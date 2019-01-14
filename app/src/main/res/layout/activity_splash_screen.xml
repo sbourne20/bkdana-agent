@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    android:gravity="center_vertical"
+    tools:context=".SplashScreenActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:layout_gravity="center"
+        android:paddingBottom="18dp"
+        />
+
+    <id.bkdana.agent.widget.MontserratSemiBoldTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16.3sp"
+        android:textColor="@color/white_two"
+        android:lineSpacingExtra="5.2sp"
+        android:gravity="center"
+        tools:text="Pendanaan Gotong Royong\nPeer to Peer Lending"
+        />
+
+</LinearLayout>
