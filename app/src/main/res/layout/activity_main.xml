@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.activity.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp">
+
+        <ImageView
+            android:id="@+id/img_account_agent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mask_by_oval_copy_3"
+            android:paddingLeft="16.7dp"/>
+
+        <id.bkdana.agent.widget.WorkSansRegularTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/img_account_agent"
+            android:layout_centerVertical="true"
+            android:paddingBottom="7dp"
+            android:paddingLeft="11dp"
+            android:textSize="15sp"
+            android:textColor="#87959c"
+            tools:text="Andhika Desta Permana"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shape_3"
+            android:layout_below="@id/img_account_agent"
+            android:layout_marginTop="8dp" />
+    </RelativeLayout>
+
+
+    <id.bkdana.agent.widget.MontserratSemiBoldButton
+        android:id="@+id/btn_menu_data_peminjam"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:background="@drawable/base"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        android:text="Data Peminjam"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textColor="@color/white_two"/>
+
+    <id.bkdana.agent.widget.MontserratSemiBoldButton
+        android:id="@+id/btn_menu_generate_barcode"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:background="@drawable/base"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:text="Generate Barcode"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textColor="@color/white_two"/>
+
+</LinearLayout>

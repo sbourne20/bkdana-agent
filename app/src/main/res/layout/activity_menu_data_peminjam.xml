@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    android:orientation="vertical"
+    tools:context=".view.activity.LoginActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="133.7dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/bg">
+
+        <id.bkdana.agent.widget.MontserratBoldTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20.5sp"
+            android:textColor="@color/white_two"
+            android:gravity="center"
+            tools:text="Data Personal"
+            />
+
+        <id.bkdana.agent.widget.WorkSansRegularTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14.3sp"
+            android:textColor="#f5f5f5"
+            android:gravity="center"
+            tools:text="Verifikasi Data Peminjam"
+            />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="30dp">
+
+                <id.bkdana.agent.widget.MontserratMediumTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.5sp"
+                    android:textColor="#fd666666"
+                    tools:text="* Nama Lengkap" />
+
+                <id.bkdana.agent.widget.MontserratMediumEditText
+                    android:id="@+id/et_nama_peminjam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="17.3dp"
+                    android:textSize="13.5sp"
+                    android:background="@drawable/rectangle_2_copy_4"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <id.bkdana.agent.widget.MontserratMediumTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.5sp"
+                    android:textColor="#fd666666"
+                    tools:text="* Alamat" />
+
+                <id.bkdana.agent.widget.MontserratMediumEditText
+                    android:id="@+id/et_alamat_peminjam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="17.3dp"
+                    android:textSize="13.5sp"
+                    android:background="@drawable/rectangle_2_copy_4"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <id.bkdana.agent.widget.MontserratMediumTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.5sp"
+                    android:textColor="#fd666666"
+                    tools:text="* Kota" />
+
+                <id.bkdana.agent.widget.MontserratMediumEditText
+                    android:id="@+id/et_kota_peminjam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="17.3dp"
+                    android:textSize="13.5sp"
+                    android:background="@drawable/rectangle_2_copy_4"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <id.bkdana.agent.widget.MontserratMediumTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.5sp"
+                    android:textColor="#fd666666"
+                    tools:text="* Provinsi" />
+
+                <Spinner
+                    android:id="@+id/sp_provinsi_peminjam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="17.3dp"
+                    android:textSize="13.5sp"
+                    android:background="@drawable/rectangle_2_copy_4"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <id.bkdana.agent.widget.MontserratMediumTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.5sp"
+                    android:textColor="#fd666666"
+                    tools:text="* Kode Pos" />
+
+                <id.bkdana.agent.widget.MontserratMediumEditText
+                    android:id="@+id/et_kodepos_peminjam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="17.3dp"
+                    android:textSize="13.5sp"
+                    android:background="@drawable/rectangle_2_copy_4"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <id.bkdana.agent.widget.MontserratMediumTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.5sp"
+                    android:textColor="#fd666666"
+                    tools:text="* No KTP" />
+
+                <id.bkdana.agent.widget.MontserratMediumEditText
+                    android:id="@+id/et_noktp_peminjam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="17.3dp"
+                    android:textSize="13.5sp"
+                    android:background="@drawable/rectangle_2_copy_4"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <id.bkdana.agent.widget.MontserratMediumTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.5sp"
+                    android:textColor="#fd666666"
+                    tools:text="* Upload NIK File" />
+
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="17.3dp"
+                    android:background="@drawable/rounded_rectangle_1313">
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:src="@drawable/iconfinder_camera_115759_copy"
+                        android:background="@drawable/rounded_rectangle_1315"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/img_ktp_peminjam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ektp-contoh"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+
+            <id.bkdana.agent.widget.MontserratSemiBoldButton
+                android:id="@+id/btn_masuk_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="29.3dp"
+                android:background="@drawable/base"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:text="Masuk"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</LinearLayout>

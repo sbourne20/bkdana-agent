@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".LoginActivity">
+    tools:context=".view.activity.LoginActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -50,15 +50,33 @@
             android:hint="E-mail"
             android:background="@drawable/rectangle_2"/>
 
-        <id.bkdana.agent.widget.MontserratMediumEditText
-            android:id="@+id/et_password_login"
+        <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="21.3dp"
-            android:paddingLeft="17.3dp"
-            android:textSize="13.5sp"
-            android:hint="Password"
-            android:background="@drawable/rectangle_2"/>
+            android:layout_height="wrap_content">
+            
+            <id.bkdana.agent.widget.MontserratMediumEditText
+                android:id="@+id/et_password_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="21.3dp"
+                android:paddingLeft="17.3dp"
+                android:textSize="13.5sp"
+                android:hint="Password"
+                android:background="@drawable/rectangle_2"/>
+
+            <ImageView
+                android:id="@+id/btn_eye_visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/shape_1"
+                android:layout_centerVertical="true"
+                android:layout_alignRight="@id/et_password_login"
+                android:paddingRight="23.3dp"
+                android:paddingTop="26dp"
+                />
+            
+        </RelativeLayout>
+       
 
 
         <ImageView
