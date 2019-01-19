@@ -1,0 +1,18 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:drawable="@drawable/bg"/>
+
+    <item android:gravity="center">
+        <shape
+            android:shape="rectangle">
+            <solid
+                android:color="@color/white"/>
+        </shape>
+    </item>
+
+    <item android:height="117.7dp"
+        android:drawable="@drawable/shape_1">
+    </item>
+
+
+</layer-list>

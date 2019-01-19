@@ -20,7 +20,7 @@
             android:textSize="20.5sp"
             android:textColor="@color/white_two"
             android:gravity="center"
-            tools:text="Login Form"
+            android:text="Login Form"
             />
 
         <id.bkdana.agent.widget.WorkSansRegularTextView
@@ -29,7 +29,7 @@
             android:textSize="14.3sp"
             android:textColor="#f5f5f5"
             android:gravity="center"
-            tools:text="Login Form untuk member BKDana"
+            android:text="Login Form untuk agent BKDana"
             />
     </LinearLayout>
 
@@ -68,7 +68,7 @@
                 android:id="@+id/btn_eye_visible"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/shape_1"
+                app:srcCompat="@drawable/shape_eye"
                 android:layout_centerVertical="true"
                 android:layout_alignRight="@id/et_password_login"
                 android:paddingRight="23.3dp"

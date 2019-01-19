@@ -18,7 +18,9 @@
         </activity>
         <activity android:name=".view.activity.SplashScreenActivity" />
         <activity android:name=".view.activity.MainActivity" />
-        <activity android:name=".view.activity.MenuDataPeminjamActivity"></activity>
+        <activity android:name=".view.activity.MenuDataPeminjamActivity" />
+        <activity android:name=".view.activity.MenuDataUsahaActivity" />
+        <activity android:name=".view.activity.MenuDataUploadActivity"></activity>
     </application>
 
 </manifest>

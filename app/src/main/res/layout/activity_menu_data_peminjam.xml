@@ -5,33 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:scrollbars="vertical"
-    android:orientation="vertical"
-    tools:context=".view.activity.LoginActivity">
+    android:orientation="vertical">
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="133.7dp"
+        android:layout_height="150.7dp"
         android:orientation="vertical"
-        android:gravity="center"
-        android:background="@drawable/bg">
+        android:background="@drawable/bg_copy_13"
+        android:paddingLeft="29dp"
+        android:paddingTop="20dp">
 
         <id.bkdana.agent.widget.MontserratBoldTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20.5sp"
             android:textColor="@color/white_two"
-            android:gravity="center"
-            tools:text="Data Personal"
+            android:text="Daftar BKDana Mikro"
             />
 
         <id.bkdana.agent.widget.WorkSansRegularTextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="14.3sp"
             android:textColor="#f5f5f5"
-            android:gravity="center"
-            tools:text="Verifikasi Data Peminjam"
+            android:text="Beberapa langkah lagi untuk menjadi\npeminjam di BKDana.\nSilahkan lengkapi informasi dan\ndata-data Anda terlebih dahulu."
             />
     </LinearLayout>
 
@@ -45,6 +43,30 @@
             android:gravity="center_horizontal">
 
             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="31dp"
+                android:orientation="vertical"
+                android:paddingTop="14dp">
+
+                <id.bkdana.agent.widget.MontserratSemiBoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="#666666"
+                    android:text="Informasi Usaha"/>
+
+                <id.bkdana.agent.widget.MontserratSemiBoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="#666666"
+                    android:text="Silahkan masukan data diri Anda \nsebenar - benarnya."/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -55,7 +77,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="13.5sp"
                     android:textColor="#fd666666"
-                    tools:text="* Nama Lengkap" />
+                    android:text="* Nama Lengkap" />
 
                 <id.bkdana.agent.widget.MontserratMediumEditText
                     android:id="@+id/et_nama_peminjam"
@@ -79,7 +101,55 @@
                     android:layout_height="wrap_content"
                     android:textSize="13.5sp"
                     android:textColor="#fd666666"
-                    tools:text="* Alamat" />
+                    android:text="* Tempat Lahir" />
+
+                <id.bkdana.agent.widget.MontserratMediumEditText
+                    android:id="@+id/et_tempat_lahir_peminjam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="17.3dp"
+                    android:textSize="13.5sp"
+                    android:background="@drawable/rectangle_2_copy_4"/>
+
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp">
+
+                    <id.bkdana.agent.widget.MontserratMediumTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13.5sp"
+                        android:textColor="#fd666666"
+                        android:text="* Jenis Kelamin" />
+
+                    <Spinner
+                        android:id="@+id/sp_jk_peminjam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:paddingLeft="17.3dp"
+                        android:textSize="13.5sp"
+                        android:background="@drawable/rectangle_2_copy_4"/>>
+
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <id.bkdana.agent.widget.MontserratMediumTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.5sp"
+                    android:textColor="#fd666666"
+                    android:text="* Alamat" />
 
                 <id.bkdana.agent.widget.MontserratMediumEditText
                     android:id="@+id/et_alamat_peminjam"
@@ -103,7 +173,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="13.5sp"
                     android:textColor="#fd666666"
-                    tools:text="* Kota" />
+                    android:text="* Kota" />
 
                 <id.bkdana.agent.widget.MontserratMediumEditText
                     android:id="@+id/et_kota_peminjam"
@@ -128,7 +198,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="13.5sp"
                     android:textColor="#fd666666"
-                    tools:text="* Provinsi" />
+                    android:text="* Provinsi" />
 
                 <Spinner
                     android:id="@+id/sp_provinsi_peminjam"
@@ -152,7 +222,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="13.5sp"
                     android:textColor="#fd666666"
-                    tools:text="* Kode Pos" />
+                    android:text="* Kode Pos" />
 
                 <id.bkdana.agent.widget.MontserratMediumEditText
                     android:id="@+id/et_kodepos_peminjam"
@@ -167,83 +237,35 @@
 
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingTop="10dp">
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="25dp">
 
-                <id.bkdana.agent.widget.MontserratMediumTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="13.5sp"
-                    android:textColor="#fd666666"
-                    tools:text="* No KTP" />
+                <id.bkdana.agent.widget.MontserratSemiBoldButton
+                    android:id="@+id/btn_sebelumnya_peminjam"
+                    android:layout_width="141dp"
+                    android:layout_height="33dp"
+                    android:layout_marginRight="7dp"
+                    android:background="@drawable/rounded_rectangle_1207"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:text="Sebelumnya"/>
 
-                <id.bkdana.agent.widget.MontserratMediumEditText
-                    android:id="@+id/et_noktp_peminjam"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:paddingLeft="17.3dp"
-                    android:textSize="13.5sp"
-                    android:background="@drawable/rectangle_2_copy_4"/>
+                <id.bkdana.agent.widget.MontserratSemiBoldButton
+                    android:id="@+id/btn_selanjutnya_peminjam"
+                    android:layout_width="141dp"
+                    android:layout_height="33dp"
+                    android:background="@drawable/rounded_rectangle_1207_copy"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:text="Selanjutnya"/>
+
 
             </LinearLayout>
 
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingTop="10dp">
-
-                <id.bkdana.agent.widget.MontserratMediumTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="13.5sp"
-                    android:textColor="#fd666666"
-                    tools:text="* Upload NIK File" />
-
-
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:paddingLeft="17.3dp"
-                    android:background="@drawable/rounded_rectangle_1313">
-
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:src="@drawable/iconfinder_camera_115759_copy"
-                        android:background="@drawable/rounded_rectangle_1315"
-                        android:layout_centerInParent="true"
-                        android:visibility="gone"/>
-
-                    <ImageView
-                        android:id="@+id/img_ktp_peminjam"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:src="@drawable/ektp-contoh"/>
-
-                </RelativeLayout>
-
-            </LinearLayout>
-
-
-
-
-            <id.bkdana.agent.widget.MontserratSemiBoldButton
-                android:id="@+id/btn_masuk_login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="29.3dp"
-                android:background="@drawable/base"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:text="Masuk"/>
         </LinearLayout>
     </ScrollView>
 
