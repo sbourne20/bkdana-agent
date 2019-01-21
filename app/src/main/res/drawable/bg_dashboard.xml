@@ -10,8 +10,8 @@
         </shape>
     </item>
 
-    <item android:height="117.7dp"
-        android:drawable="@drawable/shape_1">
+    <item android:height="200.3dp"
+        android:drawable="@drawable/bg_copy_13">
     </item>
 
 

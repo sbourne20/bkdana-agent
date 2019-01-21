@@ -40,16 +40,15 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             Fragment fragment;
             switch (item.getItemId()) {
-                case R.id.navigation_now:
+                case R.id.navigation_dashboard:
                     fragment = new fragment_dashboard();
                     loadFragment(fragment);
                     return true;
-                case R.id.navigation_history:
+                case R.id.navigation_scanbarcode:
                     return true;
-                case R.id.navigation_scan:
+                case R.id.navigation_profile:
                     return true;
-                case R.id.navigation_help:
-                    return true;
+
             }
             return false;
         }

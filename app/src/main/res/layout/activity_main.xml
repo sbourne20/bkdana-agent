@@ -7,50 +7,7 @@
     android:orientation="vertical"
     tools:context=".view.activity.MainActivity">
 
-    <android.support.design.widget.AppBarLayout
-        android:id="@+id/appBarLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="117.7dp"
-            android:paddingTop="22.7dp"
-            android:background="@drawable/shape_1">
-
-            <ImageView
-                android:id="@+id/img_account_agent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="38.1dp"
-                android:src="@drawable/mask_by_oval_copy_3"
-                android:paddingLeft="16.7dp"/>
-
-            <id.bkdana.agent.widget.WorkSansRegularTextView
-                android:id="@+id/tv_name_agent"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/img_account_agent"
-                android:paddingLeft="11dp"
-                android:textSize="18sp"
-                android:textColor="#666666"
-                android:text="Andhika Desta Permana"/>
-
-            <id.bkdana.agent.widget.WorkSansRegularTextView
-                android:id="@+id/tv_id_agent"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/img_account_agent"
-                android:layout_below="@id/tv_name_agent"
-                android:paddingLeft="11dp"
-                android:textSize="17sp"
-                android:textColor="#666666"
-                android:text="Agent #2313"/>
-        </RelativeLayout>
-
-    </android.support.design.widget.AppBarLayout>
 
 
 

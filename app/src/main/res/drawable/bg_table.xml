@@ -1,0 +1,20 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:drawable="@drawable/rounded_rectangle_kotak"/>
+
+
+
+    <item
+        android:gravity="center"
+        android:drawable="@drawable/shape_7_copy_2">
+    </item>
+
+    <item
+        android:gravity="center"
+        android:drawable="@drawable/shape_7_horizontal">
+    </item>
+
+
+
+
+</layer-list>

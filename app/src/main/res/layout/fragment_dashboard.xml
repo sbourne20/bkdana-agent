@@ -1,60 +1,193 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_dashboard">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingTop="22.7dp">
+
+        <ImageView
+            android:id="@+id/img_account_agent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24.1dp"
+            android:src="@drawable/mask_by_oval_copy_3" />
+
+        <id.bkdana.agent.widget.MontserratMediumTextView
+            android:id="@+id/tv_name_agent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/img_account_agent"
+            android:letterSpacing="0.01"
+            android:lineSpacingExtra="7.3sp"
+            android:paddingLeft="11dp"
+            android:text="Andhika Desta Permana"
+            android:textColor="@color/white"
+            android:textSize="17.3sp" />
+
+        <id.bkdana.agent.widget.WorkSansRegularTextView
+            android:id="@+id/tv_id_agent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name_agent"
+            android:layout_toRightOf="@id/img_account_agent"
+            android:letterSpacing="0.01"
+            android:lineSpacingExtra="7.8sp"
+            android:paddingLeft="11dp"
+            android:text="Agent #2313"
+            android:textColor="@color/white"
+            android:textSize="16.8sp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_table"
         android:orientation="vertical"
-        android:layout_gravity="center_horizontal">
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2"
+        tools:layout_editor_absoluteX="7dp"
+        tools:ignore="MissingConstraints">
 
         <LinearLayout
-            android:id="@+id/btn_pengajuan"
-            android:layout_width="wrap_content"
+            android:id="@+id/llkotak1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="38dp"
-            android:orientation="vertical"
-            android:background="@drawable/rectangle_path"
-            android:visibility="visible"
-            android:gravity="center_vertical"
-            android:layout_gravity="center">
+            android:paddingTop="80dp"
+            android:orientation="horizontal">
 
-            <id.bkdana.agent.widget.MontserratSemiBoldTextView
+            <LinearLayout
+                android:id="@+id/llTotalSurvey"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pengajuan"
-                android:layout_gravity="center_horizontal"
-                android:textAllCaps="false"
-                android:textSize="18sp"
-                android:textColor="@color/white_two"
-                />
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_centerHorizontal="true">
 
+                <id.bkdana.agent.widget.WorkSansSemiBoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="42.8sp"
+                    android:textColor="@color/topaz"
+                    android:text="11" />
+
+                <id.bkdana.agent.widget.MontserratSemiBoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16.2sp"
+                    android:textColor="#585f6f"
+                    android:text="Total Survey"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llTotalCollection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_toRightOf="@id/llTotalSurvey"
+                android:layout_centerHorizontal="true">
+
+                <id.bkdana.agent.widget.WorkSansSemiBoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="42.8sp"
+                    android:textColor="@color/topaz"
+                    android:text="0" />
+
+                <id.bkdana.agent.widget.MontserratSemiBoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16.2sp"
+                    android:textColor="#585f6f"
+                    android:text="Total Collection"/>
+
+            </LinearLayout>
         </LinearLayout>
 
 
-        <LinearLayout
-            android:id="@+id/btn_penagihan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/rectangle_path"
-            android:visibility="visible"
-            android:gravity="center_vertical"
-            android:layout_gravity="center">
 
-            <id.bkdana.agent.widget.MontserratSemiBoldTextView
+        <LinearLayout
+            android:layout_below="@id/llkotak1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="120dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/llListSurvey"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Penagihan"
-                android:layout_gravity="center_horizontal"
-                android:textAllCaps="false"
-                android:textSize="18sp"
-                android:textColor="@color/white_two"
-                />
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_centerHorizontal="true">
 
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:src="@drawable/list_2" />
+
+                <id.bkdana.agent.widget.MontserratSemiBoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16.2sp"
+                    android:textColor="#585f6f"
+                    android:text="List Survey"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llListCollection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_toRightOf="@id/llTotalSurvey"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:src="@drawable/list_2" />
+
+                <id.bkdana.agent.widget.MontserratSemiBoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16.2sp"
+                    android:textColor="#585f6f"
+                    android:text="List Collection"/>
+
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
 
-</LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>
+
