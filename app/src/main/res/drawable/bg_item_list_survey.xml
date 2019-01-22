@@ -1,0 +1,11 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:drawable="@drawable/row_1"/>
+
+    <item android:drawable="@drawable/rounded_rectangle_8_copy_7"/>
+
+    <item android:height="58dp"
+        android:drawable="@drawable/rounded_rectangle_8_copy_2">
+    </item>
+
+</layer-list>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="328.3dp"
+    android:layout_height="149dp"
+    android:background="@drawable/bg_item_list_survey">
+
+    <id.bkdana.agent.widget.MontserratBoldTextView
+        android:id="@+id/item_nama_peminjam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="11dp"
+        android:paddingTop="11dp"
+        android:textSize="12.2sp"
+        android:textColor="#666666"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="4.8sp"
+        android:text="Agus Soepono"/>
+
+    <id.bkdana.agent.widget.WorkSansSemiBoldTextView
+        android:id="@+id/item_no_reg_peminjam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="11dp"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="3sp"
+        android:text="No. PM-FB7FFCOB5787"
+        android:textColor="#0f9ebc"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/item_nama_peminjam" />
+
+    <id.bkdana.agent.widget.MontserratBoldTextView
+        android:id="@+id/item_tenor_peminjam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="4.8sp"
+        android:paddingLeft="11dp"
+        android:paddingTop="11dp"
+        android:text="Tenor"
+        android:textColor="#666666"
+        android:textSize="12.2sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toEndOf="@+id/item_nama_peminjam"/>
+
+    <id.bkdana.agent.widget.WorkSansSemiBoldTextView
+        android:id="@+id/item_bulan_peminjam"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:lineSpacingExtra="1sp"
+        android:paddingLeft="11dp"
+        android:text="3 Bulan"
+        android:textColor="#ed1c24"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.884"
+        app:layout_constraintStart_toEndOf="@+id/item_no_reg_peminjam"
+        app:layout_constraintTop_toBottomOf="@+id/item_nama_peminjam" />
+
+    <id.bkdana.agent.widget.WorkSansSemiBoldTextView
+        android:id="@+id/item_total_cap_peminjam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="3sp"
+        android:paddingLeft="11dp"
+        android:text="Total Pinjaman"
+        android:textColor="#666666"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_no_reg_peminjam"
+        app:layout_constraintVertical_bias="0.136"/>
+
+    <id.bkdana.agent.widget.WorkSansSemiBoldTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="3sp"
+        android:textColor="#080808"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.942"
+        app:layout_constraintStart_toEndOf="@+id/item_total_cap_peminjam"
+        app:layout_constraintTop_toBottomOf="@+id/item_bulan_peminjam"
+        app:layout_constraintVertical_bias="0.051"
+        tools:text="Rp 10 JT" />
+
+    <id.bkdana.agent.widget.MontserratSemiBoldButton
+        android:id="@+id/item_add_survey"
+        android:layout_width="wrap_content"
+        android:layout_height="28.3dp"
+        android:textSize="16.5sp"
+        android:textColor="@color/white_two"
+        android:letterSpacing="0.01"
+        android:text="Add Survey"
+        android:textAllCaps="false"
+        android:lineSpacingExtra="24.8sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_rectangle_9_copy"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_total_cap_peminjam" />
+
+</android.support.constraint.ConstraintLayout>
