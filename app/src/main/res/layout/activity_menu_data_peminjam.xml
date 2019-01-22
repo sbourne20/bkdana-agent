@@ -161,7 +161,7 @@
                         android:textColor="#fd666666"
                         android:text="* No. KTP" />
 
-                    <Spinner
+                    <id.bkdana.agent.widget.MontserratMediumEditText
                         android:id="@+id/et_noktp_peminjam"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

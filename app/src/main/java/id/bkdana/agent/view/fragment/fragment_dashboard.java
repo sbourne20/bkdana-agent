@@ -11,11 +11,12 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import id.bkdana.agent.R;
+import id.bkdana.agent.view.activity.ListSurveyActivity;
 import id.bkdana.agent.view.activity.MenuDataPeminjamActivity;
 
-public class fragment_dashboard extends Fragment  {
+public class fragment_dashboard extends Fragment implements View.OnClickListener {
 
-    private LinearLayout btn_pengajuan, btn_peminjam;
+    private LinearLayout llListSurvey, llListCollection;
 
     @Nullable
     @Override
@@ -23,11 +24,24 @@ public class fragment_dashboard extends Fragment  {
         View view = inflater.inflate(R.layout.fragment_dashboard,container,false);
 
 
+        llListSurvey = view.findViewById(R.id.llListSurvey);
+        llListCollection = view.findViewById(R.id.llListCollection);
 
+        llListSurvey.setOnClickListener(this);
 
 
         return view;
     }
 
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+
+            case R.id.llListSurvey :
+                Intent menuListSurvey = new Intent(getActivity(),ListSurveyActivity.class);
+                getActivity().startActivity(menuListSurvey);
+                break;
+        }
+    }
 }
