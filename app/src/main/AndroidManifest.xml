@@ -25,15 +25,16 @@
             android:name=".view.activity.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".view.activity.MenuDataPeminjamActivity"
+            android:name=".view.activity.MenuDataPersonalActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".view.activity.MenuDataUsahaActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".view.activity.MenuDataUploadActivity"
+            android:name=".view.activity.MenuDataKeuanganUsahaActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".view.activity.ListSurveyActivity"></activity>
+        <activity android:name=".view.activity.ListSurveyActivity" />
+        <activity android:name=".view.activity.NotifSurveyActivity"></activity>
     </application>
 
 </manifest>

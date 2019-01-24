@@ -5,11 +5,11 @@ import android.os.Bundle;
 
 import id.bkdana.agent.R;
 
-public class MenuDataUploadActivity extends AppCompatActivity {
+public class NotifSurveyActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu_data_upload);
+        setContentView(R.layout.activity_notif_survey);
     }
 }

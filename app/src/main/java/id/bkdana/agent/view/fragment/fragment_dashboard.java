@@ -12,7 +12,6 @@ import android.widget.LinearLayout;
 
 import id.bkdana.agent.R;
 import id.bkdana.agent.view.activity.ListSurveyActivity;
-import id.bkdana.agent.view.activity.MenuDataPeminjamActivity;
 
 public class fragment_dashboard extends Fragment implements View.OnClickListener {
 

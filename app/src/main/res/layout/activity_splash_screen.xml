@@ -24,7 +24,7 @@
         android:textColor="@color/white_two"
         android:lineSpacingExtra="5.2sp"
         android:gravity="center"
-        tools:text="Pendanaan Gotong Royong\nPeer to Peer Lending"
+        tools:text="Aplikasi Keagenan BKDana"
         />
 
 </LinearLayout>

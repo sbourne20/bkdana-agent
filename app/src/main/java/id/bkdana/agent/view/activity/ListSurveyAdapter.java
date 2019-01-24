@@ -57,7 +57,7 @@ class ListSurveyAdapter extends RecyclerView.Adapter<ListSurveyAdapter.SurveyVie
         switch (v.getId()){
 
             case R.id.item_add_survey :
-                Intent menuAddSurvey = new Intent(context,MenuDataPeminjamActivity.class);
+                Intent menuAddSurvey = new Intent(context,MenuDataPersonalActivity.class);
                 context.startActivity(menuAddSurvey);
         }
     }
