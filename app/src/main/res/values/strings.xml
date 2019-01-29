@@ -4,4 +4,6 @@
     <string name="menu_scanbarcode">Scan Barcode</string>
     <string name="menu_agentprofile">Profile</string>
     <string name="menu_signtout">Signout</string>
+    <string name="txt_notif_survey">Survey berhasil terkirim.
+        Tim Analis akan segera menindaklanjutinya.</string>
 </resources>

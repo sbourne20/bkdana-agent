@@ -2,6 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="id.bkdana.agent">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".view.activity.LoginActivity"
+            android:name=".view.activity.SplashScreenActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,7 +28,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.activity.SplashScreenActivity"
+            android:name=".view.activity.LoginActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".view.activity.MainActivity"
@@ -34,7 +43,10 @@
             android:name=".view.activity.MenuDataKeuanganUsahaActivity"
             android:screenOrientation="portrait" />
         <activity android:name=".view.activity.ListSurveyActivity" />
-        <activity android:name=".view.activity.NotifSurveyActivity"></activity>
+        <activity android:name=".view.activity.NotifSurveyActivity" />
+        <activity android:name=".view.fragment.fragment_scanbarcode" />
+        <activity android:name=".view.activity.DetailScanBarcodeActivity" />
+        <activity android:name=".view.activity.InputPenagihanActivity"></activity>
     </application>
 
 </manifest>

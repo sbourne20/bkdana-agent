@@ -1,7 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#f9fbfd"
@@ -35,11 +33,10 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="320dp"
         android:layout_marginTop="30.7dp"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
-        android:paddingBottom="-700dp"
         android:gravity="center"
         android:background="@drawable/rounded_rectangle_kotak_1">
 
@@ -51,18 +48,44 @@
             android:layout_centerHorizontal="true"/>
 
         <id.bkdana.agent.widget.MontserratMediumTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_below="@id/iv_notif_survey"
+            android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="11dp"
-            android:textAlignment="center"
-            android:textSize="19sp"
-            android:textColor="#585f6f"
+            android:layout_marginBottom="0dp"
             android:lineSpacingExtra="7.7sp"
-            android:text="Survey berhasil terkirim.\nTim Analis akan segera\nmenindaklanjutinya. " />
+            android:text="@string/txt_notif_survey"
+            android:textAlignment="center"
+            android:textColor="#585f6f"
+            android:textSize="19sp" />
 
     </RelativeLayout>
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="25dp">
+
+
+        <id.bkdana.agent.widget.MontserratSemiBoldButton
+            android:id="@+id/btn_selesai_survey_peminjam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:gravity="center"
+            android:background="@drawable/rounded_rectangle_1207_copy"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:text="Selesai"/>
+
+
+    </LinearLayout>
 
 </LinearLayout>

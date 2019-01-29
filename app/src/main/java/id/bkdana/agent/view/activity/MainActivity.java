@@ -13,6 +13,7 @@ import android.view.MenuItem;
 
 import id.bkdana.agent.R;
 import id.bkdana.agent.view.fragment.fragment_dashboard;
+import id.bkdana.agent.view.fragment.fragment_scanbarcode;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -45,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
                     loadFragment(fragment);
                     return true;
                 case R.id.navigation_scanbarcode:
+                    Intent i = new Intent(MainActivity.this,fragment_scanbarcode.class);
+                    startActivity(i);
                     return true;
                 case R.id.navigation_profile:
                     return true;

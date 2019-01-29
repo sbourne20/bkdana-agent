@@ -12,7 +12,7 @@ import id.bkdana.agent.R;
 public class MenuDataKeuanganUsahaActivity extends AppCompatActivity implements View.OnClickListener {
 
 
-    private Button btn_selanjutnya_data_peminjam;
+    private Button btn_kirim_survey_peminjam;
     private ImageView iv_back_survey;
 
     @Override
@@ -20,10 +20,10 @@ public class MenuDataKeuanganUsahaActivity extends AppCompatActivity implements 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_data_keuangan_usaha);
 
-        btn_selanjutnya_data_peminjam = findViewById(R.id.btn_selanjutnya_peminjam);
+        btn_kirim_survey_peminjam = findViewById(R.id.btn_kirim_survey_peminjam);
         iv_back_survey = findViewById(R.id.iv_back_survey);
 
-        btn_selanjutnya_data_peminjam.setOnClickListener(this);
+        btn_kirim_survey_peminjam.setOnClickListener(this);
         iv_back_survey.setOnClickListener(this);
 
     }
@@ -33,9 +33,9 @@ public class MenuDataKeuanganUsahaActivity extends AppCompatActivity implements 
     public void onClick(View v) {
         switch (v.getId()) {
 
-            case R.id.btn_selanjutnya_peminjam :
-//                Intent data_usaha = new Intent(this,MenuDataUsahaActivity.class);
-//                startActivity(data_usaha);
+            case R.id.btn_kirim_survey_peminjam :
+                Intent data_usaha = new Intent(this,NotifSurveyActivity.class);
+                startActivity(data_usaha);
                 break;
             case  R.id.iv_back_survey :
                 finish();

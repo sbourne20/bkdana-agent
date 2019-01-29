@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:orientation="vertical"
+        android:background="@drawable/bg_copy_13"
+        android:paddingLeft="29dp"
+        android:paddingTop="27dp">
+
+
+        <ImageView
+            android:id="@+id/iv_back_scanbarcode"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/layer_6"
+            android:layout_centerVertical="true"
+            android:paddingRight="22.3dp"/>
+
+        <id.bkdana.agent.widget.MontserratBoldTextView
+            android:id="@+id/cap_survey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_back_scanbarcode"
+            android:textSize="24.2sp"
+            android:textColor="@color/white_two"
+            android:lineSpacingExtra="-6.8sp"
+            android:text="Scan Barcode"
+            />
+
+        <id.bkdana.agent.widget.WorkSansRegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cap_survey"
+            android:layout_toRightOf="@id/iv_back_scanbarcode"
+            android:textSize="14.3sp"
+            android:textColor="#f5f5f5"
+            android:text="Data Personal"
+            />
+    </RelativeLayout>
+
+    <SurfaceView
+        android:id="@+id/cameraView"
+        android:layout_marginTop="115dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="115dp"
+            android:background="@color/semitransparent" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <View
+                android:id="@+id/left"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:background="@color/semitransparent" />
+
+            <LinearLayout
+                android:id="@+id/scannerLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_toStartOf="@+id/right"
+                android:layout_toLeftOf="@id/right"
+                android:layout_toEndOf="@+id/left"
+                android:layout_toRightOf="@id/left"
+                android:background="@drawable/ic_viewfinder"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/scannerBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/topaz" />
+
+
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/right"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:background="@color/semitransparent" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/semitransparent" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/txtBarcodeValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hasil Scan"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:visibility="gone"/>
+
+</android.support.design.widget.CoordinatorLayout>

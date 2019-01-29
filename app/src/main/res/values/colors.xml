@@ -9,4 +9,6 @@
     <color name="white">#fdfdfd</color>
     <color name="brownish_grey">#666666</color>
     <color name="golden_yellow">#ffca18</color>
+    <color name="semitransparent">#9A000000</color>
+    <color name="cheery_red">#ed1c24</color>
 </resources>

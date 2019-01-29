@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.DetailScanBarcodeActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:background="@drawable/bg_copy_13"
+        android:orientation="vertical"
+        android:paddingLeft="29dp"
+        android:paddingTop="27dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+
+        <ImageView
+            android:id="@+id/iv_back_scanbarcodedetail"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingRight="22.3dp"
+            android:src="@drawable/layer_6" />
+
+        <id.bkdana.agent.widget.MontserratBoldTextView
+            android:id="@+id/cap_survey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_back_scanbarcodedetail"
+            android:lineSpacingExtra="-6.8sp"
+            android:text="Scan Barcode"
+            android:textColor="@color/white_two"
+            android:textSize="24.2sp" />
+
+        <id.bkdana.agent.widget.WorkSansRegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cap_survey"
+            android:layout_toRightOf="@id/iv_back_scanbarcodedetail"
+            android:text="Data Personal"
+            android:textColor="#f5f5f5"
+            android:textSize="14.3sp" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="325dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/rounded_rectangle_kotak"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout3">
+
+        <id.bkdana.agent.widget.MontserratMediumTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID Transaksi"
+            android:textColor="#585f6f"
+            android:textSize="15.2sp" />
+
+        <id.bkdana.agent.widget.MontserratMediumTextView
+            android:id="@+id/tv_id_transaksi_scanbarcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PM-FB7FFC0B5787"
+            android:textColor="@color/topaz"
+            android:textSize="20sp" />
+
+
+        <id.bkdana.agent.widget.MontserratMediumTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10.7dp"
+            android:text="Product"
+            android:textColor="#585f6f"
+            android:textSize="15.2sp" />
+
+        <id.bkdana.agent.widget.MontserratMediumTextView
+            android:id="@+id/tv_product_scanbarcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PM-Pinjaman Mikro 3 Bulan"
+            android:textColor="@color/topaz"
+            android:textSize="20sp" />
+
+        <id.bkdana.agent.widget.MontserratMediumTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10.7dp"
+            android:text="Nama Peminjam"
+            android:textColor="#585f6f"
+            android:textSize="15.2sp" />
+
+        <id.bkdana.agent.widget.MontserratMediumTextView
+            android:id="@+id/tv_nama_scanbarcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Andika Desta Permana"
+            android:textColor="@color/topaz"
+            android:textSize="20sp" />
+
+        <id.bkdana.agent.widget.MontserratMediumTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10.7dp"
+            android:text="Tenort"
+            android:textColor="#585f6f"
+            android:textSize="15.2sp" />
+
+        <id.bkdana.agent.widget.MontserratMediumTextView
+            android:id="@+id/tv_tenor_scanbarcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 dari 3"
+            android:textColor="@color/topaz"
+            android:textSize="20sp" />
+
+        <id.bkdana.agent.widget.MontserratMediumTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10.7dp"
+            android:text="Jumlah Pembayaran"
+            android:textColor="#585f6f"
+            android:textSize="15.2sp" />
+
+        <id.bkdana.agent.widget.MontserratMediumTextView
+            android:id="@+id/tv_jmlpembayaran_scanbarcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp. 1.500.000"
+            android:textColor="@color/cheery_red"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+
+        <id.bkdana.agent.widget.MontserratSemiBoldButton
+            android:id="@+id/btn_selanjutnya_scanbarcode"
+            android:layout_width="153dp"
+            android:layout_height="35.7dp"
+            android:background="@drawable/rounded_rectangle_1207_copy"
+            android:text="Selanjutnya"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

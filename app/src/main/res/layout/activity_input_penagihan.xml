@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.InputPenagihanActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:background="@drawable/bg_copy_13"
+        android:orientation="vertical"
+        android:paddingLeft="29dp"
+        android:paddingTop="27dp">
+
+
+        <ImageView
+            android:id="@+id/iv_back_inoutpenagihan"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingRight="22.3dp"
+            android:src="@drawable/layer_6" />
+
+        <id.bkdana.agent.widget.MontserratBoldTextView
+            android:id="@+id/cap_survey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_back_inoutpenagihan"
+            android:lineSpacingExtra="-6.8sp"
+            android:text="Scan Barcode"
+            android:textColor="@color/white_two"
+            android:textSize="24.2sp" />
+
+        <id.bkdana.agent.widget.WorkSansRegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cap_survey"
+            android:layout_toRightOf="@id/iv_back_inoutpenagihan"
+            android:text="Input Penagihan"
+            android:textColor="#f5f5f5"
+            android:textSize="14.3sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="364dp"
+        android:layout_height="433dp"
+        android:paddingTop="32dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout4">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+            <id.bkdana.agent.widget.MontserratMediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="* Borrowe Code"
+                android:textColor="#fd666666"
+                android:textSize="13.5sp" />
+
+            <id.bkdana.agent.widget.MontserratMediumEditText
+                android:id="@+id/et_borrowercode_inputpenagihan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/textview_bg"
+                android:paddingLeft="17.3dp"
+                android:textSize="13.5sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+            <id.bkdana.agent.widget.MontserratMediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="* Jumlah Pemabayaran"
+                android:textColor="#fd666666"
+                android:textSize="13.5sp" />
+
+            <id.bkdana.agent.widget.MontserratMediumEditText
+                android:id="@+id/et_jmlpemabyaran_inputpenagihan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/textview_bg"
+                android:paddingLeft="17.3dp"
+                android:textSize="13.5sp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#fd666666"
+            android:textSize="15.2sp"
+            android:text="Note :Dengan mengklik “Kirim Penagihan”,maka Proses Penagihan telah selesai.Harap perhatikan secara seksama." />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="55dp">
+
+
+            <id.bkdana.agent.widget.MontserratSemiBoldButton
+                android:id="@+id/btn_sebelumnya_inputpenagihan"
+                android:layout_width="153dp"
+                android:layout_height="35.7dp"
+                android:background="@drawable/rounded_rectangle_1207"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:text="Sebelumnya"/>
+
+
+            <id.bkdana.agent.widget.MontserratSemiBoldButton
+                android:id="@+id/btn_proses_penagihan"
+                android:layout_width="153dp"
+                android:layout_height="35.7dp"
+                android:layout_marginLeft="18dp"
+                android:background="@drawable/rounded_rectangle_1207_copy"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:text="Proses Penagihan"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
