@@ -13,9 +13,7 @@
         android:background="@drawable/bg_copy_13"
         android:orientation="vertical"
         android:paddingLeft="29dp"
-        android:paddingTop="27dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+        android:paddingTop="27dp">
 
 
         <ImageView
@@ -49,14 +47,14 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="325dp"
+        android:layout_width="match_parent"
         android:layout_height="350dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/rounded_rectangle_kotak"
         android:orientation="vertical"
-        android:paddingLeft="20dp"
+        android:paddingLeft="30dp"
         android:paddingTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -114,7 +112,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="10.7dp"
-            android:text="Tenort"
+            android:text="Tenor"
             android:textColor="#585f6f"
             android:textSize="15.2sp" />
 

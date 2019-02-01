@@ -1,9 +1,14 @@
 <resources>
     <string name="app_name">BKDana Agent</string>
     <string name="menu_dashboard">Dashboard</string>
+    <string name="menu_listsurvey">List Survey</string>
     <string name="menu_scanbarcode">Scan Barcode</string>
     <string name="menu_agentprofile">Profile</string>
     <string name="menu_signtout">Signout</string>
     <string name="txt_notif_survey">Survey berhasil terkirim.
         Tim Analis akan segera menindaklanjutinya.</string>
+
+    <string name="txt_input_penagihan">
+        Note : Dengan mengklik "Kirim Penagihan", maka Proses Pemnagihan telah selesai. Harap Perhatikan secara seksama.
+    </string>
 </resources>

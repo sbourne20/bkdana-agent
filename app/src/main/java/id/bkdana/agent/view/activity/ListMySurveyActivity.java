@@ -10,29 +10,31 @@ import android.widget.ImageView;
 import java.util.ArrayList;
 
 import id.bkdana.agent.R;
+import id.bkdana.agent.adapter.ListSurveyAdapter;
 import id.bkdana.agent.model.DataListSurvey;
 
-public class ListSurveyActivity extends AppCompatActivity implements View.OnClickListener {
+public class ListMySurveyActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private RecyclerView rv_survey;
+    private RecyclerView rv_mysurvey;
     private RecyclerView.LayoutManager mLayoutManager;
-//    private ListSurveyAdapter mAdapter;
-    private ImageView iv_back_list_survey;
+    private ListSurveyAdapter mAdapter;
+    private ImageView iv_back_list_mysurvey;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_survey);
+        setContentView(R.layout.activity_list_my_survey);
+
 
         ArrayList<DataListSurvey> data = new ArrayList<>();
 
-        iv_back_list_survey = findViewById(R.id.iv_back_list_survey);
-        rv_survey = findViewById(R.id.rv_survey);
-        rv_survey.setHasFixedSize(true);
+        iv_back_list_mysurvey = findViewById(R.id.iv_back_list_mysurvey);
+        rv_mysurvey = findViewById(R.id.rv_mysurvey);
+        rv_mysurvey.setHasFixedSize(true);
 
         // use a linear layout manager
         mLayoutManager = new LinearLayoutManager(this);
-        rv_survey.setLayoutManager(mLayoutManager);
+        rv_mysurvey.setLayoutManager(mLayoutManager);
 
         // specify an adapter (see also next example)
 
@@ -42,20 +44,17 @@ public class ListSurveyActivity extends AppCompatActivity implements View.OnClic
         data.add(new DataListSurvey("Asep","No. PM-FB7FFCOA1234"," 10 Bulan","Rp 25 JT"));
         data.add(new DataListSurvey("Nanag","No. PM-FB7FFCOA1234"," 3 Bulan","Rp 5 JT"));
 
-//        mAdapter = new ListSurveyAdapter(this,data);
-//        rv_survey.setAdapter(mAdapter);
+        mAdapter = new ListSurveyAdapter(this,data,"0");
+        rv_mysurvey.setAdapter(mAdapter);
 
-        iv_back_list_survey.setOnClickListener(this);
-
-
-
+        iv_back_list_mysurvey.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
 
-            case R.id.iv_back_list_survey:
+            case R.id.iv_back_list_mysurvey:
                 finish();
                 break;
         }
@@ -68,4 +67,3 @@ public class ListSurveyActivity extends AppCompatActivity implements View.OnClic
         finish();
     }
 }
-

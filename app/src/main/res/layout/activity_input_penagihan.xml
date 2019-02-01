@@ -107,7 +107,7 @@
             android:layout_marginLeft="20dp"
             android:textColor="#fd666666"
             android:textSize="15.2sp"
-            android:text="Note :Dengan mengklik “Kirim Penagihan”,maka Proses Penagihan telah selesai.Harap perhatikan secara seksama." />
+            android:text="@string/txt_input_penagihan"/>
 
 
         <LinearLayout

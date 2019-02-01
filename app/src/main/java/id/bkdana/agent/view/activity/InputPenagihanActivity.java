@@ -1,11 +1,15 @@
 package id.bkdana.agent.view.activity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import id.bkdana.agent.R;
 
@@ -39,8 +43,43 @@ public class InputPenagihanActivity extends AppCompatActivity implements View.On
                 break;
             case R.id.btn_proses_penagihan:
                 Intent menumain = new Intent(this,MainActivity.class);
-                startActivity(menumain);
-                finish();
+                customDialog(menumain);
+
         }
+    }
+
+
+    private void customDialog(final Intent eks){
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = this.getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.custom_dialog, null);
+        builder.setView(dialogView);
+        TextView tv_yes_dialog = dialogView.findViewById(R.id.tv_yes_dialog);
+        TextView tv_no_dialog = dialogView.findViewById(R.id.tv_no_dialog);
+
+
+        final AlertDialog alertDialog = builder.create();
+
+        tv_yes_dialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(eks);
+                finish();
+            }
+        });
+
+        tv_no_dialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog.dismiss();
+            }
+        });
+        alertDialog.setCanceledOnTouchOutside(false);
+        alertDialog.show();
+
+
+
+
     }
 }

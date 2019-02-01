@@ -7,6 +7,11 @@
         android:title="@string/menu_dashboard" />
 
     <item
+        android:id="@+id/navigation_listsurvey"
+        android:icon="@drawable/list_2"
+        android:title="@string/menu_listsurvey" />
+
+    <item
         android:id="@+id/navigation_scanbarcode"
         android:icon="@drawable/scan_barcode"
         android:title="@string/menu_scanbarcode" />

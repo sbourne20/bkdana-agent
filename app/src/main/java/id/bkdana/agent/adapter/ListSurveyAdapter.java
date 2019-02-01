@@ -1,4 +1,4 @@
-package id.bkdana.agent.view.activity;
+package id.bkdana.agent.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,19 +10,28 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import id.bkdana.agent.R;
 import id.bkdana.agent.model.DataListSurvey;
+import id.bkdana.agent.view.activity.DetailScanBarcodeActivity;
+import id.bkdana.agent.view.activity.MenuDataPersonalActivity;
 
-class ListSurveyAdapter extends RecyclerView.Adapter<ListSurveyAdapter.SurveyViewHolder> implements View.OnClickListener {
+public class ListSurveyAdapter extends RecyclerView.Adapter<ListSurveyAdapter.SurveyViewHolder> implements View.OnClickListener {
 
     private Context context;
     private List<DataListSurvey> data;
+    private String is_data;
 
     public ListSurveyAdapter(Context context, List<DataListSurvey> data) {
-        this.context = context;
+
+    }
+
+    public ListSurveyAdapter(Context context, ArrayList<DataListSurvey> data, String is_data) {
+        this.context = context ;
         this.data = data;
+        this.is_data = is_data;
     }
 
     @NonNull
@@ -38,6 +47,11 @@ class ListSurveyAdapter extends RecyclerView.Adapter<ListSurveyAdapter.SurveyVie
     public void onBindViewHolder(@NonNull SurveyViewHolder surveyViewHolder, int position) {
         final DataListSurvey datum = data.get(position);
 
+        if(is_data.equals("0")){
+            surveyViewHolder.item_add_survey.setText("detail survey");
+        } else {
+            surveyViewHolder.item_add_survey.setText("add survey");
+        }
         surveyViewHolder.item_nama_peminjam.setText(datum.getNama());
         surveyViewHolder.item_no_reg_peminjam.setText(datum.getNo_reg());
         surveyViewHolder.item_bulan_peminjam.setText(datum.getTenor());
@@ -57,8 +71,13 @@ class ListSurveyAdapter extends RecyclerView.Adapter<ListSurveyAdapter.SurveyVie
         switch (v.getId()){
 
             case R.id.item_add_survey :
-                Intent menuAddSurvey = new Intent(context,MenuDataPersonalActivity.class);
-                context.startActivity(menuAddSurvey);
+                if (!is_data.equals("0")) {
+                    Intent menuAddSurvey = new Intent(context, MenuDataPersonalActivity.class);
+                    context.startActivity(menuAddSurvey);
+                } else {
+                    Intent menuDetailSurvey = new Intent(context, DetailScanBarcodeActivity.class);
+                    context.startActivity(menuDetailSurvey);
+                }
         }
     }
 

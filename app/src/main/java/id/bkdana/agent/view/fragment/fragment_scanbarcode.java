@@ -91,7 +91,7 @@ public class fragment_scanbarcode extends AppCompatActivity implements View.OnCl
             return;
         }
 
-//        initialiseDetectorsAndSources();
+        initialiseDetectorsAndSources();
     }
 
 

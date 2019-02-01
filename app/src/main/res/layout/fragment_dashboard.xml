@@ -85,9 +85,10 @@
                 <id.bkdana.agent.widget.MontserratSemiBoldTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="16.2sp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15sp"
                     android:textColor="#585f6f"
-                    android:text="Total Survey"/>
+                    android:text="Total My Survey"/>
 
             </LinearLayout>
 
@@ -113,9 +114,10 @@
                 <id.bkdana.agent.widget.MontserratSemiBoldTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="16.2sp"
+                    android:layout_marginLeft="3dp"
+                    android:textSize="15sp"
                     android:textColor="#585f6f"
-                    android:text="Total Collection"/>
+                    android:text="Total My Collection"/>
 
             </LinearLayout>
         </LinearLayout>
@@ -149,9 +151,9 @@
                 <id.bkdana.agent.widget.MontserratSemiBoldTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="16.2sp"
+                    android:textSize="15sp"
                     android:textColor="#585f6f"
-                    android:text="List Survey"/>
+                    android:text="My Survey"/>
 
             </LinearLayout>
 
@@ -176,9 +178,9 @@
                 <id.bkdana.agent.widget.MontserratSemiBoldTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="16.2sp"
+                    android:textSize="15sp"
                     android:textColor="#585f6f"
-                    android:text="List Collection"/>
+                    android:text="My Collection"/>
 
             </LinearLayout>
         </LinearLayout>

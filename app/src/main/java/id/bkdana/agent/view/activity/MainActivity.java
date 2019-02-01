@@ -13,6 +13,7 @@ import android.view.MenuItem;
 
 import id.bkdana.agent.R;
 import id.bkdana.agent.view.fragment.fragment_dashboard;
+import id.bkdana.agent.view.fragment.fragment_profile;
 import id.bkdana.agent.view.fragment.fragment_scanbarcode;
 
 public class MainActivity extends AppCompatActivity {
@@ -45,11 +46,17 @@ public class MainActivity extends AppCompatActivity {
                     fragment = new fragment_dashboard();
                     loadFragment(fragment);
                     return true;
+                case R.id.navigation_listsurvey:
+                    Intent menuListSurvey = new Intent(MainActivity.this,ListSurveyActivity.class);
+                    startActivity(menuListSurvey);
+                    return true;
                 case R.id.navigation_scanbarcode:
-                    Intent i = new Intent(MainActivity.this,fragment_scanbarcode.class);
-                    startActivity(i);
+                    Intent menuScan = new Intent(MainActivity.this,DetailScanBarcodeActivity.class);
+                    startActivity(menuScan);
                     return true;
                 case R.id.navigation_profile:
+                    fragment = new fragment_profile();
+                    loadFragment(fragment);
                     return true;
 
             }

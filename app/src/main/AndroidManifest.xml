@@ -46,7 +46,9 @@
         <activity android:name=".view.activity.NotifSurveyActivity" />
         <activity android:name=".view.fragment.fragment_scanbarcode" />
         <activity android:name=".view.activity.DetailScanBarcodeActivity" />
-        <activity android:name=".view.activity.InputPenagihanActivity"></activity>
+        <activity android:name=".view.activity.InputPenagihanActivity" />
+        <activity android:name=".view.activity.ListMySurveyActivity" />
+        <activity android:name=".view.activity.ListMyCollection"></activity>
     </application>
 
 </manifest>

@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import id.bkdana.agent.R;
+import id.bkdana.agent.view.activity.ListMySurveyActivity;
 import id.bkdana.agent.view.activity.ListSurveyActivity;
 
 public class fragment_dashboard extends Fragment implements View.OnClickListener {
@@ -38,7 +39,7 @@ public class fragment_dashboard extends Fragment implements View.OnClickListener
         switch (v.getId()){
 
             case R.id.llListSurvey :
-                Intent menuListSurvey = new Intent(getActivity(),ListSurveyActivity.class);
+                Intent menuListSurvey = new Intent(getActivity(),ListMySurveyActivity.class);
                 getActivity().startActivity(menuListSurvey);
                 break;
         }
