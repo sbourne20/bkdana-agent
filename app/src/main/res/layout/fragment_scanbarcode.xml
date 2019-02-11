@@ -23,7 +23,7 @@
             android:layout_centerVertical="true"
             android:paddingRight="22.3dp"/>
 
-        <id.bkdana.agent.widget.MontserratBoldTextView
+        <id.bkdana.agent.Util.widget.MontserratBoldTextView
             android:id="@+id/cap_survey"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -34,7 +34,7 @@
             android:text="Scan Barcode"
             />
 
-        <id.bkdana.agent.widget.WorkSansRegularTextView
+        <id.bkdana.agent.Util.widget.WorkSansRegularTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/cap_survey"

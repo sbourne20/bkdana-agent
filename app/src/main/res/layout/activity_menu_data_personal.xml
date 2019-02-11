@@ -26,7 +26,7 @@
             android:layout_centerVertical="true"
             android:paddingRight="22.3dp"/>
 
-        <id.bkdana.agent.widget.MontserratBoldTextView
+        <id.bkdana.agent.Util.widget.MontserratBoldTextView
             android:id="@+id/cap_survey"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
             android:text="Form Survey"
             />
 
-        <id.bkdana.agent.widget.WorkSansRegularTextView
+        <id.bkdana.agent.Util.widget.WorkSansRegularTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/cap_survey"
@@ -66,23 +66,23 @@
                 android:background="@drawable/shape_4"
                 android:paddingTop="14dp">
 
-                <id.bkdana.agent.widget.MontserratMediumTextView
+                <id.bkdana.agent.Util.widget.MontserratMediumTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="15.2sp"
                     android:textColor="#585f6f"
                     android:text="ID Transaksi"/>
 
-                <id.bkdana.agent.widget.MontserratMediumTextView
-                    android:id="@+id/tv_id_transaksi"
+                <id.bkdana.agent.Util.widget.MontserratMediumTextView
+                    android:id="@+id/tv_dataPersonal_masterLoadId"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:textColor="@color/topaz"
-                    android:text="PM-FB7FFC0B5787"/>
+                    android:text=""/>
 
 
-                <id.bkdana.agent.widget.MontserratMediumTextView
+                <id.bkdana.agent.Util.widget.MontserratMediumTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="10.7dp"
@@ -90,14 +90,14 @@
                     android:textColor="#585f6f"
                     android:text="Product"/>
 
-                <id.bkdana.agent.widget.MontserratMediumTextView
-                    android:id="@+id/tv_product"
+                <id.bkdana.agent.Util.widget.MontserratMediumTextView
+                    android:id="@+id/tv_dataPersonal_produktitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingBottom="17.7dp"
                     android:textSize="20sp"
                     android:textColor="@color/topaz"
-                    android:text="PM-Pinjaman Mikro 3 Bulan"/>
+                    android:text=""/>
 
             </LinearLayout>
 
@@ -108,14 +108,14 @@
                 android:orientation="vertical"
                 android:paddingTop="10dp">
 
-                <id.bkdana.agent.widget.MontserratMediumTextView
+                <id.bkdana.agent.Util.widget.MontserratMediumTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="13.5sp"
                     android:textColor="#fd666666"
                     android:text="* Nama Lengkap" />
 
-                <id.bkdana.agent.widget.MontserratMediumEditText
+                <id.bkdana.agent.Util.widget.MontserratMediumEditText
                     android:id="@+id/et_nama_peminjam"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -132,19 +132,21 @@
                 android:orientation="vertical"
                 android:paddingTop="10dp">
 
-                <id.bkdana.agent.widget.MontserratMediumTextView
+                <id.bkdana.agent.Util.widget.MontserratMediumTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="13.5sp"
                     android:textColor="#fd666666"
                     android:text="* Alamat" />
 
-                <id.bkdana.agent.widget.MontserratMediumEditText
+                <id.bkdana.agent.Util.widget.MontserratMediumEditText
                     android:id="@+id/et_alamat_peminjam"
                     android:layout_width="wrap_content"
                     android:layout_height="90dp"
                     android:layout_marginTop="5dp"
                     android:paddingLeft="17.3dp"
+                    android:paddingTop="5dp"
+                    android:gravity="top"
                     android:textSize="13.5sp"
                     android:background="@drawable/textview_bg"/>
 
@@ -156,14 +158,14 @@
                     android:orientation="vertical"
                     android:paddingTop="10dp">
 
-                    <id.bkdana.agent.widget.MontserratMediumTextView
+                    <id.bkdana.agent.Util.widget.MontserratMediumTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="13.5sp"
                         android:textColor="#fd666666"
                         android:text="* No. KTP" />
 
-                    <id.bkdana.agent.widget.MontserratMediumEditText
+                    <id.bkdana.agent.Util.widget.MontserratMediumEditText
                         android:id="@+id/et_noktp_peminjam"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -185,7 +187,7 @@
                 android:layout_marginTop="25dp">
 
 
-                <id.bkdana.agent.widget.MontserratSemiBoldButton
+                <id.bkdana.agent.Util.widget.MontserratSemiBoldButton
                     android:id="@+id/btn_selanjutnya_peminjam"
                     android:layout_width="153dp"
                     android:layout_height="35.7dp"

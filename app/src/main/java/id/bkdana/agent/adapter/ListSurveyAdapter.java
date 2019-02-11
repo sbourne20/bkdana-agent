@@ -10,28 +10,28 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import id.bkdana.agent.R;
 import id.bkdana.agent.model.DataListSurvey;
+import id.bkdana.agent.model.response.listSurveyResponse.ListPeminjam;
 import id.bkdana.agent.view.activity.DetailScanBarcodeActivity;
 import id.bkdana.agent.view.activity.MenuDataPersonalActivity;
 
 public class ListSurveyAdapter extends RecyclerView.Adapter<ListSurveyAdapter.SurveyViewHolder> implements View.OnClickListener {
 
     private Context context;
-    private List<DataListSurvey> data;
-    private String is_data;
+    private List<ListPeminjam> data;
 
-    public ListSurveyAdapter(Context context, List<DataListSurvey> data) {
 
-    }
 
-    public ListSurveyAdapter(Context context, ArrayList<DataListSurvey> data, String is_data) {
+
+    public ListSurveyAdapter(Context context, List<ListPeminjam> data) {
         this.context = context ;
         this.data = data;
-        this.is_data = is_data;
     }
 
     @NonNull
@@ -44,20 +44,29 @@ public class ListSurveyAdapter extends RecyclerView.Adapter<ListSurveyAdapter.Su
     }
 
     @Override
-    public void onBindViewHolder(@NonNull SurveyViewHolder surveyViewHolder, int position) {
-        final DataListSurvey datum = data.get(position);
+    public void onBindViewHolder(@NonNull final SurveyViewHolder surveyViewHolder, int position) {
+        final ListPeminjam datum = data.get(position);
 
-        if(is_data.equals("0")){
-            surveyViewHolder.item_add_survey.setText("detail survey");
-        } else {
-            surveyViewHolder.item_add_survey.setText("add survey");
-        }
-        surveyViewHolder.item_nama_peminjam.setText(datum.getNama());
-        surveyViewHolder.item_no_reg_peminjam.setText(datum.getNo_reg());
-        surveyViewHolder.item_bulan_peminjam.setText(datum.getTenor());
-        surveyViewHolder.item_total_peminjaman.setText(datum.getTotal_pinjaman());
+        Locale localeID = new Locale("in", "ID");
+        NumberFormat formatRupiah = NumberFormat.getCurrencyInstance(localeID);
 
-        surveyViewHolder.item_add_survey.setOnClickListener(this);
+        surveyViewHolder.item_add_survey.setText("add survey");
+        surveyViewHolder.item_nama_peminjam.setText(datum.getNamaPeminjam());
+        surveyViewHolder.item_no_reg_peminjam.setText(datum.getTransaksiId());
+        surveyViewHolder.item_bulan_peminjam.setText(datum.getLoanTerm() + " Bulan");
+        surveyViewHolder.item_total_peminjaman.setText(formatRupiah.format((double)Integer.parseInt(datum.getTotalPinjam())));
+
+        surveyViewHolder.item_add_survey.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent menuAddSurvey = new Intent(v.getContext(), MenuDataPersonalActivity.class);
+                menuAddSurvey.putExtra("intent_idPeminjam", datum.getIdPeminjam());
+                menuAddSurvey.putExtra("intent_masterLoadId", datum.getTransaksiId());
+                menuAddSurvey.putExtra("intent_productTitle", datum.getProductTitle());
+
+                context.startActivity(menuAddSurvey);
+            }
+        });
 
     }
 
@@ -71,13 +80,9 @@ public class ListSurveyAdapter extends RecyclerView.Adapter<ListSurveyAdapter.Su
         switch (v.getId()){
 
             case R.id.item_add_survey :
-                if (!is_data.equals("0")) {
-                    Intent menuAddSurvey = new Intent(context, MenuDataPersonalActivity.class);
-                    context.startActivity(menuAddSurvey);
-                } else {
-                    Intent menuDetailSurvey = new Intent(context, DetailScanBarcodeActivity.class);
-                    context.startActivity(menuDetailSurvey);
-                }
+
+                    break;
+
         }
     }
 

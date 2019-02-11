@@ -17,7 +17,7 @@
         android:paddingBottom="18dp"
         />
 
-    <id.bkdana.agent.widget.MontserratSemiBoldTextView
+    <id.bkdana.agent.Util.widget.MontserratSemiBoldTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="16.3sp"

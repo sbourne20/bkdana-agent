@@ -6,46 +6,72 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import id.bkdana.agent.R;
-import id.bkdana.agent.adapter.ListSurveyAdapter;
-import id.bkdana.agent.model.DataListSurvey;
+import id.bkdana.agent.Util.EndlessOnScrollListener;
+import id.bkdana.agent.Util.Session.BKDanaAgentSession;
+import id.bkdana.agent.adapter.ListMySurveyAdapter;
+import id.bkdana.agent.contarct.ListMySurveyContract;
+import id.bkdana.agent.model.response.listMySurveyResponse.ListMySurveyResponse;
+import id.bkdana.agent.model.response.listMySurveyResponse.ListMysurvey;
+import id.bkdana.agent.presenter.ListMySurveyPresenter;
+import id.bkdana.agent.view.bridge.ListMySurveyBridge;
 
-public class ListMySurveyActivity extends AppCompatActivity implements View.OnClickListener {
+public class ListMySurveyActivity extends AppCompatActivity implements ListMySurveyBridge<ListMySurveyResponse>, View.OnClickListener {
 
     private RecyclerView rv_mysurvey;
-    private RecyclerView.LayoutManager mLayoutManager;
-    private ListSurveyAdapter mAdapter;
+    private ListMySurveyAdapter mAdapter;
     private ImageView iv_back_list_mysurvey;
+    private BKDanaAgentSession agentSession;
+    private ListMySurveyContract listMySurveyContract;
+    private EndlessOnScrollListener scrollListener;
+    private int offset = 1;
+    private List<ListMysurvey> datumList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_my_survey);
 
+        agentSession = new BKDanaAgentSession(this);
+        listMySurveyContract = new ListMySurveyPresenter(agentSession,this,this);
 
-        ArrayList<DataListSurvey> data = new ArrayList<>();
+//        ArrayList<DataListSurvey> data = new ArrayList<>();
 
         iv_back_list_mysurvey = findViewById(R.id.iv_back_list_mysurvey);
         rv_mysurvey = findViewById(R.id.rv_mysurvey);
         rv_mysurvey.setHasFixedSize(true);
 
+
+        listMySurveyContract.getListMySurvey(agentSession.getidMod(),"0","10");
         // use a linear layout manager
-        mLayoutManager = new LinearLayoutManager(this);
+        LinearLayoutManager mLayoutManager = new LinearLayoutManager(this);
         rv_mysurvey.setLayoutManager(mLayoutManager);
 
-        // specify an adapter (see also next example)
-
-        data.add(new DataListSurvey("Dedi Kusniadi Saputra","No. PM-FB7FFCOA1234"," 3 Bulan","Rp 10 JT"));
-        data.add(new DataListSurvey("Nurhadia","No. PM-FB7FFCOA1234"," 12 Bulan","Rp 20 JT"));
-        data.add(new DataListSurvey("Aldo","No. PM-FB7FFCOA1234"," 6 Bulan","Rp 15 JT"));
-        data.add(new DataListSurvey("Asep","No. PM-FB7FFCOA1234"," 10 Bulan","Rp 25 JT"));
-        data.add(new DataListSurvey("Nanag","No. PM-FB7FFCOA1234"," 3 Bulan","Rp 5 JT"));
-
-        mAdapter = new ListSurveyAdapter(this,data,"0");
+        mAdapter = new ListMySurveyAdapter(this,datumList);
         rv_mysurvey.setAdapter(mAdapter);
+
+        scrollListener = new EndlessOnScrollListener(mLayoutManager) {
+            @Override
+            public void onLoadMore(int page, int totalItemsCount, RecyclerView view) {
+                offset = offset + 1;
+                listMySurveyContract.getListMySurvey(agentSession.getidMod(),String.valueOf(offset),"10");
+                final int curSize = mAdapter.getItemCount();
+
+
+                view.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        mAdapter.notifyItemRangeInserted(curSize, datumList.size() - 1);
+                    }
+                });
+            }
+        };
+        rv_mysurvey.addOnScrollListener(scrollListener);
 
         iv_back_list_mysurvey.setOnClickListener(this);
     }
@@ -65,5 +91,19 @@ public class ListMySurveyActivity extends AppCompatActivity implements View.OnCl
         super.onBackPressed();
 
         finish();
+    }
+
+
+    @Override
+    public void onSuccessListMySurvey(ListMySurveyResponse response) {
+        for (int i = 0; i < response.getContent().getListMysurvey().size() ; i++) {
+            datumList.add(response.getContent().getListMysurvey().get(i));
+            mAdapter.notifyDataSetChanged();
+        }
+    }
+
+    @Override
+    public void onFailureListMySurvey(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 }

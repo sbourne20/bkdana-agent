@@ -16,7 +16,7 @@
         android:paddingTop="27dp">
 
 
-        <id.bkdana.agent.widget.MontserratBoldTextView
+        <id.bkdana.agent.Util.widget.MontserratBoldTextView
             android:id="@+id/cap_survey"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
             android:src="@drawable/vector_smart_object"
             android:layout_centerHorizontal="true"/>
 
-        <id.bkdana.agent.widget.MontserratMediumTextView
+        <id.bkdana.agent.Util.widget.MontserratMediumTextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/iv_notif_survey"
@@ -73,7 +73,7 @@
         android:layout_marginTop="25dp">
 
 
-        <id.bkdana.agent.widget.MontserratSemiBoldButton
+        <id.bkdana.agent.Util.widget.MontserratSemiBoldButton
             android:id="@+id/btn_selesai_survey_peminjam"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

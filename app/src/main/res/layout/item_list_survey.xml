@@ -5,23 +5,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="149dp"
-    android:layout_marginBottom="30dp"
+    android:layout_marginBottom="20dp"
     android:layout_gravity="center_horizontal"
     android:background="@drawable/bg_item_list_survey">
 
-    <id.bkdana.agent.widget.MontserratBoldTextView
+    <id.bkdana.agent.Util.widget.MontserratBoldTextView
         android:id="@+id/item_nama_peminjam"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="11dp"
         android:paddingTop="11dp"
-        android:textSize="12.2sp"
+        android:textSize="14.2sp"
         android:textColor="#666666"
         android:letterSpacing="0.01"
         android:lineSpacingExtra="4.8sp"
         android:text="Agus Soepono"/>
 
-    <id.bkdana.agent.widget.WorkSansSemiBoldTextView
+    <id.bkdana.agent.Util.widget.WorkSansSemiBoldTextView
         android:id="@+id/item_no_reg_peminjam"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
         android:textSize="14sp"
         app:layout_constraintTop_toBottomOf="@+id/item_nama_peminjam" />
 
-    <id.bkdana.agent.widget.MontserratBoldTextView
+    <id.bkdana.agent.Util.widget.MontserratBoldTextView
         android:id="@+id/item_tenor_peminjam"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -50,12 +50,11 @@
         app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toEndOf="@+id/item_nama_peminjam"/>
 
-    <id.bkdana.agent.widget.WorkSansSemiBoldTextView
+    <id.bkdana.agent.Util.widget.WorkSansSemiBoldTextView
         android:id="@+id/item_bulan_peminjam"
         android:layout_width="wrap_content"
         android:layout_height="27dp"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
         android:lineSpacingExtra="1sp"
         android:paddingLeft="11dp"
         android:text="3 Bulan"
@@ -66,7 +65,7 @@
         app:layout_constraintStart_toEndOf="@+id/item_no_reg_peminjam"
         app:layout_constraintTop_toBottomOf="@+id/item_nama_peminjam" />
 
-    <id.bkdana.agent.widget.WorkSansSemiBoldTextView
+    <id.bkdana.agent.Util.widget.WorkSansSemiBoldTextView
         android:id="@+id/item_total_cap_peminjam"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -80,7 +79,7 @@
         app:layout_constraintTop_toBottomOf="@+id/item_no_reg_peminjam"
         app:layout_constraintVertical_bias="0.136"/>
 
-    <id.bkdana.agent.widget.WorkSansSemiBoldTextView
+    <id.bkdana.agent.Util.widget.WorkSansSemiBoldTextView
         android:id="@+id/item_total_peminjaman"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -100,7 +99,7 @@
         app:layout_constraintVertical_bias="0.051"
         tools:text="Rp 10 JT" />
 
-    <id.bkdana.agent.widget.MontserratSemiBoldButton
+    <id.bkdana.agent.Util.widget.MontserratSemiBoldButton
         android:id="@+id/item_add_survey"
         android:layout_width="wrap_content"
         android:layout_height="28.3dp"

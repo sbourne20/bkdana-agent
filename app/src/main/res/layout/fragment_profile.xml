@@ -47,46 +47,46 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout3">
 
-        <id.bkdana.agent.widget.MontserratMediumTextView
+        <id.bkdana.agent.Util.widget.MontserratMediumTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nama"
             android:textSize="15.2sp" />
 
-        <id.bkdana.agent.widget.MontserratMediumTextView
+        <id.bkdana.agent.Util.widget.MontserratMediumTextView
             android:id="@+id/tv_nama_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Andika Desta Permana"
+            android:text=""
             android:textSize="20sp" />
 
 
-        <id.bkdana.agent.widget.MontserratMediumTextView
+        <id.bkdana.agent.Util.widget.MontserratMediumTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="15dp"
             android:text="E-mail"
             android:textSize="15.2sp" />
 
-        <id.bkdana.agent.widget.MontserratMediumTextView
+        <id.bkdana.agent.Util.widget.MontserratMediumTextView
             android:id="@+id/tv_email_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Desta@gmail.com"
+            android:text=""
             android:textSize="20sp" />
 
-        <id.bkdana.agent.widget.MontserratMediumTextView
+        <id.bkdana.agent.Util.widget.MontserratMediumTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="15dp"
             android:text="Phone"
             android:textSize="15.2sp" />
 
-        <id.bkdana.agent.widget.MontserratMediumTextView
+        <id.bkdana.agent.Util.widget.MontserratMediumTextView
             android:id="@+id/tv_phone_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="+628 618 5892 68"
+            android:text=""
             android:textSize="20sp" />
 
     </LinearLayout>

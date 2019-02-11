@@ -3,7 +3,7 @@
     android:layout_width="317dp"
     android:layout_height="225.3dp">
 
-    <id.bkdana.agent.widget.MontserratSemiBoldTextView
+    <id.bkdana.agent.Util.widget.MontserratSemiBoldTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="20dp"
@@ -13,7 +13,7 @@
         android:lineSpacingExtra="11.3sp"
         android:text="Apakah Anda Yakin?"
         />
-    <id.bkdana.agent.widget.MontserratMediumTextView
+    <id.bkdana.agent.Util.widget.MontserratMediumTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"

@@ -48,7 +48,8 @@
         <activity android:name=".view.activity.DetailScanBarcodeActivity" />
         <activity android:name=".view.activity.InputPenagihanActivity" />
         <activity android:name=".view.activity.ListMySurveyActivity" />
-        <activity android:name=".view.activity.ListMyCollection"></activity>
+        <activity android:name=".view.activity.ListMyCollectionActivity" />
+        <activity android:name=".view.activity.DetailSurveyActivity"></activity>
     </application>
 
 </manifest>

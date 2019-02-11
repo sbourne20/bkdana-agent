@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(menuListSurvey);
                     return true;
                 case R.id.navigation_scanbarcode:
-                    Intent menuScan = new Intent(MainActivity.this,DetailScanBarcodeActivity.class);
+                    Intent menuScan = new Intent(MainActivity.this,fragment_scanbarcode.class);
                     startActivity(menuScan);
                     return true;
                 case R.id.navigation_profile:

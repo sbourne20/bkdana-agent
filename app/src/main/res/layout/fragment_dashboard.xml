@@ -20,7 +20,7 @@
             android:layout_marginLeft="24.1dp"
             android:src="@drawable/mask_by_oval_copy_3" />
 
-        <id.bkdana.agent.widget.MontserratMediumTextView
+        <id.bkdana.agent.Util.widget.MontserratMediumTextView
             android:id="@+id/tv_name_agent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -32,7 +32,7 @@
             android:textColor="@color/white"
             android:textSize="17.3sp" />
 
-        <id.bkdana.agent.widget.WorkSansRegularTextView
+        <id.bkdana.agent.Util.widget.WorkSansRegularTextView
             android:id="@+id/tv_id_agent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -44,6 +44,14 @@
             android:text="Agent #2313"
             android:textColor="@color/white"
             android:textSize="16.8sp" />
+
+        <ImageView
+            android:id="@+id/iv_signout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/signout"
+            android:paddingRight="10dp"
+            android:layout_alignParentRight="true"/>
     </RelativeLayout>
 
 
@@ -73,16 +81,17 @@
                 android:layout_weight="1"
                 android:layout_centerHorizontal="true">
 
-                <id.bkdana.agent.widget.WorkSansSemiBoldTextView
+                <id.bkdana.agent.Util.widget.WorkSansSemiBoldTextView
+                    android:id="@+id/tv_total_mysurvey"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:textSize="42.8sp"
                     android:textColor="@color/topaz"
-                    android:text="11" />
+                    android:text="" />
 
-                <id.bkdana.agent.widget.MontserratSemiBoldTextView
+                <id.bkdana.agent.Util.widget.MontserratSemiBoldTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -102,16 +111,17 @@
                 android:layout_toRightOf="@id/llTotalSurvey"
                 android:layout_centerHorizontal="true">
 
-                <id.bkdana.agent.widget.WorkSansSemiBoldTextView
+                <id.bkdana.agent.Util.widget.WorkSansSemiBoldTextView
+                    android:id="@+id/tv_total_mycollection"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:textSize="42.8sp"
                     android:textColor="@color/topaz"
-                    android:text="0" />
+                    android:text="" />
 
-                <id.bkdana.agent.widget.MontserratSemiBoldTextView
+                <id.bkdana.agent.Util.widget.MontserratSemiBoldTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="3dp"
@@ -148,7 +158,7 @@
                     android:padding="10dp"
                     android:src="@drawable/list_2" />
 
-                <id.bkdana.agent.widget.MontserratSemiBoldTextView
+                <id.bkdana.agent.Util.widget.MontserratSemiBoldTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
@@ -175,7 +185,7 @@
                     android:gravity="center"
                     android:src="@drawable/list_2" />
 
-                <id.bkdana.agent.widget.MontserratSemiBoldTextView
+                <id.bkdana.agent.Util.widget.MontserratSemiBoldTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"

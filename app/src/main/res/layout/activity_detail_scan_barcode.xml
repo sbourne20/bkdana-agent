@@ -24,7 +24,7 @@
             android:paddingRight="22.3dp"
             android:src="@drawable/layer_6" />
 
-        <id.bkdana.agent.widget.MontserratBoldTextView
+        <id.bkdana.agent.Util.widget.MontserratBoldTextView
             android:id="@+id/cap_survey"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -34,7 +34,7 @@
             android:textColor="@color/white_two"
             android:textSize="24.2sp" />
 
-        <id.bkdana.agent.widget.WorkSansRegularTextView
+        <id.bkdana.agent.Util.widget.WorkSansRegularTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/cap_survey"
@@ -60,14 +60,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout3">
 
-        <id.bkdana.agent.widget.MontserratMediumTextView
+        <id.bkdana.agent.Util.widget.MontserratMediumTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ID Transaksi"
             android:textColor="#585f6f"
             android:textSize="15.2sp" />
 
-        <id.bkdana.agent.widget.MontserratMediumTextView
+        <id.bkdana.agent.Util.widget.MontserratMediumTextView
             android:id="@+id/tv_id_transaksi_scanbarcode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -76,7 +76,7 @@
             android:textSize="20sp" />
 
 
-        <id.bkdana.agent.widget.MontserratMediumTextView
+        <id.bkdana.agent.Util.widget.MontserratMediumTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="10.7dp"
@@ -84,7 +84,7 @@
             android:textColor="#585f6f"
             android:textSize="15.2sp" />
 
-        <id.bkdana.agent.widget.MontserratMediumTextView
+        <id.bkdana.agent.Util.widget.MontserratMediumTextView
             android:id="@+id/tv_product_scanbarcode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -92,7 +92,7 @@
             android:textColor="@color/topaz"
             android:textSize="20sp" />
 
-        <id.bkdana.agent.widget.MontserratMediumTextView
+        <id.bkdana.agent.Util.widget.MontserratMediumTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="10.7dp"
@@ -100,7 +100,7 @@
             android:textColor="#585f6f"
             android:textSize="15.2sp" />
 
-        <id.bkdana.agent.widget.MontserratMediumTextView
+        <id.bkdana.agent.Util.widget.MontserratMediumTextView
             android:id="@+id/tv_nama_scanbarcode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -108,7 +108,7 @@
             android:textColor="@color/topaz"
             android:textSize="20sp" />
 
-        <id.bkdana.agent.widget.MontserratMediumTextView
+        <id.bkdana.agent.Util.widget.MontserratMediumTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="10.7dp"
@@ -116,7 +116,7 @@
             android:textColor="#585f6f"
             android:textSize="15.2sp" />
 
-        <id.bkdana.agent.widget.MontserratMediumTextView
+        <id.bkdana.agent.Util.widget.MontserratMediumTextView
             android:id="@+id/tv_tenor_scanbarcode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -124,7 +124,7 @@
             android:textColor="@color/topaz"
             android:textSize="20sp" />
 
-        <id.bkdana.agent.widget.MontserratMediumTextView
+        <id.bkdana.agent.Util.widget.MontserratMediumTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="10.7dp"
@@ -132,7 +132,7 @@
             android:textColor="#585f6f"
             android:textSize="15.2sp" />
 
-        <id.bkdana.agent.widget.MontserratMediumTextView
+        <id.bkdana.agent.Util.widget.MontserratMediumTextView
             android:id="@+id/tv_jmlpembayaran_scanbarcode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -153,7 +153,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
 
-        <id.bkdana.agent.widget.MontserratSemiBoldButton
+        <id.bkdana.agent.Util.widget.MontserratSemiBoldButton
             android:id="@+id/btn_selanjutnya_scanbarcode"
             android:layout_width="153dp"
             android:layout_height="35.7dp"

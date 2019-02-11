@@ -32,10 +32,17 @@ import com.google.android.gms.vision.barcode.BarcodeDetector;
 import java.io.IOException;
 
 import id.bkdana.agent.R;
+import id.bkdana.agent.Util.ConnectionDetector;
+import id.bkdana.agent.Util.Session.BKDanaAgentSession;
+import id.bkdana.agent.contarct.ScanBarcodeContract;
+import id.bkdana.agent.model.response.scanBarcodeResponse.DataBorrower;
+import id.bkdana.agent.model.response.scanBarcodeResponse.ScanBarcodeResponse;
+import id.bkdana.agent.presenter.ScanBarcodePresenter;
 import id.bkdana.agent.view.activity.DetailScanBarcodeActivity;
 import id.bkdana.agent.view.activity.MainActivity;
+import id.bkdana.agent.view.bridge.ScanBarcodeBridge;
 
-public class fragment_scanbarcode extends AppCompatActivity implements View.OnClickListener {
+public class fragment_scanbarcode extends AppCompatActivity implements ScanBarcodeBridge<ScanBarcodeResponse>, View.OnClickListener {
 
     private ObjectAnimator animator;
     private SurfaceView surfaceView;
@@ -44,6 +51,11 @@ public class fragment_scanbarcode extends AppCompatActivity implements View.OnCl
     private TextView txtBarcodeValue;
     private String uniqueid;
     private ImageView iv_back_scanbarcode;
+
+    private BKDanaAgentSession agentSession;
+    private ScanBarcodeContract scanBarcodeContract;
+    private ConnectionDetector cd;
+    private Boolean isInternetPresent = false;
 
 
     private BarcodeDetector barcodeDetector;
@@ -55,6 +67,10 @@ public class fragment_scanbarcode extends AppCompatActivity implements View.OnCl
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_scanbarcode);
+
+        agentSession = new BKDanaAgentSession(this);
+        scanBarcodeContract = new ScanBarcodePresenter(agentSession,this,this);
+        cd = new ConnectionDetector(this);
 
         txtBarcodeValue = findViewById(R.id.txtBarcodeValue);
         scannerLayout = findViewById(R.id.scannerLayout);
@@ -151,11 +167,7 @@ public class fragment_scanbarcode extends AppCompatActivity implements View.OnCl
                             if (barcodes.valueAt(0).displayValue != null) {
                                 uniqueid = barcodes.valueAt(0).displayValue;
 //                                txtBarcodeValue.setText(intentData);
-
-                                Intent i = new Intent(fragment_scanbarcode.this,DetailScanBarcodeActivity.class);
-                                startActivity(i);
-                                finish();
-
+                                    onSendData(uniqueid);
                             }
                         }
                     });
@@ -193,6 +205,18 @@ public class fragment_scanbarcode extends AppCompatActivity implements View.OnCl
         finish();
     }
 
+    void onSendData(String id){
+
+        isInternetPresent = cd.isConnectingToInternet();
+        if (isInternetPresent) {
+            scanBarcodeContract.postScanBarcode(id);
+        }  else if (isInternetPresent.equals(false)) {
+            Toast.makeText(this, "Tidak ada koneksi Internet", Toast.LENGTH_LONG).show();
+        }
+
+    }
+
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -202,5 +226,19 @@ public class fragment_scanbarcode extends AppCompatActivity implements View.OnCl
                 finish();
                 break;
         }
+    }
+
+    @Override
+    public void onSuccessScanBarcode(ScanBarcodeResponse response) {
+        Intent menuDetailScan = new Intent(fragment_scanbarcode.this,DetailScanBarcodeActivity.class);
+        DataBorrower dataBorrower = new DataBorrower();
+        menuDetailScan.putExtra("dataBorrowe", dataBorrower);
+        startActivity(menuDetailScan);
+        finish();
+    }
+
+    @Override
+    public void onFailureScanBarcode(String message) {
+
     }
 }
