@@ -1,6 +1,7 @@
 package id.bkdana.agent.service;
 
 import id.bkdana.agent.model.response.dashboardResponse.DashboardResponse;
+import id.bkdana.agent.model.response.detailMyCollectionResponse.DetailMyCollectionResponse;
 import id.bkdana.agent.model.response.detailSurveyResponse.DetailSurveyResponse;
 import id.bkdana.agent.model.response.formSurverResponse.FormSurveyResponse;
 import id.bkdana.agent.model.response.listMyCollectionResponse.ListCollectionResponse;
@@ -17,6 +18,7 @@ import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
+import retrofit2.http.HEAD;
 import retrofit2.http.Header;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
@@ -84,18 +86,19 @@ public interface BKDapi {
 
     @POST("collection/submit_collection")
     Call<SubmitCollectionReponse> postSubmitCollection (@Header("Authorization") String Authorization,
-                                                        @Field("id_agent") String id_agent,
-                                                        @Field("id_peminjam") String id_peminjam,
+                                                        @Field("user_id") String user_id,
+                                                        @Field("id_mod_agent") String id_mod_agent,
                                                         @Field("master_loan_id") String master_loan_id,
-                                                        @Field("product_title") String product_title,
-                                                        @Field("nama") String nama,
-                                                        @Field("no_ktp") String no_ktp,
-                                                        @Field("borrower_code") String borrower_code,
-                                                        @Field("hutang_pokok") String hutang_pokok,
-                                                        @Field("jumlah_pembayaran") String jumlah_pembayaran);
+                                                        @Field("jml_tagihan") String jml_tagihan,
+                                                        @Field("sisa_tagihan") String sisa_tagihan,
+                                                        @Field("borrower_code") String borrower_code);
     @FormUrlEncoded
     @POST("survey/details_survey")
     Call<DetailSurveyResponse> postDetailMySurvey (@Header("Authorization") String Authorization,
                                                    @Field("id_mod_agent_survey") String id_mod_agent_survey);
+
+    @POST("collection/details_collection")
+    Call<DetailMyCollectionResponse> postDetailMyCollection (@Header("Authorization") String Authorization,
+                                                             @Field("Master_loan_id") String Master_loan_id);
 }
 

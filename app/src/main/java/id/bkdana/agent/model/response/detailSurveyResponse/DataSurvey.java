@@ -37,6 +37,8 @@ public class DataSurvey {
     private String mStatus;
     @SerializedName("survey_date")
     private String mSurveyDate;
+    @SerializedName("0")
+    private String m0;
 
     public String getAlamat() {
         return mAlamat;
@@ -166,4 +168,11 @@ public class DataSurvey {
         mSurveyDate = surveyDate;
     }
 
+    public String getM0() {
+        return m0;
+    }
+
+    public void setM0(String m0) {
+        this.m0 = m0;
+    }
 }

@@ -51,8 +51,6 @@ public class fragment_dashboard extends Fragment implements DashboardBridge<Dash
         dashboardContract = new DasboardPresenter(agentSession,getActivity(),this);
         dashboardContract.getDashboard();
 
-        Log.d(TAG, "onCreateView: " + agentSession.getFullname());
-
         tv_namaAgent.setText(agentSession.getFullname());
         tv_idAgent.setText("Agent #"+agentSession.getidMod());
         llListCollection.setOnClickListener(this);

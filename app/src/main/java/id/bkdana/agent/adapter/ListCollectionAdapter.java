@@ -1,6 +1,7 @@
 package id.bkdana.agent.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -15,6 +16,7 @@ import java.util.Locale;
 
 import id.bkdana.agent.R;
 import id.bkdana.agent.model.response.listMyCollectionResponse.ListMycollection;
+import id.bkdana.agent.view.activity.DetailMyCollectionActivity;
 
 public class ListCollectionAdapter extends RecyclerView.Adapter<ListCollectionAdapter.CollectionViewHolder> {
 
@@ -47,7 +49,14 @@ public class ListCollectionAdapter extends RecyclerView.Adapter<ListCollectionAd
 //        collectionViewHolder.tv_tenor_mycollection.setText(datum.getTenor()+" Bulan");
         collectionViewHolder.tv_sisa_hutang_collection.setText(formatRupiah.format((double)Integer.parseInt(datum.getSisaHutangPokok())));
         collectionViewHolder.tv_total_peminjam_collection.setText(formatRupiah.format((double)Integer.parseInt(datum.getHutangPokok())));
-        collectionViewHolder.btn_detail_collection.setVisibility(View.GONE);
+        collectionViewHolder.btn_detail_collection.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent menuDetailMyCollection = new Intent(context,DetailMyCollectionActivity.class);
+                menuDetailMyCollection.putExtra("masted_id",datum.getMasterLoanId());
+                context.startActivity(menuDetailMyCollection);
+            }
+        });
     }
 
     @Override

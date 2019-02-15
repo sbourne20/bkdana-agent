@@ -168,7 +168,7 @@
                 <ImageView
                     android:id="@+id/iv_img_detailMysurvey"
                     android:layout_width="330dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="180.3dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="15dp"
                     android:src="@drawable/layer_706" />

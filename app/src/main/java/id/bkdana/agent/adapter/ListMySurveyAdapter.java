@@ -52,8 +52,6 @@ public class ListMySurveyAdapter extends RecyclerView.Adapter<ListMySurveyAdapte
         mySurveyViewHolder.item_add_survey.setText("detail survey");
         mySurveyViewHolder.item_nama_peminjam.setText(datum.getNama());
         mySurveyViewHolder.item_no_reg_peminjam.setText(datum.getMasterLoanId());
-//        mySurveyViewHolder.item_bulan_peminjam.setText(datum.getLoanTerm() + " Bulan");
-//        mySurveyViewHolder.item_total_peminjaman.setText(datum.getTotalPinjam());
 
 
         mySurveyViewHolder.item_add_survey.setOnClickListener(new View.OnClickListener() {

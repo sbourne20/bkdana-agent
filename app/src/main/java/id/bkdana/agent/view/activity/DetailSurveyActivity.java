@@ -2,10 +2,13 @@ package id.bkdana.agent.view.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
@@ -40,10 +43,12 @@ public class DetailSurveyActivity extends AppCompatActivity implements DetailMyS
         setContentView(R.layout.activity_detail_survey);
 
         id_mod_agent_detail = getIntent().getStringExtra("detail_id");
+        Log.i("id", "onCreate: " + id_mod_agent_detail);
         agentSession = new BKDanaAgentSession(this);
         detailSurveyContract = new DetailMySurveyPresenter(agentSession,this,this);
 
         iv_back_detailmysurvey = findViewById(R.id.iv_back_detailmysurvey);
+        iv_img_detailMysurvey = findViewById(R.id.iv_img_detailMysurvey);
        tv_id_transaksi_detailmysurvey = findViewById(R.id.tv_id_transaksi_detailmysurvey);
         tv_id_produk_detailmysurvey = findViewById(R.id.tv_id_produk_detailmysurvey);
         tv_nama_deatilmysurvey = findViewById(R.id.tv_nama_deatilmysurvey);
@@ -69,6 +74,11 @@ public class DetailSurveyActivity extends AppCompatActivity implements DetailMyS
         List<DataSurvey> dataSurveys = new ArrayList<>();
         for (int i = 0; i < response.getContent().getDataSurvey().size(); i++) {
             dataSurveys.add(response.getContent().getDataSurvey().get(i));
+
+            if(dataSurveys.get(i).getM0() != null && !dataSurveys.get(i).getM0().isEmpty()) {
+                Picasso.get().load(dataSurveys.get(i).getM0()).error(R.drawable.layer_6).into(iv_img_detailMysurvey);
+            }
+
 
             tv_id_transaksi_detailmysurvey.setText(dataSurveys.get(i).getMasterLoanId());
             tv_id_produk_detailmysurvey.setText(dataSurveys.get(i).getProductTitle());

@@ -84,12 +84,35 @@
             <id.bkdana.agent.Util.widget.MontserratMediumTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="* Jumlah Pemabayaran"
+                android:text="* Jumlah Tagihan"
                 android:textColor="#fd666666"
                 android:textSize="13.5sp" />
 
             <id.bkdana.agent.Util.widget.MontserratMediumEditText
-                android:id="@+id/et_jmlpemabyaran_inputpenagihan"
+                android:id="@+id/et_jmltagihan_inputpenagihan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/textview_bg"
+                android:paddingLeft="17.3dp"
+                android:textSize="13.5sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+            <id.bkdana.agent.Util.widget.MontserratMediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="* Sisa Tagihan"
+                android:textColor="#fd666666"
+                android:textSize="13.5sp" />
+
+            <id.bkdana.agent.Util.widget.MontserratMediumEditText
+                android:id="@+id/et_sisatagihan_inputpenagihan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"

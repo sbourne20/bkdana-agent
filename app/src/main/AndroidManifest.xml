@@ -49,7 +49,9 @@
         <activity android:name=".view.activity.InputPenagihanActivity" />
         <activity android:name=".view.activity.ListMySurveyActivity" />
         <activity android:name=".view.activity.ListMyCollectionActivity" />
-        <activity android:name=".view.activity.DetailSurveyActivity"></activity>
+        <activity android:name=".view.activity.DetailSurveyActivity" />
+        <activity android:name=".view.activity.EditProfileActivity" />
+        <activity android:name=".view.activity.DetailMyCollection"></activity>
     </application>
 
 </manifest>

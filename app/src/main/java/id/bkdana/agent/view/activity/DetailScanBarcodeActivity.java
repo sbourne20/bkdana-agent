@@ -49,6 +49,7 @@ public class DetailScanBarcodeActivity extends AppCompatActivity implements View
 
 
         onSetData();
+
     }
 
     void onSetData(){
@@ -63,14 +64,19 @@ public class DetailScanBarcodeActivity extends AppCompatActivity implements View
         tv_jmlpembayaran_scanbarcode.setText(formatRupiah.format((double)Integer.parseInt(dataBorrower.getTotalPinjamanDisetujui())));
     }
 
+    void onSendData(){
+        Intent menuInput = new Intent(this,InputPenagihanActivity.class);
+        dataBorrower = new DataBorrower();
+        menuInput.putExtra("dataBorrowe",dataBorrower);
+        startActivity(menuInput);
+    }
+
     @Override
     public void onClick(View v) {
         switch (v.getId()){
 
             case R.id.btn_selanjutnya_scanbarcode :
-
-                Intent menuInput = new Intent(this,InputPenagihanActivity.class);
-                startActivity(menuInput);
+                onSendData();
                 break;
             case R.id.iv_back_scanbarcodedetail:
                 Intent menuScan = new Intent(this,fragment_scanbarcode.class);
