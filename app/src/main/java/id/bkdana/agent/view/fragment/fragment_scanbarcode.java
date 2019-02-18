@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
@@ -30,6 +31,8 @@ import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.gms.vision.barcode.BarcodeDetector;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import id.bkdana.agent.R;
 import id.bkdana.agent.Util.ConnectionDetector;
@@ -37,6 +40,7 @@ import id.bkdana.agent.Util.Session.BKDanaAgentSession;
 import id.bkdana.agent.contarct.ScanBarcodeContract;
 import id.bkdana.agent.model.response.scanBarcodeResponse.DataBorrower;
 import id.bkdana.agent.model.response.scanBarcodeResponse.ScanBarcodeResponse;
+import id.bkdana.agent.model.temp;
 import id.bkdana.agent.presenter.ScanBarcodePresenter;
 import id.bkdana.agent.view.activity.DetailScanBarcodeActivity;
 import id.bkdana.agent.view.activity.MainActivity;
@@ -51,6 +55,7 @@ public class fragment_scanbarcode extends AppCompatActivity implements ScanBarco
     private TextView txtBarcodeValue;
     private String uniqueid;
     private ImageView iv_back_scanbarcode;
+    private temp temp = new temp();
 
     private BKDanaAgentSession agentSession;
     private ScanBarcodeContract scanBarcodeContract;
@@ -167,7 +172,11 @@ public class fragment_scanbarcode extends AppCompatActivity implements ScanBarco
                             if (barcodes.valueAt(0).displayValue != null) {
                                 uniqueid = barcodes.valueAt(0).displayValue;
 //                                txtBarcodeValue.setText(intentData);
+                                if(!uniqueid.equals(temp.getTmp())) {
                                     onSendData(uniqueid);
+                                    temp.setTmp(uniqueid);
+                                }
+
                             }
                         }
                     });
@@ -206,7 +215,6 @@ public class fragment_scanbarcode extends AppCompatActivity implements ScanBarco
     }
 
     void onSendData(String id){
-
         isInternetPresent = cd.isConnectingToInternet();
         if (isInternetPresent) {
             scanBarcodeContract.postScanBarcode(id);
@@ -230,9 +238,13 @@ public class fragment_scanbarcode extends AppCompatActivity implements ScanBarco
 
     @Override
     public void onSuccessScanBarcode(ScanBarcodeResponse response) {
+        ArrayList<DataBorrower> dataBorrower = new ArrayList<>();
         Intent menuDetailScan = new Intent(fragment_scanbarcode.this,DetailScanBarcodeActivity.class);
-        DataBorrower dataBorrower = new DataBorrower();
-        menuDetailScan.putExtra("dataBorrowe", dataBorrower);
+        for (int i = 0; i < response.getContent().getDataBorrower().size() ; i++) {
+            dataBorrower.add(response.getContent().getDataBorrower().get(i));
+            menuDetailScan.putParcelableArrayListExtra("dataBorrower",dataBorrower);
+        }
+
         startActivity(menuDetailScan);
         finish();
     }

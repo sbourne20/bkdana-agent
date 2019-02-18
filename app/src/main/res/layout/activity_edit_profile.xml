@@ -244,15 +244,44 @@
                         android:textSize="13.5sp" />
 
 
-                    <EditText
-                        android:id="@+id/et_old_password_editprofile"
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginRight="8dp"
-                        android:paddingLeft="5dp"
-                        android:background="@drawable/rounded_editprofile" />
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/et_old_password_editprofile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="8dp"
+                            android:paddingLeft="5dp"
+                            android:inputType="textPassword"
+                            android:background="@drawable/rounded_editprofile" />
+
+                        <ImageView
+                            android:id="@+id/btn_eye_visible_old"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_eye"
+                            android:paddingTop="10dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"/>
+
+                        <ImageView
+                            android:id="@+id/btn_eye_invisible_old"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_invisible"
+                            android:paddingTop="10dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:visibility="gone"/>
+
+                    </RelativeLayout>
+
 
                     <id.bkdana.agent.Util.widget.MontserratMediumTextView
                         android:layout_width="wrap_content"
@@ -264,17 +293,42 @@
                         android:textColor="#fda1b7c2"
                         android:textSize="13.5sp" />
 
-
-                    <EditText
-                        android:id="@+id/et_new_password_editprofile"
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginRight="8dp"
-                        android:paddingLeft="5dp"
-                        android:enabled="false"
-                        android:background="@drawable/rounded_editprofile" />
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/et_new_password_editprofile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="8dp"
+                            android:paddingLeft="5dp"
+                            android:inputType="textPassword"
+                            android:background="@drawable/rounded_editprofile" />
+
+                        <ImageView
+                            android:id="@+id/btn_eye_visible_new"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_eye"
+                            android:paddingTop="10dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"/>
+
+                        <ImageView
+                            android:id="@+id/btn_eye_invisible_new"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_invisible"
+                            android:paddingTop="10dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:visibility="gone"/>
+                    </RelativeLayout>
 
                     <id.bkdana.agent.Util.widget.MontserratMediumTextView
                         android:layout_width="wrap_content"
@@ -286,19 +340,44 @@
                         android:textColor="#fda1b7c2"
                         android:textSize="13.5sp" />
 
-
-                    <EditText
-                        android:id="@+id/et_confrim_password_editprofile"
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="5dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginRight="8dp"
-                        android:background="@drawable/rounded_editprofile" />
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/et_confrim_password_editprofile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="8dp"
+                            android:inputType="textPassword"
+                            android:background="@drawable/rounded_editprofile" />
+
+                        <ImageView
+                            android:id="@+id/btn_eye_visible_conf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_eye"
+                            android:paddingTop="10dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"/>
+
+                        <ImageView
+                            android:id="@+id/btn_eye_invisible_conf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_invisible"
+                            android:paddingTop="10dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:visibility="gone"/>
+                    </RelativeLayout>
 
                     <id.bkdana.agent.Util.widget.MontserratSemiBoldButton
-                        android:id="@+id/btn__update_password_editprofile"
+                        android:id="@+id/btn_update_password_editprofile"
                         android:layout_width="153dp"
                         android:layout_height="35.7dp"
                         android:layout_gravity="center"

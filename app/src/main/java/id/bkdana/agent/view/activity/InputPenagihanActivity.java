@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -12,6 +13,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 import id.bkdana.agent.R;
 import id.bkdana.agent.Util.ConnectionDetector;
@@ -31,15 +34,18 @@ public class InputPenagihanActivity extends AppCompatActivity implements SubmitC
     private SubmitCollectionContract submitCollectionContract;
     private ConnectionDetector cd;
     private Boolean isInternetPresent = false;
-    private DataBorrower dataBorrower;
-    private String idUser,idModAgent,masterLoanId,jmlTgihan,sisaTghan,borrowCode;
+    private String idUser,idModAgent,masterLoanId,jmlTgihan,sisaTghan,borrowCode,idtrk;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input_penagihan);
 
-        dataBorrower = getIntent().getExtras().getParcelable("dataBorrowe");
+
+        idtrk = getIntent().getExtras().getString("idtrk");
+        idUser = getIntent().getExtras().getString("jancuk");
+
+        Log.i("in", "ii: " + idUser + idtrk);
 
         agentSession = new BKDanaAgentSession(this);
         submitCollectionContract = new SubmitCollectionPresenter(agentSession,this,this);
@@ -60,9 +66,7 @@ public class InputPenagihanActivity extends AppCompatActivity implements SubmitC
 
 
     void sendData(){
-        idUser = dataBorrower.getIdPeminjam();
         idModAgent = agentSession.getidMod();
-        masterLoanId = dataBorrower.getTransaksiId();
         jmlTgihan = et_jmltagihan_inputpenagihan.getText().toString();
         sisaTghan = et_sisatagihan_inputpenagihan.getText().toString();
         borrowCode = et_borrowercode_inputpenagihan.getText().toString();
@@ -73,10 +77,10 @@ public class InputPenagihanActivity extends AppCompatActivity implements SubmitC
             et_sisatagihan_inputpenagihan.setError("Isi Terlebih Dahulu!");
         } else if(et_borrowercode_inputpenagihan.equals("")){
             et_borrowercode_inputpenagihan.setError("Isi Terlebih Dahulu!");
-        } else if(borrowCode != idUser){
+        } else if(!borrowCode.equals(idUser)){
             et_borrowercode_inputpenagihan.setError("Borrower Code Salah");
         } else {
-            submitCollectionContract.postSubmitCollection(idUser,idModAgent,masterLoanId,jmlTgihan,sisaTghan,borrowCode);
+            customDialog();
         }
 
     }
@@ -99,7 +103,7 @@ public class InputPenagihanActivity extends AppCompatActivity implements SubmitC
     }
 
 
-    private void customDialog(final Intent eks){
+    private void customDialog(){
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         LayoutInflater inflater = this.getLayoutInflater();
@@ -114,8 +118,13 @@ public class InputPenagihanActivity extends AppCompatActivity implements SubmitC
         tv_yes_dialog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(eks);
-                finish();
+                isInternetPresent = cd.isConnectingToInternet();
+                if (isInternetPresent) {
+                    submitCollectionContract.postSubmitCollection(idUser,idModAgent,idtrk,jmlTgihan,sisaTghan,borrowCode);
+                }  else if (isInternetPresent.equals(false)) {
+                    Toast.makeText(InputPenagihanActivity.this, "Tidak ada koneksi Internet", Toast.LENGTH_LONG).show();
+                }
+
             }
         });
 
@@ -135,10 +144,11 @@ public class InputPenagihanActivity extends AppCompatActivity implements SubmitC
 
     @Override
     public void onSuccessSubmitCollection(SubmitCollectionReponse response) {
-        Toast.makeText(this, response.getResponse(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, response.getContent(), Toast.LENGTH_SHORT).show();
         Intent menumain = new Intent(this,MainActivity.class);
-        customDialog(menumain);
+        startActivity(menumain);
         finish();
+
     }
 
     @Override

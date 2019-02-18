@@ -70,6 +70,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
+                android:inputType="number"
                 android:background="@drawable/textview_bg"
                 android:paddingLeft="17.3dp"
                 android:textSize="13.5sp" />
@@ -92,6 +93,7 @@
                 android:id="@+id/et_jmltagihan_inputpenagihan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:inputType="number"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/textview_bg"
                 android:paddingLeft="17.3dp"
@@ -115,6 +117,7 @@
                 android:id="@+id/et_sisatagihan_inputpenagihan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:inputType="number"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/textview_bg"
                 android:paddingLeft="17.3dp"

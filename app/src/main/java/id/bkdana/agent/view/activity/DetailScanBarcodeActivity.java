@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.text.NumberFormat;
+import java.util.ArrayList;
 import java.util.Locale;
 
 import id.bkdana.agent.R;
@@ -22,8 +23,9 @@ public class DetailScanBarcodeActivity extends AppCompatActivity implements View
     private Button btn_selanjutnya_scanbarcode;
     private TextView tv_id_transaksi_scanbarcode, tv_product_scanbarcode, tv_nama_scanbarcode, tv_tenor_scanbarcode, tv_jmlpembayaran_scanbarcode;
     private ImageView iv_back_scanbarcodedetail;
-    private DataBorrower dataBorrower;
+    private ArrayList<DataBorrower> dataBorrower;
     private BKDanaAgentSession agentSession;
+    private String idpan,idtrk;
 
 
     @Override
@@ -31,10 +33,7 @@ public class DetailScanBarcodeActivity extends AppCompatActivity implements View
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_scan_barcode);
 
-        dataBorrower = getIntent().getExtras().getParcelable("dataBorrowe");
-
-        Log.i("isi", "onCreate: " + dataBorrower.getIdKtp());
-
+        dataBorrower = getIntent().getParcelableArrayListExtra("dataBorrower");
 
         tv_id_transaksi_scanbarcode = findViewById(R.id.tv_id_transaksi_scanbarcode);
         tv_product_scanbarcode = findViewById(R.id.tv_product_scanbarcode);
@@ -47,6 +46,8 @@ public class DetailScanBarcodeActivity extends AppCompatActivity implements View
         btn_selanjutnya_scanbarcode.setOnClickListener(this);
         iv_back_scanbarcodedetail.setOnClickListener(this);
 
+//        Log.i("dd", "hasil: " + dataBorrower.getTotalPinjamanDiset);
+
 
         onSetData();
 
@@ -57,17 +58,27 @@ public class DetailScanBarcodeActivity extends AppCompatActivity implements View
         Locale localeID = new Locale("in", "ID");
         NumberFormat formatRupiah = NumberFormat.getCurrencyInstance(localeID);
 
-        tv_id_transaksi_scanbarcode.setText(dataBorrower.getTransaksiId());
-        tv_product_scanbarcode.setText(dataBorrower.getProductTitle());
-        tv_nama_scanbarcode.setText(dataBorrower.getNamaPeminjam());
-        tv_tenor_scanbarcode.setText(dataBorrower.getLoanTerm() + "Bulan");
-        tv_jmlpembayaran_scanbarcode.setText(formatRupiah.format((double)Integer.parseInt(dataBorrower.getTotalPinjamanDisetujui())));
+        if (dataBorrower.size() != 0) {
+            for (int i = 0; i < dataBorrower.size(); i++) {
+                idpan = dataBorrower.get(i).getIdPeminjam();
+                idtrk = dataBorrower.get(i).getTransaksiId();
+                tv_id_transaksi_scanbarcode.setText(dataBorrower.get(i).getTransaksiId());
+                tv_product_scanbarcode.setText(dataBorrower.get(i).getProductTitle());
+                tv_nama_scanbarcode.setText(dataBorrower.get(i).getNamaPeminjam());
+                tv_tenor_scanbarcode.setText(dataBorrower.get(i).getLoanTerm() + " Bulan");
+                tv_jmlpembayaran_scanbarcode.setText(formatRupiah.format((double) Integer.parseInt(dataBorrower.get(i).getTotalPinjamanDisetujui())));
+            }
+        }
+
+
+
     }
 
     void onSendData(){
         Intent menuInput = new Intent(this,InputPenagihanActivity.class);
-        dataBorrower = new DataBorrower();
-        menuInput.putExtra("dataBorrowe",dataBorrower);
+        Log.i("jancuk", "onSendData: " + idpan);
+        menuInput.putExtra("idtrk",idtrk);
+        menuInput.putExtra("jancuk", idpan);
         startActivity(menuInput);
     }
 
@@ -81,6 +92,8 @@ public class DetailScanBarcodeActivity extends AppCompatActivity implements View
             case R.id.iv_back_scanbarcodedetail:
                 Intent menuScan = new Intent(this,fragment_scanbarcode.class);
                 startActivity(menuScan);
+                finish();
+                break;
 
         }
     }
@@ -88,8 +101,8 @@ public class DetailScanBarcodeActivity extends AppCompatActivity implements View
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-
         Intent menuScan = new Intent(this,fragment_scanbarcode.class);
         startActivity(menuScan);
+        finish();
     }
 }

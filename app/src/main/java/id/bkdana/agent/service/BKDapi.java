@@ -1,5 +1,6 @@
 package id.bkdana.agent.service;
 
+import id.bkdana.agent.model.response.UpdateProfileResponse;
 import id.bkdana.agent.model.response.dashboardResponse.DashboardResponse;
 import id.bkdana.agent.model.response.detailMyCollectionResponse.DetailMyCollectionResponse;
 import id.bkdana.agent.model.response.detailSurveyResponse.DetailSurveyResponse;
@@ -79,12 +80,12 @@ public interface BKDapi {
                                               @Field("omset") String omset,
                                               @Field("biaya") String biaya,
                                               @Field("laba") String laba);
-
+    @FormUrlEncoded
     @POST("collection/data_borrower")
     Call<ScanBarcodeResponse> postScanBarcode (@Header("Authorization") String Authorization,
                                                @Field("id_peminjam") String id_peminjam);
-
-    @POST("collection/submit_collection")
+    @FormUrlEncoded
+    @POST("collection/submit_collection2")
     Call<SubmitCollectionReponse> postSubmitCollection (@Header("Authorization") String Authorization,
                                                         @Field("user_id") String user_id,
                                                         @Field("id_mod_agent") String id_mod_agent,
@@ -100,5 +101,18 @@ public interface BKDapi {
     @POST("collection/details_collection")
     Call<DetailMyCollectionResponse> postDetailMyCollection (@Header("Authorization") String Authorization,
                                                              @Field("Master_loan_id") String Master_loan_id);
+    @FormUrlEncoded
+    @POST("agent/update_informasiakun")
+    Call<UpdateProfileResponse> postUpdateInformasiAkun (@Header("Authorization") String Authorization,
+                                                         @Field("fullname") String fullname,
+                                                         @Field("phone") String phone);
+
+    @FormUrlEncoded
+    @POST("agent/update_password")
+    Call<UpdateProfileResponse> postUpdatePasswordAkun (@Header("Authorization") String Authorization,
+                                                        @Field("old_password") String old_password,
+                                                        @Field("password") String password,
+                                                        @Field("conf_password") String conf_password);
+
 }
 
