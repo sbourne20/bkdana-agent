@@ -71,7 +71,7 @@
             android:id="@+id/tv_id_transaksi_scanbarcode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="PM-FB7FFC0B5787"
+            android:text=""
             android:textColor="@color/topaz"
             android:textSize="20sp" />
 
@@ -88,7 +88,7 @@
             android:id="@+id/tv_product_scanbarcode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="PM-Pinjaman Mikro 3 Bulan"
+            android:text=""
             android:textColor="@color/topaz"
             android:textSize="20sp" />
 
@@ -104,7 +104,7 @@
             android:id="@+id/tv_nama_scanbarcode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Andika Desta Permana"
+            android:text=""
             android:textColor="@color/topaz"
             android:textSize="20sp" />
 
@@ -120,7 +120,7 @@
             android:id="@+id/tv_tenor_scanbarcode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2 dari 3"
+            android:text=""
             android:textColor="@color/topaz"
             android:textSize="20sp" />
 
@@ -136,7 +136,7 @@
             android:id="@+id/tv_jmlpembayaran_scanbarcode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Rp. 1.500.000"
+            android:text=""
             android:textColor="@color/cheery_red"
             android:textSize="20sp" />
 

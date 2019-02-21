@@ -5,21 +5,19 @@ import id.bkdana.agent.model.response.dashboardResponse.DashboardResponse;
 import id.bkdana.agent.model.response.detailMyCollectionResponse.DetailMyCollectionResponse;
 import id.bkdana.agent.model.response.detailSurveyResponse.DetailSurveyResponse;
 import id.bkdana.agent.model.response.formSurverResponse.FormSurveyResponse;
-import id.bkdana.agent.model.response.listMyCollectionResponse.ListCollectionResponse;
+import id.bkdana.agent.model.response.listMyCollectionResponse.ListMyCollectionResponse;
 import id.bkdana.agent.model.response.listMySurveyResponse.ListMySurveyResponse;
 import id.bkdana.agent.model.response.loginResponse;
 import id.bkdana.agent.model.response.listSurveyResponse.ListSurveyResponse;
 import id.bkdana.agent.model.response.profileResponse.ProfileResponse;
 import id.bkdana.agent.model.response.scanBarcodeResponse.ScanBarcodeResponse;
 import id.bkdana.agent.model.response.submitCollectionResponse.SubmitCollectionReponse;
-import id.bkdana.agent.view.activity.DetailSurveyActivity;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
-import retrofit2.http.HEAD;
 import retrofit2.http.Header;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
@@ -52,10 +50,10 @@ public interface BKDapi {
                                                 @Query("limit") String limit);
 
     @GET("collection/list_mycollection")
-    Call<ListCollectionResponse> getListMyCollection (@Header("Authorization") String Authorization,
-                                                      @Query("id_agent") String id_agent,
-                                                      @Query("page") String page,
-                                                      @Query("limit") String limit);
+    Call<ListMyCollectionResponse> getListMyCollection (@Header("Authorization") String Authorization,
+                                                        @Query("id_mod_agent") String id_agent,
+                                                        @Query("page") String page,
+                                                        @Query("limit") String limit);
     @FormUrlEncoded
     @POST("survey/submit_formsurvey1")
     Call<FormSurveyResponse> postFormSurvey1 (@Header("Authorization") String Authorization,
@@ -97,7 +95,7 @@ public interface BKDapi {
     @POST("survey/details_survey")
     Call<DetailSurveyResponse> postDetailMySurvey (@Header("Authorization") String Authorization,
                                                    @Field("id_mod_agent_survey") String id_mod_agent_survey);
-
+    @FormUrlEncoded
     @POST("collection/details_collection")
     Call<DetailMyCollectionResponse> postDetailMyCollection (@Header("Authorization") String Authorization,
                                                              @Field("Master_loan_id") String Master_loan_id);

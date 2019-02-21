@@ -6,6 +6,7 @@ import android.util.Log;
 import id.bkdana.agent.Util.Session.BKDanaAgentSession;
 import id.bkdana.agent.contarct.UpdateProfileContract;
 import id.bkdana.agent.model.response.UpdateProfileResponse;
+import id.bkdana.agent.model.response.profileResponse.ProfileResponse;
 import id.bkdana.agent.service.BKDapi;
 import id.bkdana.agent.service.ServiceClient;
 import id.bkdana.agent.view.bridge.UpdateProfileBridge;
@@ -73,5 +74,37 @@ public class UpdateProfilePresenter implements UpdateProfileContract {
             }
         });
 
+    }
+
+    @Override
+    public void postUpdateprofile(String token) {
+        BKDapi api = ServiceClient.getClient().create(BKDapi.class);
+        Call<ProfileResponse> call = api.postProfile(token);
+        call.enqueue(new Callback<ProfileResponse>() {
+            @Override
+            public void onResponse(Call<ProfileResponse> call, Response<ProfileResponse> response) {
+                if(response.isSuccessful()){
+                    if(response.body().getStatus() == 200){
+                        updateProfileBridge.onSuccesUpdateSessionProfile(response.body());
+                        agentSession.setProfile(response.body().getContent().getIdModAgent(),
+                                response.body().getContent().getAgentFullname(),
+                                response.body().getContent().getAgentEmail(),
+                                response.body().getContent().getAgentPhone(),
+                                response.body().getContent().getAgentUsername(),
+                                response.body().getContent().getAgentStatus());
+                    } else {
+                        updateProfileBridge.onFailureUpdateProfile(response.body().getResponse());
+                        Log.d(TAG, "onFailureUpdateProfile: " + response.body().getResponse());
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ProfileResponse> call, Throwable t) {
+                updateProfileBridge.onFailureUpdateProfile(t.getMessage());
+                Log.d(TAG, "onFailureUpdateProfile: " + t.getMessage());
+
+            }
+        });
     }
 }

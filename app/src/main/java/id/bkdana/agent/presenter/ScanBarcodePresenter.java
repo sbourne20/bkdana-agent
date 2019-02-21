@@ -36,8 +36,8 @@ public class ScanBarcodePresenter implements ScanBarcodeContract {
                     if(response.body().getStatus() == 200){
                         scanBarcodeBridge.onSuccessScanBarcode(response.body());
                     } else {
-                        scanBarcodeBridge.onFailureScanBarcode(response.body().getResponse());
-                        Log.d(TAG, "onFailureScanBarcode :" + response.body().getResponse());
+                        scanBarcodeBridge.onFailureScanBarcode(response.body().getMessage());
+                        Log.d(TAG, "onFailureScanBarcode :" + response.body().getMessage());
                     }
                 }
             }

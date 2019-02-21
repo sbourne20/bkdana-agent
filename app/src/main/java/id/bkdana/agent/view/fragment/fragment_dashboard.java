@@ -78,7 +78,7 @@ public class fragment_dashboard extends Fragment implements DashboardBridge<Dash
 
             case R.id.iv_signout :
                 Intent menuSinout = new Intent(getActivity(),LoginActivity.class);
-                menuSinout.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                menuSinout.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 getActivity().startActivity(menuSinout);
                 agentSession.clear();
                 getActivity().finish();

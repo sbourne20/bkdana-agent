@@ -5,7 +5,7 @@ import android.util.Log;
 
 import id.bkdana.agent.Util.Session.BKDanaAgentSession;
 import id.bkdana.agent.contarct.ListMyCollectionContract;
-import id.bkdana.agent.model.response.listMyCollectionResponse.ListCollectionResponse;
+import id.bkdana.agent.model.response.listMyCollectionResponse.ListMyCollectionResponse;
 import id.bkdana.agent.service.BKDapi;
 import id.bkdana.agent.service.ServiceClient;
 import id.bkdana.agent.view.bridge.ListMyCollectionBridge;
@@ -29,10 +29,10 @@ public class ListMyCollectionPresenter implements ListMyCollectionContract {
     @Override
     public void getListMyCollection(String id, String page, String limit) {
         BKDapi api = ServiceClient.getClient().create(BKDapi.class);
-        Call<ListCollectionResponse> call = api.getListMyCollection(agentSession.getAutorization(),id,page,limit);
-        call.enqueue(new Callback<ListCollectionResponse>() {
+        Call<ListMyCollectionResponse> call = api.getListMyCollection(agentSession.getAutorization(),id,page,limit);
+        call.enqueue(new Callback<ListMyCollectionResponse>() {
             @Override
-            public void onResponse(Call<ListCollectionResponse> call, Response<ListCollectionResponse> response) {
+            public void onResponse(Call<ListMyCollectionResponse> call, Response<ListMyCollectionResponse> response) {
                 if(response.isSuccessful()){
                     if(response.body().getStatus() == 200){
                         myCollectionBridge.onSuccessListMyCollection(response.body());
@@ -46,7 +46,7 @@ public class ListMyCollectionPresenter implements ListMyCollectionContract {
             }
 
             @Override
-            public void onFailure(Call<ListCollectionResponse> call, Throwable t) {
+            public void onFailure(Call<ListMyCollectionResponse> call, Throwable t) {
                 myCollectionBridge.onFailureListMyCollection(t.getMessage());
                 Log.d(TAG, "onFailureListMyCollection: " + t.getMessage());
             }

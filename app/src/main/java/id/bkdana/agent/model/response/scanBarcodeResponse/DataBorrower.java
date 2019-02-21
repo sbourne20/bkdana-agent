@@ -30,6 +30,9 @@ public class DataBorrower implements Parcelable {
     private String mTransaksiStatus;
     @SerializedName("type_business_name")
     private String mTypeBusinessName;
+    @SerializedName("message")
+    private String mMessage;
+
 
     public DataBorrower() {
     }
@@ -46,6 +49,7 @@ public class DataBorrower implements Parcelable {
         mTransaksiId = in.readString();
         mTransaksiStatus = in.readString();
         mTypeBusinessName = in.readString();
+        mMessage = in.readString();
     }
 
     public static final Creator<DataBorrower> CREATOR = new Creator<DataBorrower>() {
@@ -148,6 +152,14 @@ public class DataBorrower implements Parcelable {
         mTypeBusinessName = typeBusinessName;
     }
 
+    public String getmMessage() {
+        return mMessage;
+    }
+
+    public void setmMessage(String mMessage) {
+        this.mMessage = mMessage;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -166,5 +178,6 @@ public class DataBorrower implements Parcelable {
         dest.writeString(mTransaksiId);
         dest.writeString(mTransaksiStatus);
         dest.writeString(mTypeBusinessName);
+        dest.writeString(mMessage);
     }
 }

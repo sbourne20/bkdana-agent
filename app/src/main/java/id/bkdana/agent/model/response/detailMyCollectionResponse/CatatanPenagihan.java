@@ -12,6 +12,12 @@ public class CatatanPenagihan {
     @SerializedName("tgl_collection")
     private String mTglCollection;
 
+    public CatatanPenagihan(String mJmlTagihan, String mMasterLoanId, String mTglCollection) {
+        this.mJmlTagihan = mJmlTagihan;
+        this.mMasterLoanId = mMasterLoanId;
+        this.mTglCollection = mTglCollection;
+    }
+
     public String getJmlTagihan() {
         return mJmlTagihan;
     }

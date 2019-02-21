@@ -42,16 +42,28 @@
         <activity
             android:name=".view.activity.MenuDataKeuanganUsahaActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".view.activity.ListSurveyActivity" />
-        <activity android:name=".view.activity.NotifSurveyActivity" />
-        <activity android:name=".view.fragment.fragment_scanbarcode" />
-        <activity android:name=".view.activity.DetailScanBarcodeActivity" />
-        <activity android:name=".view.activity.InputPenagihanActivity" />
-        <activity android:name=".view.activity.ListMySurveyActivity" />
-        <activity android:name=".view.activity.ListMyCollectionActivity" />
-        <activity android:name=".view.activity.DetailSurveyActivity" />
-        <activity android:name=".view.activity.EditProfileActivity" />
-        <activity android:name=".view.activity.DetailMyCollection"></activity>
+        <activity android:name=".view.activity.ListSurveyActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.NotifSurveyActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".view.fragment.fragment_scanbarcode"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.DetailScanBarcodeActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.InputPenagihanActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.ListMySurveyActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.ListMyCollectionActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.DetailSurveyActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.EditProfileActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".view.fragment.fragment_profile"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".view.activity.DetailMyCollectionActivity">
+        </activity>
     </application>
 
 </manifest>

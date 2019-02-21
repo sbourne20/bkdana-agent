@@ -4,6 +4,7 @@ import android.content.Context;
 import android.util.Log;
 
 import id.bkdana.agent.Util.Session.BKDanaAgentSession;
+import id.bkdana.agent.contarct.DetailMyCollectionContract;
 import id.bkdana.agent.contarct.DetailSurveyContract;
 import id.bkdana.agent.model.response.detailMyCollectionResponse.DetailMyCollectionResponse;
 import id.bkdana.agent.model.response.detailSurveyResponse.DetailSurveyResponse;
@@ -14,7 +15,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class DetailMyCollectionPresenter implements DetailSurveyContract {
+public class DetailMyCollectionPresenter implements DetailMyCollectionContract {
 
     private BKDanaAgentSession agentSession;
     private Context context;
@@ -28,7 +29,7 @@ public class DetailMyCollectionPresenter implements DetailSurveyContract {
     }
 
     @Override
-    public void postDetailMySurvey(String idModAgent) {
+    public void postDetailMycontract (String idModAgent) {
         Call<DetailMyCollectionResponse> call = ServiceClient.getClient().create(BKDapi.class).postDetailMyCollection(agentSession.getAutorization(),idModAgent);
         call.enqueue(new Callback<DetailMyCollectionResponse>() {
             @Override

@@ -3,6 +3,7 @@ package id.bkdana.agent.adapter;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,6 +56,8 @@ public class ListDetailMyCollectioAdapter extends RecyclerView.Adapter<ListDetai
         DateFormat outputMenit = new SimpleDateFormat("mm");
         Date date1 = null;
 
+        Log.i("okrrrr", "ini adapter: " + datum.getJmlTagihan());
+
         try {
             date1 = inputFormat.parse(datum.getTglCollection());
         } catch (ParseException e) {
@@ -73,22 +76,18 @@ public class ListDetailMyCollectioAdapter extends RecyclerView.Adapter<ListDetai
         detailMyCollectionHolder.tv_tgh_item_listdetailmycollection.setText(formatRupiah.format((double) Integer.parseInt(datum.getJmlTagihan())));
 
 
-
-
-
-
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return data.size();
     }
 
     public class DetailMyCollectionHolder extends RecyclerView.ViewHolder {
 
         private TextView tv_id_item_listdetailmycollection, tv_tgl_item_listdetailmycollection, tv_tgh_item_listdetailmycollection;
 
-        public DetailMyCollectionHolder(@NonNull View itemView) {
+         public DetailMyCollectionHolder(@NonNull View itemView) {
             super(itemView);
             tv_id_item_listdetailmycollection = itemView.findViewById(R.id.tv_id_item_listdetailmycollection);
             tv_tgl_item_listdetailmycollection = itemView.findViewById(R.id.tv_tgl_item_listdetailmycollection);

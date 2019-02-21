@@ -45,7 +45,8 @@ public class LoginPresenter implements LoginContarct {
                         Log.d(TAG, "onFailureLogin: " + response.body().getResponse());
                     }
                 } else if(response.code() == 401){
-                    Toast.makeText(context, "Username and Password wajib di isi!", Toast.LENGTH_SHORT).show();
+                    loginBridge.onFailure(response.message());
+//                    Toast.makeText(context, "Username and Password wajib di isi!", Toast.LENGTH_SHORT).show();
                 }
             }
 

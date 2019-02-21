@@ -19,6 +19,10 @@ public class SummaryPenagihan {
     private String mTglCollection;
     @SerializedName("User_id")
     private String mUserId;
+    @SerializedName ("Nama_pengguna")
+    private String mNamaPengguna;
+    @SerializedName("ltp_product_title")
+    private String mLtpProductTitle;
 
     public String getIdCollection() {
         return mIdCollection;
@@ -76,4 +80,19 @@ public class SummaryPenagihan {
         mUserId = userId;
     }
 
+    public String getmNamaPengguna() {
+        return mNamaPengguna;
+    }
+
+    public void setmNamaPengguna(String mNamaPengguna) {
+        this.mNamaPengguna = mNamaPengguna;
+    }
+
+    public String getmLtpProductTitle() {
+        return mLtpProductTitle;
+    }
+
+    public void setmLtpProductTitle(String mLtpProductTitle) {
+        this.mLtpProductTitle = mLtpProductTitle;
+    }
 }

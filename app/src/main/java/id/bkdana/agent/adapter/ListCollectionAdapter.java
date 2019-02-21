@@ -45,10 +45,10 @@ public class ListCollectionAdapter extends RecyclerView.Adapter<ListCollectionAd
         NumberFormat formatRupiah = NumberFormat.getCurrencyInstance(localeID);
 
         collectionViewHolder.tv_id_collection.setText(datum.getMasterLoanId());
-        collectionViewHolder.tv_nama_collection_tv_tenor_collection.setText(datum.getNama());
-//        collectionViewHolder.tv_tenor_mycollection.setText(datum.getTenor()+" Bulan");
-        collectionViewHolder.tv_sisa_hutang_collection.setText(formatRupiah.format((double)Integer.parseInt(datum.getSisaHutangPokok())));
-        collectionViewHolder.tv_total_peminjam_collection.setText(formatRupiah.format((double)Integer.parseInt(datum.getHutangPokok())));
+        collectionViewHolder.tv_nama_collection_tv_tenor_collection.setText(datum.getNamaPengguna());
+        collectionViewHolder.tv_tenor_mycollection.setText(datum.getLtpProductTitle());
+        collectionViewHolder.tv_sisa_hutang_collection.setText(formatRupiah.format((double)Integer.parseInt(datum.getSisaTagihan())));
+        collectionViewHolder.tv_total_peminjam_collection.setText(formatRupiah.format((double)Integer.parseInt(datum.getJmlTagihan())));
         collectionViewHolder.btn_detail_collection.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

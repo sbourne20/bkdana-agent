@@ -1,11 +1,14 @@
 package id.bkdana.agent.view.activity;
 
+import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -18,10 +21,13 @@ import id.bkdana.agent.Util.Session.BKDanaAgentSession;
 import id.bkdana.agent.adapter.ExpandableEditProfileAdapter;
 import id.bkdana.agent.contarct.UpdateProfileContract;
 import id.bkdana.agent.model.response.UpdateProfileResponse;
+import id.bkdana.agent.model.response.profileResponse.ProfileResponse;
 import id.bkdana.agent.presenter.UpdateProfilePresenter;
 import id.bkdana.agent.view.bridge.UpdateProfileBridge;
+import id.bkdana.agent.view.fragment.fragment_profile;
+import id.bkdana.agent.view.fragment.fragment_scanbarcode;
 
-public class EditProfileActivity extends AppCompatActivity implements UpdateProfileBridge<UpdateProfileResponse,UpdateProfileResponse>, View.OnClickListener {
+public class EditProfileActivity extends AppCompatActivity implements UpdateProfileBridge<UpdateProfileResponse,UpdateProfileResponse,ProfileResponse>, View.OnClickListener {
 
 
     private LinearLayout ll_edit_informasi,ll_edit_password;
@@ -29,7 +35,8 @@ public class EditProfileActivity extends AppCompatActivity implements UpdateProf
     private TextView et_nama_editprofile,et_email_editprofile,et_phone_editprofile,et_old_password_editprofile,
             et_new_password_editprofile,et_confrim_password_editprofile;
     private ImageView iv_back_editprofile, btn_eye_visible_old, btn_eye_invisible_old, btn_eye_visible_new, btn_eye_invisible_new,
-            btn_eye_visible_conf, btn_eye_invisible_conf, btn_update_informasi_editprofile, btn_update_password_editprofile;
+            btn_eye_visible_conf, btn_eye_invisible_conf;
+    private Button btn_update_informasi_editprofile, btn_update_password_editprofile;
     private boolean open = false;
     private BKDanaAgentSession agentSession;
     private UpdateProfileContract updateProfileContract;
@@ -68,7 +75,7 @@ public class EditProfileActivity extends AppCompatActivity implements UpdateProf
         btn_eye_visible_conf = findViewById(R.id.btn_eye_visible_conf);
         btn_eye_invisible_conf = findViewById(R.id.btn_eye_invisible_conf);
         btn_update_informasi_editprofile = findViewById(R.id.btn_update_informasi_editprofile);
-        btn_update_password_editprofile = findViewById(R.id.btn__update_password_editprofile);
+        btn_update_password_editprofile = findViewById(R.id.btn_update_password_editprofile);
 
         rl_title_informasi.setOnClickListener(this);
         rl_title_password.setOnClickListener(this);
@@ -83,12 +90,33 @@ public class EditProfileActivity extends AppCompatActivity implements UpdateProf
         btn_update_password_editprofile.setOnClickListener(this);
 
         onSetData();
-        onSendDataInformasi();
-        onSendDataPassword();
 
     }
 
     private void onSendDataPassword() {
+        et_old_password_editprofile.setError(null);
+        et_new_password_editprofile.setError(null);
+        et_confrim_password_editprofile.setError(null);
+
+        String oldPass = et_old_password_editprofile.getText().toString();
+        String newPass = et_new_password_editprofile.getText().toString();
+        String confPass = et_confrim_password_editprofile.getText().toString();
+
+        if(oldPass.isEmpty() && newPass.isEmpty() && confPass.isEmpty()){
+            et_old_password_editprofile.setError("Harap isi Terlebih dahulu!");
+            et_new_password_editprofile.setError("Harap isi Terlebih dahulu!");
+            et_confrim_password_editprofile.setError("Harap isi Terlebih dahulu!");
+        } else if(oldPass.isEmpty()){
+            et_old_password_editprofile.setError("Harap isi Terlebih dahulu!");
+        } else if (newPass.isEmpty()) {
+            et_new_password_editprofile.setError("Harap isi Terlebih dahulu!");
+        } else if(confPass.isEmpty()){
+            et_confrim_password_editprofile.setError("Harap isi Terlebih dahulu!");
+        } else if(newPass == oldPass){
+            Toast.makeText(this, "Password Tidak Boleh Sama dengan yang lama", Toast.LENGTH_SHORT).show();
+        } else {
+            updateProfileContract.postUpdatePasswordAkun(oldPass,newPass,confPass);
+        }
 
     }
 
@@ -149,7 +177,7 @@ public class EditProfileActivity extends AppCompatActivity implements UpdateProf
 
             case  R.id.iv_back_editprofile :
 
-                finish();
+                updateProfileContract.postUpdateprofile(agentSession.getAutorization());
 
                 break;
 
@@ -197,7 +225,7 @@ public class EditProfileActivity extends AppCompatActivity implements UpdateProf
 
     @Override
     public void onSuccessUpdateInformasiAkun(UpdateProfileResponse response) {
-        customDialog(response.getMessage());
+        customDialogInformasi(response.getMessage());
     }
 
     @Override
@@ -206,23 +234,38 @@ public class EditProfileActivity extends AppCompatActivity implements UpdateProf
     }
 
     @Override
+    public void onSuccesUpdateSessionProfile(ProfileResponse response) {
+        Intent menuScan = new Intent(this,fragment_profile.class);
+        startActivity(menuScan);
+        finish();
+    }
+
+    @Override
     public void onFailureUpdateProfile(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        updateProfileContract.postUpdateprofile(agentSession.getAutorization());
+    }
 
     private void customDialog(String isi){
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         LayoutInflater inflater = this.getLayoutInflater();
-        View dialogView = inflater.inflate(R.layout.custom_dialog, null);
+        final View dialogView = inflater.inflate(R.layout.custom_dialog, null);
         builder.setView(dialogView);
+        TextView title_dialog = dialogView.findViewById(R.id.title_dialog);
         TextView tv_isi_dialog = dialogView.findViewById(R.id.txt_isi_dialog);
         TextView tv_yes_dialog = dialogView.findViewById(R.id.tv_yes_dialog);
         TextView tv_no_dialog = dialogView.findViewById(R.id.tv_no_dialog);
 
 
         final AlertDialog alertDialog = builder.create();
+        title_dialog.setText("Pemberitahuan");
         tv_isi_dialog.setText(isi);
         tv_yes_dialog.setVisibility(View.GONE);
         tv_no_dialog.setText("OK");
@@ -234,8 +277,33 @@ public class EditProfileActivity extends AppCompatActivity implements UpdateProf
         });
         alertDialog.setCanceledOnTouchOutside(false);
         alertDialog.show();
+    }
+
+    private void customDialogInformasi(String isi){
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = this.getLayoutInflater();
+        final View dialogView = inflater.inflate(R.layout.custom_dialog, null);
+        builder.setView(dialogView);
+        TextView title_dialog = dialogView.findViewById(R.id.title_dialog);
+        TextView tv_isi_dialog = dialogView.findViewById(R.id.txt_isi_dialog);
+        TextView tv_yes_dialog = dialogView.findViewById(R.id.tv_yes_dialog);
+        TextView tv_no_dialog = dialogView.findViewById(R.id.tv_no_dialog);
 
 
+        final AlertDialog alertDialog = builder.create();
+        title_dialog.setText("Pemberitahuan");
+        tv_isi_dialog.setText(isi);
+        tv_yes_dialog.setVisibility(View.GONE);
+        tv_no_dialog.setText("OK");
+        tv_no_dialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                updateProfileContract.postUpdateprofile(agentSession.getAutorization());
+            }
+        });
+        alertDialog.setCanceledOnTouchOutside(false);
+        alertDialog.show();
 
 
     }

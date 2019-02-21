@@ -15,14 +15,12 @@ import id.bkdana.agent.R;
 import id.bkdana.agent.Util.Session.BKDanaAgentSession;
 import id.bkdana.agent.adapter.ListCollectionAdapter;
 import id.bkdana.agent.contarct.ListMyCollectionContract;
-import id.bkdana.agent.model.DataListMyCollection;
-import id.bkdana.agent.model.DataListSurvey;
-import id.bkdana.agent.model.response.listMyCollectionResponse.ListCollectionResponse;
+import id.bkdana.agent.model.response.listMyCollectionResponse.ListMyCollectionResponse;
 import id.bkdana.agent.model.response.listMyCollectionResponse.ListMycollection;
 import id.bkdana.agent.presenter.ListMyCollectionPresenter;
 import id.bkdana.agent.view.bridge.ListMyCollectionBridge;
 
-public class ListMyCollectionActivity extends AppCompatActivity implements ListMyCollectionBridge<ListCollectionResponse>,View.OnClickListener {
+public class ListMyCollectionActivity extends AppCompatActivity implements ListMyCollectionBridge<ListMyCollectionResponse>,View.OnClickListener {
 
     private RecyclerView rv_collection;
     private RecyclerView.LayoutManager mLayoutManager;
@@ -74,7 +72,7 @@ public class ListMyCollectionActivity extends AppCompatActivity implements ListM
     }
 
     @Override
-    public void onSuccessListMyCollection(ListCollectionResponse response) {
+    public void onSuccessListMyCollection(ListMyCollectionResponse response) {
         for (int i = 0; i < response.getContent().getListMycollection().size() ; i++) {
             datumList.add(response.getContent().getListMycollection().get(i));
             mAdapter.notifyDataSetChanged();

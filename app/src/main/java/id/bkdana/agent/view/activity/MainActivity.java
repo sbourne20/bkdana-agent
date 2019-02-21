@@ -55,8 +55,8 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(menuScan);
                     return true;
                 case R.id.navigation_profile:
-                    fragment = new fragment_profile();
-                    loadFragment(fragment);
+                    Intent menuProfile= new Intent(MainActivity.this,fragment_profile.class);
+                    startActivity(menuProfile);
                     return true;
 
             }

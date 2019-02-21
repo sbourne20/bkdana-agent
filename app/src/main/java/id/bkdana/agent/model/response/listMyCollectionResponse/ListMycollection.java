@@ -5,77 +5,55 @@ import com.google.gson.annotations.SerializedName;
 
 public class ListMycollection {
 
-    @SerializedName("collection_date")
-    private String mCollectionDate;
-    @SerializedName("hutang_pokok")
-    private String mHutangPokok;
-    @SerializedName("id_agent")
-    private String mIdAgent;
-    @SerializedName("id_mod_agent_collection")
-    private String mIdModAgentCollection;
-    @SerializedName("id_peminjam")
-    private String mIdPeminjam;
-    @SerializedName("jumlah_pembayaran")
-    private String mJumlahPembayaran;
-    @SerializedName("master_loan_id")
+    @SerializedName("id_collection")
+    private String mIdCollection;
+    @SerializedName("id_mod_agent")
+    private String mIdModAgent;
+    @SerializedName("jml_tagihan")
+    private String mJmlTagihan;
+    @SerializedName("ltp_product_title")
+    private String mLtpProductTitle;
+    @SerializedName("Master_loan_id")
     private String mMasterLoanId;
-    @SerializedName("nama")
-    private String mNama;
-    @SerializedName("no_ktp")
-    private String mNoKtp;
-    @SerializedName("product_title")
-    private String mProductTitle;
-    @SerializedName("sisa_hutang_pokok")
-    private String mSisaHutangPokok;
-    @SerializedName("status")
-    private String mStatus;
+    @SerializedName("Nama_pengguna")
+    private String mNamaPengguna;
+    @SerializedName("sisa_tagihan")
+    private String mSisaTagihan;
+    @SerializedName("tgl_collection")
+    private String mTglCollection;
+    @SerializedName("User_id")
+    private String mUserId;
 
-    public String getCollectionDate() {
-        return mCollectionDate;
+    public String getIdCollection() {
+        return mIdCollection;
     }
 
-    public void setCollectionDate(String collectionDate) {
-        mCollectionDate = collectionDate;
+    public void setIdCollection(String idCollection) {
+        mIdCollection = idCollection;
     }
 
-    public String getHutangPokok() {
-        return mHutangPokok;
+    public String getIdModAgent() {
+        return mIdModAgent;
     }
 
-    public void setHutangPokok(String hutangPokok) {
-        mHutangPokok = hutangPokok;
+    public void setIdModAgent(String idModAgent) {
+        mIdModAgent = idModAgent;
     }
 
-    public String getIdAgent() {
-        return mIdAgent;
+    public String getJmlTagihan() {
+        return mJmlTagihan;
     }
 
-    public void setIdAgent(String idAgent) {
-        mIdAgent = idAgent;
+    public void setJmlTagihan(String jmlTagihan) {
+        mJmlTagihan = jmlTagihan;
     }
 
-    public String getIdModAgentCollection() {
-        return mIdModAgentCollection;
+    public String getLtpProductTitle() {
+        return mLtpProductTitle;
     }
 
-    public void setIdModAgentCollection(String idModAgentCollection) {
-        mIdModAgentCollection = idModAgentCollection;
-    }
-
-    public String getIdPeminjam() {
-        return mIdPeminjam;
-    }
-
-    public void setIdPeminjam(String idPeminjam) {
-        mIdPeminjam = idPeminjam;
-    }
-
-    public String getJumlahPembayaran() {
-        return mJumlahPembayaran;
-    }
-
-    public void setJumlahPembayaran(String jumlahPembayaran) {
-        mJumlahPembayaran = jumlahPembayaran;
+    public void setLtpProductTitle(String ltpProductTitle) {
+        mLtpProductTitle = ltpProductTitle;
     }
 
     public String getMasterLoanId() {
@@ -86,44 +64,36 @@ public class ListMycollection {
         mMasterLoanId = masterLoanId;
     }
 
-    public String getNama() {
-        return mNama;
+    public String getNamaPengguna() {
+        return mNamaPengguna;
     }
 
-    public void setNama(String nama) {
-        mNama = nama;
+    public void setNamaPengguna(String namaPengguna) {
+        mNamaPengguna = namaPengguna;
     }
 
-    public String getNoKtp() {
-        return mNoKtp;
+    public String getSisaTagihan() {
+        return mSisaTagihan;
     }
 
-    public void setNoKtp(String noKtp) {
-        mNoKtp = noKtp;
+    public void setSisaTagihan(String sisaTagihan) {
+        mSisaTagihan = sisaTagihan;
     }
 
-    public String getProductTitle() {
-        return mProductTitle;
+    public String getTglCollection() {
+        return mTglCollection;
     }
 
-    public void setProductTitle(String productTitle) {
-        mProductTitle = productTitle;
+    public void setTglCollection(String tglCollection) {
+        mTglCollection = tglCollection;
     }
 
-    public String getSisaHutangPokok() {
-        return mSisaHutangPokok;
+    public String getUserId() {
+        return mUserId;
     }
 
-    public void setSisaHutangPokok(String sisaHutangPokok) {
-        mSisaHutangPokok = sisaHutangPokok;
-    }
-
-    public String getStatus() {
-        return mStatus;
-    }
-
-    public void setStatus(String status) {
-        mStatus = status;
+    public void setUserId(String userId) {
+        mUserId = userId;
     }
 
 }

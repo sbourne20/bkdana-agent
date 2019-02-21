@@ -240,17 +240,26 @@ public class fragment_scanbarcode extends AppCompatActivity implements ScanBarco
     public void onSuccessScanBarcode(ScanBarcodeResponse response) {
         ArrayList<DataBorrower> dataBorrower = new ArrayList<>();
         Intent menuDetailScan = new Intent(fragment_scanbarcode.this,DetailScanBarcodeActivity.class);
-        for (int i = 0; i < response.getContent().getDataBorrower().size() ; i++) {
-            dataBorrower.add(response.getContent().getDataBorrower().get(i));
-            menuDetailScan.putParcelableArrayListExtra("dataBorrower",dataBorrower);
+        if(response.getContent().getDataBorrower().size()  != 0 ) {
+            for (int i = 0; i < response.getContent().getDataBorrower().size(); i++) {
+
+                if(response.getContent().getDataBorrower().get(i).getmMessage() == null) {
+                    dataBorrower.add(response.getContent().getDataBorrower().get(i));
+                    menuDetailScan.putParcelableArrayListExtra("dataBorrower", dataBorrower);
+                    startActivity(menuDetailScan);
+                    finish();
+                } else if (response.getContent().getDataBorrower().get(i).getmMessage().equals("Borrower tidak ditemukan")) {
+                    Toast.makeText(this, response.getContent().getDataBorrower().get(i).getmMessage(), Toast.LENGTH_SHORT).show();
+                }
+
+            }
         }
 
-        startActivity(menuDetailScan);
-        finish();
+
     }
 
     @Override
     public void onFailureScanBarcode(String message) {
-
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 }

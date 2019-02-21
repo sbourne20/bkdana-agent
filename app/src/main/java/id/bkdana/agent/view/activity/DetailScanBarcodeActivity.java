@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
@@ -58,7 +59,7 @@ public class DetailScanBarcodeActivity extends AppCompatActivity implements View
         Locale localeID = new Locale("in", "ID");
         NumberFormat formatRupiah = NumberFormat.getCurrencyInstance(localeID);
 
-        if (dataBorrower.size() != 0) {
+
             for (int i = 0; i < dataBorrower.size(); i++) {
                 idpan = dataBorrower.get(i).getIdPeminjam();
                 idtrk = dataBorrower.get(i).getTransaksiId();
@@ -66,8 +67,9 @@ public class DetailScanBarcodeActivity extends AppCompatActivity implements View
                 tv_product_scanbarcode.setText(dataBorrower.get(i).getProductTitle());
                 tv_nama_scanbarcode.setText(dataBorrower.get(i).getNamaPeminjam());
                 tv_tenor_scanbarcode.setText(dataBorrower.get(i).getLoanTerm() + " Bulan");
-                tv_jmlpembayaran_scanbarcode.setText(formatRupiah.format((double) Integer.parseInt(dataBorrower.get(i).getTotalPinjamanDisetujui())));
-            }
+                if(dataBorrower.get(i).getTotalPinjamanDisetujui() != null) {
+                    tv_jmlpembayaran_scanbarcode.setText(formatRupiah.format((double) Integer.parseInt(dataBorrower.get(i).getTotalPinjamanDisetujui())));
+                }
         }
 
 
