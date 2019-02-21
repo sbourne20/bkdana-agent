@@ -12,6 +12,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
@@ -249,7 +250,8 @@ public class fragment_scanbarcode extends AppCompatActivity implements ScanBarco
                     startActivity(menuDetailScan);
                     finish();
                 } else if (response.getContent().getDataBorrower().get(i).getmMessage().equals("Borrower tidak ditemukan")) {
-                    Toast.makeText(this, response.getContent().getDataBorrower().get(i).getmMessage(), Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this, response.getContent().getDataBorrower().get(i).getmMessage(), Toast.LENGTH_SHORT).show();
+                    customDialogInformasi(response.getContent().getDataBorrower().get(i).getmMessage());
                 }
 
             }
@@ -261,5 +263,38 @@ public class fragment_scanbarcode extends AppCompatActivity implements ScanBarco
     @Override
     public void onFailureScanBarcode(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+
+
+
+    private void customDialogInformasi(String isi){
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = this.getLayoutInflater();
+        final View dialogView = inflater.inflate(R.layout.custom_dialog, null);
+        builder.setView(dialogView);
+        TextView title_dialog = dialogView.findViewById(R.id.title_dialog);
+        TextView tv_isi_dialog = dialogView.findViewById(R.id.txt_isi_dialog);
+        TextView tv_yes_dialog = dialogView.findViewById(R.id.tv_yes_dialog);
+        TextView tv_no_dialog = dialogView.findViewById(R.id.tv_no_dialog);
+
+
+        final AlertDialog alertDialog = builder.create();
+        title_dialog.setText("Pemberitahuan");
+        tv_isi_dialog.setText(isi);
+        tv_yes_dialog.setVisibility(View.GONE);
+        tv_no_dialog.setText("OK");
+        tv_no_dialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent menuScan = new Intent(fragment_scanbarcode.this,fragment_scanbarcode.class);
+                startActivity(menuScan);
+                finish();
+            }
+        });
+        alertDialog.setCanceledOnTouchOutside(false);
+        alertDialog.show();
+
+
     }
 }
