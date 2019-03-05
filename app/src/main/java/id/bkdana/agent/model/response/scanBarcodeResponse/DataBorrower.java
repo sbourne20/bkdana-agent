@@ -33,10 +33,6 @@ public class DataBorrower implements Parcelable {
     @SerializedName("message")
     private String mMessage;
 
-
-    public DataBorrower() {
-    }
-
     protected DataBorrower(Parcel in) {
         mIdKtp = in.readString();
         mIdPeminjam = in.readString();

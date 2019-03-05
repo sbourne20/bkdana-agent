@@ -17,4 +17,5 @@ public class ScanBarcodeResponse extends BaseModel {
     public void setContent(Content content) {
         mContent = content;
     }
+
 }

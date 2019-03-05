@@ -30,8 +30,8 @@ public class FormSurvey3Presenter implements FormSurvey3Contract {
 
 
     @Override
-    public void postFormSurvey3(String idAgentFormSurvey3, String omset, String biaya, String laba) {
-        Call<FormSurveyResponse> call =ServiceClient.getClient().create(BKDapi.class).postFormSurvey3(agentSession.getAutorization(),idAgentFormSurvey3,omset,biaya,laba);
+    public void postFormSurvey3(String idAgentFormSurvey3, String omset, String biaya, String laba,String latitude, String longitude) {
+        Call<FormSurveyResponse> call =ServiceClient.getClient().create(BKDapi.class).postFormSurvey3(agentSession.getAutorization(),idAgentFormSurvey3,omset,biaya,laba,latitude,longitude);
         call.enqueue(new Callback<FormSurveyResponse>() {
             @Override
             public void onResponse(Call<FormSurveyResponse> call, Response<FormSurveyResponse> response) {

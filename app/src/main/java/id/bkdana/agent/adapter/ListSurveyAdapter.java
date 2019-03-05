@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,6 +41,8 @@ public class ListSurveyAdapter extends RecyclerView.Adapter<ListSurveyAdapter.Su
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_list_survey, parent, false);
 
+
+
         return new SurveyViewHolder(itemView);
     }
 
@@ -63,6 +66,8 @@ public class ListSurveyAdapter extends RecyclerView.Adapter<ListSurveyAdapter.Su
                 menuAddSurvey.putExtra("intent_idPeminjam", datum.getIdPeminjam());
                 menuAddSurvey.putExtra("intent_masterLoadId", datum.getTransaksiId());
                 menuAddSurvey.putExtra("intent_productTitle", datum.getProductTitle());
+
+                Log.d("id", "onClick: "  + datum.getIdPeminjam());
 
                 context.startActivity(menuAddSurvey);
             }

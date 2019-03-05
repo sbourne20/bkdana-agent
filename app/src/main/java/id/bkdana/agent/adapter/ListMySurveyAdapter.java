@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,11 +40,12 @@ public class ListMySurveyAdapter extends RecyclerView.Adapter<ListMySurveyAdapte
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_list_survey, parent, false);
 
+
         return new MySurveyViewHolder(itemView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ListMySurveyAdapter.MySurveyViewHolder mySurveyViewHolder, int position) {
+    public void onBindViewHolder(@NonNull ListMySurveyAdapter.MySurveyViewHolder mySurveyViewHolder, final int position) {
         datum = data.get(position);
 
         Locale localeID = new Locale("in", "ID");
@@ -52,14 +54,13 @@ public class ListMySurveyAdapter extends RecyclerView.Adapter<ListMySurveyAdapte
         mySurveyViewHolder.item_add_survey.setText("detail survey");
         mySurveyViewHolder.item_nama_peminjam.setText(datum.getNama());
         mySurveyViewHolder.item_no_reg_peminjam.setText(datum.getMasterLoanId());
-
+        mySurveyViewHolder.tv_idMOD.setText(datum.getIdModAgentSurvey());
+        final String isiMOD = mySurveyViewHolder.tv_idMOD.getText().toString();
 
         mySurveyViewHolder.item_add_survey.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent menuAddSurvey = new Intent(context, DetailSurveyActivity.class);
-                menuAddSurvey.putExtra("detail_id", datum.getIdModAgentSurvey());
-                context.startActivity(menuAddSurvey);
+                send(isiMOD);
             }
         });
 
@@ -73,7 +74,7 @@ public class ListMySurveyAdapter extends RecyclerView.Adapter<ListMySurveyAdapte
 
     public class MySurveyViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView item_nama_peminjam,item_no_reg_peminjam,item_bulan_peminjam,item_total_peminjaman;
+        private TextView item_nama_peminjam,item_no_reg_peminjam,item_bulan_peminjam,item_total_peminjaman,tv_idMOD;
         private Button item_add_survey;
 
         public MySurveyViewHolder(@NonNull View itemView) {
@@ -84,6 +85,13 @@ public class ListMySurveyAdapter extends RecyclerView.Adapter<ListMySurveyAdapte
             item_bulan_peminjam = itemView.findViewById(R.id.item_bulan_peminjam);
             item_total_peminjaman = itemView.findViewById(R.id.item_total_peminjaman);
             item_add_survey = itemView.findViewById(R.id.item_add_survey);
+            tv_idMOD = itemView.findViewById(R.id.tv_idMOD);
         }
+    }
+
+    void send(String isiMOD){
+        Intent menuAddSurvey = new Intent(context, DetailSurveyActivity.class);
+        menuAddSurvey.putExtra("detail_id", isiMOD);
+        context.startActivity(menuAddSurvey);
     }
 }

@@ -14,6 +14,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.NumberFormat;
+import java.util.Locale;
+
 import id.bkdana.agent.R;
 import id.bkdana.agent.Util.Session.BKDanaAgentSession;
 import id.bkdana.agent.contarct.DashboardContract;
@@ -29,7 +32,7 @@ public class fragment_dashboard extends Fragment implements DashboardBridge<Dash
     private LinearLayout llListSurvey, llListCollection;
     private ImageView iv_signtout;
     private BKDanaAgentSession agentSession;
-    private TextView tv_idAgent,tv_namaAgent,tv_total_mySurvey,tv_total_myCollection;
+    private TextView tv_idAgent,tv_namaAgent,tv_total_mySurvey,tv_total_myCollection,tv_idSaldo;
     private DashboardContract dashboardContract;
     private String TAG = fragment_dashboard.class.getSimpleName();
 
@@ -46,6 +49,7 @@ public class fragment_dashboard extends Fragment implements DashboardBridge<Dash
         tv_namaAgent = view.findViewById(R.id.tv_name_agent);
         tv_total_mySurvey = view.findViewById(R.id.tv_total_mysurvey);
         tv_total_myCollection = view.findViewById(R.id.tv_total_mycollection);
+        tv_idSaldo = view.findViewById(R.id.tv_id_saldo);
 
         agentSession = new BKDanaAgentSession(getActivity());
         dashboardContract = new DasboardPresenter(agentSession,getActivity(),this);
@@ -87,8 +91,13 @@ public class fragment_dashboard extends Fragment implements DashboardBridge<Dash
 
     @Override
     public void onSuccessDashboard(DashboardResponse reponse) {
+
+        Locale localeID = new Locale("in", "ID");
+        NumberFormat formatRupiah = NumberFormat.getCurrencyInstance(localeID);
+
         tv_total_mySurvey.setText(reponse.getContent().getTotalMysurvey().getItotal());
         tv_total_myCollection.setText(reponse.getContent().getTotalMycollection().getItotal());
+        tv_idSaldo.setText("Saldo :"+formatRupiah.format((double)Integer.parseInt(reponse.getContent().getmAgentAmount().getmSaldo())));
     }
 
     @Override

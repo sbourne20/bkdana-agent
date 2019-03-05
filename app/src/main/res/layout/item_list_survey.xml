@@ -9,6 +9,12 @@
     android:layout_gravity="center_horizontal"
     android:background="@drawable/bg_item_list_survey">
 
+    <TextView
+        android:id="@+id/tv_idMOD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
     <id.bkdana.agent.Util.widget.MontserratBoldTextView
         android:id="@+id/item_nama_peminjam"
         android:layout_width="wrap_content"

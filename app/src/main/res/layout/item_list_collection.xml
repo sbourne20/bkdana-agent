@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
+    android:id="@+id/container_item_list_container"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="200.3dp"
-    android:background="@drawable/belum_lunas_collection">
+    android:layout_height="200.3dp">
 
     <id.bkdana.agent.Util.widget.WorkSansSemiBoldTextView
         android:id="@+id/tv_id_mycollection"

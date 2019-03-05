@@ -172,6 +172,7 @@
                         android:layout_marginTop="5dp"
                         android:paddingLeft="17.3dp"
                         android:textSize="13.5sp"
+                        android:inputType="number"
                         android:background="@drawable/textview_bg"/>>
 
                 </LinearLayout>

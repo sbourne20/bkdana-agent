@@ -1,6 +1,5 @@
 package id.bkdana.agent.view.activity;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -14,13 +13,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-
 import id.bkdana.agent.R;
 import id.bkdana.agent.Util.ConnectionDetector;
 import id.bkdana.agent.Util.Session.BKDanaAgentSession;
 import id.bkdana.agent.contarct.SubmitCollectionContract;
-import id.bkdana.agent.model.response.scanBarcodeResponse.DataBorrower;
 import id.bkdana.agent.model.response.submitCollectionResponse.SubmitCollectionReponse;
 import id.bkdana.agent.presenter.SubmitCollectionPresenter;
 import id.bkdana.agent.view.bridge.SubmitCollectionBridge;
@@ -34,7 +30,7 @@ public class InputPenagihanActivity extends AppCompatActivity implements SubmitC
     private SubmitCollectionContract submitCollectionContract;
     private ConnectionDetector cd;
     private Boolean isInternetPresent = false;
-    private String idUser,idModAgent,masterLoanId,jmlTgihan,sisaTghan,borrowCode,idtrk;
+    private String idUser,idModAgent,masterLoanId,jmlTgihan,sisaTghan,borrowCode,idtrk,total_pinjam,sisa_tagihan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +40,8 @@ public class InputPenagihanActivity extends AppCompatActivity implements SubmitC
 
         idtrk = getIntent().getExtras().getString("idtrk");
         idUser = getIntent().getExtras().getString("jancuk");
+        total_pinjam = getIntent().getExtras().getString("disetujui");
+        sisa_tagihan = getIntent().getExtras().getString("sisaTagihan");
 
         Log.i("in", "ii: " + idUser + idtrk);
 
@@ -62,6 +60,12 @@ public class InputPenagihanActivity extends AppCompatActivity implements SubmitC
         iv_back_inoutpenagihan.setOnClickListener(this);
         btn_sebelumnya_inputpenagihan.setOnClickListener(this);
         btn_proses_penagihan.setOnClickListener(this);
+
+        et_borrowercode_inputpenagihan.setText(idUser);
+        et_sisatagihan_inputpenagihan.setText(sisa_tagihan);
+
+        et_jmltagihan_inputpenagihan.setText(total_pinjam);
+
     }
 
 

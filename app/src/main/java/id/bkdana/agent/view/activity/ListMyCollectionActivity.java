@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import id.bkdana.agent.R;
+import id.bkdana.agent.Util.EndlessOnScrollListener;
 import id.bkdana.agent.Util.Session.BKDanaAgentSession;
 import id.bkdana.agent.adapter.ListCollectionAdapter;
 import id.bkdana.agent.contarct.ListMyCollectionContract;
@@ -23,10 +24,11 @@ import id.bkdana.agent.view.bridge.ListMyCollectionBridge;
 public class ListMyCollectionActivity extends AppCompatActivity implements ListMyCollectionBridge<ListMyCollectionResponse>,View.OnClickListener {
 
     private RecyclerView rv_collection;
-    private RecyclerView.LayoutManager mLayoutManager;
     private ListCollectionAdapter mAdapter;
     private ImageView iv_back_list_collection;
     private ListMyCollectionContract listMyCollectionContract;
+    private EndlessOnScrollListener scrollListener;
+    private int offset = 1;
     private BKDanaAgentSession agentSession;
     private List<ListMycollection> datumList = new ArrayList<>();
 
@@ -43,13 +45,31 @@ public class ListMyCollectionActivity extends AppCompatActivity implements ListM
         rv_collection.setHasFixedSize(true);
 
 
-        mLayoutManager = new LinearLayoutManager(this);
+        LinearLayoutManager mLayoutManager = new LinearLayoutManager(this);
         rv_collection.setLayoutManager(mLayoutManager);
 
         listMyCollectionContract.getListMyCollection(agentSession.getidMod(),"0","10");
 
         mAdapter = new ListCollectionAdapter(this,datumList);
         rv_collection.setAdapter(mAdapter);
+
+        scrollListener = new EndlessOnScrollListener(mLayoutManager) {
+            @Override
+            public void onLoadMore(int page, int totalItemsCount, RecyclerView view) {
+                offset = offset + 1;
+                listMyCollectionContract.getListMyCollection(agentSession.getidMod(), String.valueOf(offset),"10");
+                final int curSize = mAdapter.getItemCount();
+
+
+                view.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        mAdapter.notifyItemRangeInserted(curSize, datumList.size() - 1);
+                    }
+                });
+            }
+        };
+        rv_collection.addOnScrollListener(scrollListener);
 
         iv_back_list_collection.setOnClickListener(this);
     }

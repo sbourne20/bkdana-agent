@@ -232,7 +232,7 @@
                         android:textColor="#655ee0"
                         android:letterSpacing="0.01"
                         android:lineSpacingExtra="2.5sp"
-                        android:paddingLeft="23dp"
+                        android:layout_marginLeft="23dp"
                         android:paddingRight="23dp"
                         android:text=""
                         />
@@ -321,6 +321,68 @@
 
                     <id.bkdana.agent.Util.widget.WorkSansRegularTextView
                         android:id="@+id/tv_laba_detailsurvey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14.5sp"
+                        android:textColor="#655ee0"
+                        android:letterSpacing="0.01"
+                        android:lineSpacingExtra="2.5sp"
+                        android:paddingRight="23dp"
+                        android:text=""
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <id.bkdana.agent.Util.widget.WorkSansSemiBoldTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14.5sp"
+                        android:textColor="#655ee0"
+                        android:letterSpacing="0.01"
+                        android:lineSpacingExtra="2.5sp"
+                        android:paddingLeft="23dp"
+                        android:paddingRight="22dp"
+                        android:text="Latitude: "
+                        />
+
+                    <id.bkdana.agent.Util.widget.WorkSansRegularTextView
+                        android:id="@+id/tv_latitude_detailsurvey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14.5sp"
+                        android:textColor="#655ee0"
+                        android:letterSpacing="0.01"
+                        android:lineSpacingExtra="2.5sp"
+                        android:paddingRight="23dp"
+                        android:text=""
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <id.bkdana.agent.Util.widget.WorkSansSemiBoldTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14.5sp"
+                        android:textColor="#655ee0"
+                        android:letterSpacing="0.01"
+                        android:lineSpacingExtra="2.5sp"
+                        android:paddingLeft="23dp"
+                        android:paddingRight="11dp"
+                        android:text="Longitude: "
+                        />
+
+                    <id.bkdana.agent.Util.widget.WorkSansRegularTextView
+                        android:id="@+id/tv_longitude_detailsurvey"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="14.5sp"

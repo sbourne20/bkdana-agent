@@ -23,6 +23,8 @@ public class ListMycollection {
     private String mTglCollection;
     @SerializedName("User_id")
     private String mUserId;
+    @SerializedName("Master_loan_status")
+    private String mMasterLoanStatus;
 
     public String getIdCollection() {
         return mIdCollection;
@@ -96,4 +98,11 @@ public class ListMycollection {
         mUserId = userId;
     }
 
+    public String getmMasterLoanStatus() {
+        return mMasterLoanStatus;
+    }
+
+    public void setmMasterLoanStatus(String mMasterLoanStatus) {
+        this.mMasterLoanStatus = mMasterLoanStatus;
+    }
 }

@@ -77,7 +77,9 @@ public interface BKDapi {
                                               @Field("id_mod_agent_survey") String id_mod_agent_survey,
                                               @Field("omset") String omset,
                                               @Field("biaya") String biaya,
-                                              @Field("laba") String laba);
+                                              @Field("laba") String laba,
+                                              @Field("latitude") String latitude,
+                                              @Field("longitude") String longitude);
     @FormUrlEncoded
     @POST("collection/data_borrower")
     Call<ScanBarcodeResponse> postScanBarcode (@Header("Authorization") String Authorization,

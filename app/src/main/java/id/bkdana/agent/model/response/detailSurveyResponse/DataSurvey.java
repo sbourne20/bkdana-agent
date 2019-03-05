@@ -39,6 +39,10 @@ public class DataSurvey {
     private String mSurveyDate;
     @SerializedName("0")
     private String m0;
+    @SerializedName("latitude")
+    private String mLatitude;
+    @SerializedName("longitude")
+    private String mLongitude;
 
     public String getAlamat() {
         return mAlamat;
@@ -174,5 +178,21 @@ public class DataSurvey {
 
     public void setM0(String m0) {
         this.m0 = m0;
+    }
+
+    public String getmLatitude() {
+        return mLatitude;
+    }
+
+    public void setmLatitude(String mLatitude) {
+        this.mLatitude = mLatitude;
+    }
+
+    public String getmLongitude() {
+        return mLongitude;
+    }
+
+    public void setmLongitude(String mLongitude) {
+        this.mLongitude = mLongitude;
     }
 }

@@ -2,7 +2,9 @@ package id.bkdana.agent.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,6 +36,8 @@ public class ListCollectionAdapter extends RecyclerView.Adapter<ListCollectionAd
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_list_collection, parent, false);
 
+
+
         return new CollectionViewHolder(itemView);
     }
 
@@ -57,6 +61,10 @@ public class ListCollectionAdapter extends RecyclerView.Adapter<ListCollectionAd
                 context.startActivity(menuDetailMyCollection);
             }
         });
+
+        if(!datum.getmMasterLoanStatus().equals("lunas")){
+            collectionViewHolder.container_item_list_container.setBackground(context.getDrawable(R.drawable.belum_lunas_collection));
+        }
     }
 
     @Override
@@ -68,6 +76,7 @@ public class ListCollectionAdapter extends RecyclerView.Adapter<ListCollectionAd
 
         private TextView tv_id_collection, tv_nama_collection_tv_tenor_collection, tv_tenor_mycollection,tv_total_peminjam_collection,tv_sisa_hutang_collection;
         private Button btn_detail_collection;
+        private ConstraintLayout container_item_list_container;
 
         public CollectionViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -78,6 +87,7 @@ public class ListCollectionAdapter extends RecyclerView.Adapter<ListCollectionAd
             tv_sisa_hutang_collection = itemView.findViewById(R.id.tv_sisa_hutang_mycollection);
             tv_total_peminjam_collection = itemView.findViewById(R.id.tv_total_pinjam_mycollection);
             btn_detail_collection = itemView.findViewById(R.id.item_btn_detail_collection);
+            container_item_list_container = itemView.findViewById(R.id.container_item_list_container);
         }
     }
 }

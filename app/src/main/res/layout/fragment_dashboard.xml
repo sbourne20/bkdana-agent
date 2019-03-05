@@ -28,22 +28,48 @@
             android:letterSpacing="0.01"
             android:lineSpacingExtra="7.3sp"
             android:paddingLeft="11dp"
-            android:text="Andhika Desta Permana"
+            android:text=""
             android:textColor="@color/white"
             android:textSize="17.3sp" />
 
-        <id.bkdana.agent.Util.widget.WorkSansRegularTextView
-            android:id="@+id/tv_id_agent"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_name_agent"
-            android:layout_toRightOf="@id/img_account_agent"
-            android:letterSpacing="0.01"
-            android:lineSpacingExtra="7.8sp"
-            android:paddingLeft="11dp"
-            android:text="Agent #2313"
-            android:textColor="@color/white"
-            android:textSize="16.8sp" />
+            android:layout_toRightOf="@id/img_account_agent">
+
+            <id.bkdana.agent.Util.widget.WorkSansRegularTextView
+                android:id="@+id/tv_id_agent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.01"
+                android:lineSpacingExtra="7.8sp"
+                android:paddingLeft="11dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="16.8sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:background="@color/white"
+                android:layout_marginLeft="11dp"
+                android:layout_gravity="center"/>
+
+            <id.bkdana.agent.Util.widget.WorkSansRegularTextView
+                android:id="@+id/tv_id_saldo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.01"
+                android:lineSpacingExtra="7.8sp"
+                android:paddingLeft="11dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="16.8sp" />
+
+        </LinearLayout>
+
+
 
         <ImageView
             android:id="@+id/iv_signout"

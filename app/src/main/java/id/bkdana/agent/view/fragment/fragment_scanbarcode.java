@@ -7,19 +7,17 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.ImageView;
@@ -33,7 +31,6 @@ import com.google.android.gms.vision.barcode.BarcodeDetector;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 import id.bkdana.agent.R;
 import id.bkdana.agent.Util.ConnectionDetector;
@@ -241,11 +238,19 @@ public class fragment_scanbarcode extends AppCompatActivity implements ScanBarco
     public void onSuccessScanBarcode(ScanBarcodeResponse response) {
         ArrayList<DataBorrower> dataBorrower = new ArrayList<>();
         Intent menuDetailScan = new Intent(fragment_scanbarcode.this,DetailScanBarcodeActivity.class);
+        String sisa = String.valueOf(response.getContent().getChkBorrower().getSisaTagihan());
+
+        menuDetailScan.putExtra("ok", sisa);
+
+        Log.i("sisacuk", "onSuccessScanBarcode: " + response.getContent().getChkBorrower().getSisaTagihan());
+
+
         if(response.getContent().getDataBorrower().size()  != 0 ) {
             for (int i = 0; i < response.getContent().getDataBorrower().size(); i++) {
 
                 if(response.getContent().getDataBorrower().get(i).getmMessage() == null) {
                     dataBorrower.add(response.getContent().getDataBorrower().get(i));
+
                     menuDetailScan.putParcelableArrayListExtra("dataBorrower", dataBorrower);
                     startActivity(menuDetailScan);
                     finish();

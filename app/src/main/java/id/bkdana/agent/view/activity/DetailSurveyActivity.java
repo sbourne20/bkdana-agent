@@ -27,7 +27,7 @@ public class DetailSurveyActivity extends AppCompatActivity implements DetailMyS
 
     private TextView tv_id_transaksi_detailmysurvey, tv_id_produk_detailmysurvey, tv_nama_deatilmysurvey,
             tv_alamat_detailmysurvey, tv_ktp_detailmysurvey, tv_jenis_detailsurvey, tv_alamat_usaha_detailsurvey,
-            tv_omset_detailsurvey, tv_biaya_detailsurvey, tv_laba_detailsurvey;
+            tv_omset_detailsurvey, tv_biaya_detailsurvey, tv_laba_detailsurvey,tv_latitude_detailsurvey,tv_longitude_detailsurvey;
     private ImageView iv_img_detailMysurvey, iv_back_detailmysurvey;
     private String id_transaksi_detailmysurvey, produk_detailmysurvey, nama_detailmysurvey, alamat_detailmysurvey,
             ktp_detailmysurvey, jenis_detailmysurvey, alamat_usaha_detailmysurvey, omset_detailmysurvey,biaya_detailmysurvey,
@@ -59,6 +59,8 @@ public class DetailSurveyActivity extends AppCompatActivity implements DetailMyS
         tv_omset_detailsurvey = findViewById(R.id.tv_omset_detailsurvey);
         tv_biaya_detailsurvey = findViewById(R.id.tv_biaya_detailsurvey);
         tv_laba_detailsurvey = findViewById(R.id.tv_laba_detailsurvey);
+        tv_latitude_detailsurvey = findViewById(R.id.tv_latitude_detailsurvey);
+        tv_longitude_detailsurvey = findViewById(R.id.tv_longitude_detailsurvey);
 
 
         detailSurveyContract.postDetailMySurvey(id_mod_agent_detail);
@@ -90,6 +92,8 @@ public class DetailSurveyActivity extends AppCompatActivity implements DetailMyS
             tv_omset_detailsurvey.setText(formatRupiah.format((double)Integer.parseInt(dataSurveys.get(i).getOmset())));
             tv_biaya_detailsurvey.setText(formatRupiah.format((double)Integer.parseInt(dataSurveys.get(i).getBiaya())));
             tv_laba_detailsurvey.setText(formatRupiah.format((double)Integer.parseInt(dataSurveys.get(i).getLaba())));
+            tv_latitude_detailsurvey.setText(dataSurveys.get(i).getmLatitude());
+            tv_longitude_detailsurvey.setText(dataSurveys.get(i).getmLongitude());
         }
 
 

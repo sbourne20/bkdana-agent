@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
@@ -26,7 +25,7 @@ public class DetailScanBarcodeActivity extends AppCompatActivity implements View
     private ImageView iv_back_scanbarcodedetail;
     private ArrayList<DataBorrower> dataBorrower;
     private BKDanaAgentSession agentSession;
-    private String idpan,idtrk;
+    private String idpan,idtrk,total_pinjam,sisa_tagihan;
 
 
     @Override
@@ -35,6 +34,8 @@ public class DetailScanBarcodeActivity extends AppCompatActivity implements View
         setContentView(R.layout.activity_detail_scan_barcode);
 
         dataBorrower = getIntent().getParcelableArrayListExtra("dataBorrower");
+        sisa_tagihan = getIntent().getExtras().getString("ok");
+        Log.i("sisacuk", "onCreate: " + sisa_tagihan);
 
         tv_id_transaksi_scanbarcode = findViewById(R.id.tv_id_transaksi_scanbarcode);
         tv_product_scanbarcode = findViewById(R.id.tv_product_scanbarcode);
@@ -63,6 +64,7 @@ public class DetailScanBarcodeActivity extends AppCompatActivity implements View
             for (int i = 0; i < dataBorrower.size(); i++) {
                 idpan = dataBorrower.get(i).getIdPeminjam();
                 idtrk = dataBorrower.get(i).getTransaksiId();
+                total_pinjam = dataBorrower.get(i).getTotalPinjamanDisetujui();
                 tv_id_transaksi_scanbarcode.setText(dataBorrower.get(i).getTransaksiId());
                 tv_product_scanbarcode.setText(dataBorrower.get(i).getProductTitle());
                 tv_nama_scanbarcode.setText(dataBorrower.get(i).getNamaPeminjam());
@@ -81,6 +83,8 @@ public class DetailScanBarcodeActivity extends AppCompatActivity implements View
         Log.i("jancuk", "onSendData: " + idpan);
         menuInput.putExtra("idtrk",idtrk);
         menuInput.putExtra("jancuk", idpan);
+        menuInput.putExtra("disetujui",total_pinjam);
+        menuInput.putExtra("sisaTagihan",sisa_tagihan);
         startActivity(menuInput);
     }
 
