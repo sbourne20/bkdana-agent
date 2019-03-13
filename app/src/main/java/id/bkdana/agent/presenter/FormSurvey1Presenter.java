@@ -35,11 +35,11 @@ public class FormSurvey1Presenter implements FormSurvey1Contract {
             @Override
             public void onResponse(Call<FormSurveyResponse> call, Response<FormSurveyResponse> response) {
                 if(response.isSuccessful()){
-                    if(response.body().getStatus() == 200){
+                    if(response.body().getStatus() == 200 && !response.body().getResponse().equals("fail")){
                         formSurvey1Bridge.onSuccessFromSuervey1(response.body());
                     } else {
-                        formSurvey1Bridge.onFailureFromSurvey1(response.body().getResponse());
-                        Log.d(TAG, "onFailureFormSurvey1: " + response.body().getResponse());
+                        formSurvey1Bridge.onFailureFromSurvey1(response.body().getMessage());
+                        Log.d(TAG, "onFailureFormSurvey1: " + response.body().getMessage());
                     }
                 }
             }

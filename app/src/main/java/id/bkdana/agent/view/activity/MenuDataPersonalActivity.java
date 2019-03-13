@@ -88,11 +88,11 @@ public class MenuDataPersonalActivity extends AppCompatActivity implements FormS
 
     @Override
     public void onSuccessFromSuervey1(FormSurveyResponse response) {
-        Toast.makeText(this, response.getContent().getMessage(), Toast.LENGTH_SHORT).show();
         Intent data_usaha = new Intent(this,MenuDataUsahaActivity.class);
         data_usaha.putExtra("intent_idPeminjam", id_peminjam);
         data_usaha.putExtra("intent_masterLoadId", master_loan_id);
         data_usaha.putExtra("intent_productTitle", product_title);
+        data_usaha.putExtra("last_id",response.getContent().getLastId());
         startActivity(data_usaha);
         finish();
     }

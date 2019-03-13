@@ -40,6 +40,7 @@ public class MenuDataKeuanganUsahaActivity extends AppCompatActivity implements 
     private EditText et_omzet_peminjam, et_biaya_peminjam, et_laba_peminjam;
     private ImageView iv_back_survey;
     private String id_agent,id_peminjam,master_loan_id,product_title,omset,biaya,laba;
+    private Long last_id;
     private BKDanaAgentSession agentSession;
     private FormSurvey3Contract formSurvey3Contract;
     private Double lat, longi;
@@ -92,6 +93,8 @@ public class MenuDataKeuanganUsahaActivity extends AppCompatActivity implements 
         id_peminjam = getIntent().getStringExtra("intent_idPeminjam");
         master_loan_id = getIntent().getStringExtra("intent_masterLoadId");
         product_title = getIntent().getStringExtra("intent_productTitle");
+        last_id = getIntent().getExtras().getLong("last_id");
+        Log.i("koc", "onSetData: " + last_id);
 
         tv_dataKeungan_produktitle.setText(product_title);
         tv_dataKeungan_masterLoadId.setText(master_loan_id);
@@ -107,7 +110,7 @@ public class MenuDataKeuanganUsahaActivity extends AppCompatActivity implements 
 
         isInternetPresent = cd.isConnectingToInternet();
         if (isInternetPresent) {
-            formSurvey3Contract.postFormSurvey3(agentSession.getidMod(),omset,biaya,laba,latitude,longitude);
+            formSurvey3Contract.postFormSurvey3(String.valueOf(last_id),omset,biaya,laba,latitude,longitude);
         }  else if (isInternetPresent.equals(false)) {
             Toast.makeText(this, "Tidak ada koneksi Internet", Toast.LENGTH_LONG).show();
         }

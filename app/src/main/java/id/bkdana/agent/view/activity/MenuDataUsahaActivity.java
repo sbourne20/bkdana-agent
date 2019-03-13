@@ -39,6 +39,7 @@ public class MenuDataUsahaActivity extends AppCompatActivity implements FormSurv
     private TextView tv_dataUsaha_masterLoadId, tv_dataUsaha_produktitle;
     private EditText et_alamat_usaha_peminjam, et_jenis_usaha_peminjam;
     private String id_agent,id_peminjam,master_loan_id,product_title,alamatUsaha,jenisUsaha;
+    private Long last_id;
     private BKDanaAgentSession agentSession;
     private FormSurvey2Contract formSurvey2Contract;
     private ConnectionDetector cd;
@@ -76,6 +77,8 @@ public class MenuDataUsahaActivity extends AppCompatActivity implements FormSurv
         id_peminjam = getIntent().getStringExtra("intent_idPeminjam");
         master_loan_id = getIntent().getStringExtra("intent_masterLoadId");
         product_title = getIntent().getStringExtra("intent_productTitle");
+        last_id = getIntent().getExtras().getLong("last_id");
+        Log.i("koc", "onSetData: " + last_id);
 
         tv_dataUsaha_produktitle.setText(product_title);
         tv_dataUsaha_masterLoadId.setText(master_loan_id);
@@ -99,7 +102,7 @@ public class MenuDataUsahaActivity extends AppCompatActivity implements FormSurv
 
         isInternetPresent = cd.isConnectingToInternet();
         if (isInternetPresent) {
-            formSurvey2Contract.postFormSurvey2(agentSession.getidMod(),alamatUsaha,jenisUsaha,imageBitmap);
+            formSurvey2Contract.postFormSurvey2(String.valueOf(last_id),alamatUsaha,jenisUsaha,imageBitmap);
         }  else if (isInternetPresent.equals(false)) {
             Toast.makeText(this, "Tidak ada koneksi Internet", Toast.LENGTH_LONG).show();
         }
@@ -129,6 +132,7 @@ public class MenuDataUsahaActivity extends AppCompatActivity implements FormSurv
         data_usaha.putExtra("intent_idPeminjam", id_peminjam);
         data_usaha.putExtra("intent_masterLoadId", master_loan_id);
         data_usaha.putExtra("intent_productTitle", product_title);
+        data_usaha.putExtra("last_id",last_id);
         startActivity(data_usaha);
         finish();
     }

@@ -47,7 +47,7 @@ public class DasboardPresenter implements DashboardContract {
                     }
                 } else if(response.code() == 401){
                     AlertDialog.Builder builder = new AlertDialog.Builder(context)
-                            .setMessage("Token Anda Sudah Habis /n Harap Login Lagi")
+                            .setMessage("Token Anda Sudah Habis Harap Login Lagi")
                             .setPositiveButton("Login", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
