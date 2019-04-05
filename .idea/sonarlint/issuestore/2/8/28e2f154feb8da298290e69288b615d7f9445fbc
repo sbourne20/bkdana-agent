@@ -1,0 +1,31 @@
+
+Psquid:S1659"2Declare "btn_proses_penagihan" on a separate line.(Øêã8—ˆıØ”-
+‡squid:S00116"hRename this field "btn_sebelumnya_inputpenagihan" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Øêã8—ˆıØ”-
+Vsquid:S2589€"7Remove this expression which always evaluates to "true"(ÿò†ô8—ˆıØ”-
+Esquid:S1659!"'Declare "sisaTghan" on a separate line.(ì‡¥ä8—ˆıØ”-
+ƒsquid:S1450"eRemove the "iv_back_inoutpenagihan" field and declare it as a local variable in the relevant methods.(Ø¼÷¢8—ˆıØ”-
+ysquid:S1450!"[Remove the "total_pinjam" field and declare it as a local variable in the relevant methods.(ì‡¥ä8®Ó„Ù”-
+usquid:S00117t"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È¿˜şşÿÿÿÿ8—ˆıØ”-
+Œsquid:S00116"hRename this field "et_sisatagihan_inputpenagihan" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤Ê×·ÿÿÿÿÿ8—ˆıØ”-
+Asquid:S1659!"#Declare "idtrk" on a separate line.(ì‡¥ä8—ˆıØ”-
+Šsquid:S1450"lRemove the "btn_sebelumnya_inputpenagihan" field and declare it as a local variable in the relevant methods.(Øêã8—ˆıØ”-
+]squid:S1659":Declare "et_jmltagihan_inputpenagihan" on a separate line.(¤Ê×·ÿÿÿÿÿ8—ˆıØ”-
+^squid:S1659";Declare "et_sisatagihan_inputpenagihan" on a separate line.(¤Ê×·ÿÿÿÿÿ8—ˆıØ”-
+Hsquid:S1659!"*Declare "sisa_tagihan" on a separate line.(ì‡¥ä8«şØ”-
+vsquid:S00116!"WRename this field "sisa_tagihan" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ì‡¥ä8—ˆıØ”-
+Fsquid:S1659!"(Declare "idModAgent" on a separate line.(ì‡¥ä8—ˆıØ”-
+usquid:S00117u"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é°™…ÿÿÿÿÿ8—ˆıØ”-
+squid:S00116"iRename this field "et_borrowercode_inputpenagihan" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤Ê×·ÿÿÿÿÿ8—ˆıØ”-
+‹squid:S00116"gRename this field "et_jmltagihan_inputpenagihan" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤Ê×·ÿÿÿÿÿ8—ˆıØ”-
+\"squid:SwitchLastCaseIsDefaultCheck^""Add a default case to this switch.(×“¾ñùÿÿÿÿ8—ˆıØ”-
+Esquid:S1659!"'Declare "jmlTgihan" on a separate line.(ì‡¥ä8—ˆıØ”-
+Fsquid:S1659!"(Declare "borrowCode" on a separate line.(ì‡¥ä8—ˆıØ”-
+ysquid:S1450!"[Remove the "sisa_tagihan" field and declare it as a local variable in the relevant methods.(ì‡¥ä8—ˆıØ”-
+squid:S1450"cRemove the "btn_proses_penagihan" field and declare it as a local variable in the relevant methods.(Øêã8—ˆıØ”-
+Nsquid:S1068!"0Remove this unused "masterLoanId" private field.(ì‡¥ä8—ˆıØ”-
+ssquid:S1192O"UDefine a constant instead of duplicating this literal "Isi Terlebih Dahulu!" 3 times.(ñŠ¼8—ˆıØ”-
+€squid:S00116"aRename this field "iv_back_inoutpenagihan" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ø¼÷¢8—ˆıØ”-
+~squid:S00116"_Rename this field "btn_proses_penagihan" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Øêã8—ˆıØ”-
+Hsquid:S1659!"*Declare "total_pinjam" on a separate line.(ì‡¥ä8—ˆıØ”-
+Hsquid:S1659!"*Declare "masterLoanId" on a separate line.(ì‡¥ä8—ˆıØ”-
+vsquid:S00116!"WRename this field "total_pinjam" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ì‡¥ä8«şØ”-

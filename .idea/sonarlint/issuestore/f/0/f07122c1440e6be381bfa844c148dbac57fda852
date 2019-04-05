@@ -1,0 +1,25 @@
+
+]squid:UselessImportCheck"-Remove this unused import 'android.util.Log'.(Ô¦Ø²øÿÿÿÿ8Ìá¿ı-
+~squid:S1450("`Remove the "isInternetPresent" field and declare it as a local variable in the relevant methods.(Ñœ‹8Ìá¿ı-
+‡squid:S1450""iRemove the "iv_back_detailmycollection" field and declare it as a local variable in the relevant methods.(×ÿ‘8Ìá¿ı-
+Usquid:S2589C"7Remove this expression which always evaluates to "true"(ÿò†ô8Ìá¿ı-
+‡squid:S00116!"hRename this field "rv_tagihan_detailmycollection" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅæÌÅ8Ìá¿ı-
+]squid:S1659 "?Declare "tv_sisa_hutang_detailmycollection" on a separate line.(™Îä¸8Ìá¿ı-
+nsquid:CommentedOutCodeLineO"<This block of commented-out lines of code should be removed.(ÏºïÌøÿÿÿÿ8Ìá¿ı-
+„squid:S00116""eRename this field "iv_back_detailmycollection" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×ÿ‘8Ìá¿ı-
+Œsquid:S00116 "mRename this field "tv_total_pinjam_detailmycollection" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™Îä¸8Ìá¿ı-
+\squid:S1659"9Declare "tv_tenor_detailmycollection" on a separate line.(¬èùûÿÿÿÿ8Ìá¿ı-
+Šsquid:S00116"fRename this field "tv_tenor_detailmycollection" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬èùûÿÿÿÿ8Ìá¿ı-
+\"squid:SwitchLastCaseIsDefaultCheckv""Add a default case to this switch.(×“¾ñùÿÿÿÿ8Ìá¿ı-
+ssquid:UselessImportCheck"HRemove this unused import 'id.bkdana.agent.adapter.ListMySurveyAdapter'.(ğì¤Ü8Ìá¿ı-
+tsquid:S1450%"QRemove the "cd" field and declare it as a local variable in the relevant methods.(¨ğÂæıÿÿÿÿ8Ìá¿ı-
+‹squid:S00116 "lRename this field "tv_sisa_hutang_detailmycollection" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™Îä¸8Ìá¿ı-
+‰squid:S00116"eRename this field "tv_nama_detailmycollection" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬èùûÿÿÿÿ8Ìá¿ı-
+[squid:S1659"8Declare "tv_nama_detailmycollection" on a separate line.(¬èùûÿÿÿÿ8Ìá¿ı-
+Šsquid:S1450!"lRemove the "rv_tagihan_detailmycollection" field and declare it as a local variable in the relevant methods.(ÅæÌÅ8Ìá¿ı-
+Œsquid:S1450&"iRemove the "detailMyCollectionContract" field and declare it as a local variable in the relevant methods.(„³Æ¸ÿÿÿÿÿ8Ìá¿ı-
+nsquid:S1301v"KReplace this "switch" statement by "if" statements to increase readability.(×“¾ñùÿÿÿÿ8Ìá¿ı-
+ysquid:S1450'"[Remove the "agentSession" field and declare it as a local variable in the relevant methods.(‰éµ8Ìá¿ı-
+^squid:S1659 "@Declare "tv_total_pinjam_detailmycollection" on a separate line.(™Îä¸8Ìá¿ı-
+‡squid:S00116"cRename this field "tv_id_detailmycollection" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬èùûÿÿÿÿ8Ìá¿ı-
+wsquid:S1450$"YRemove the "idModAgent" field and declare it as a local variable in the relevant methods.(š™ıÌ8Ìá¿ı-

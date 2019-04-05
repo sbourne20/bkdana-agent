@@ -1,0 +1,15 @@
+
+ksquid:HiddenFieldCheck7"BRename "mLayoutManager" which hides the field declared at line 31.(¸œ›¼8ìÄØ”-
+rsquid:S00116"TRename this field "rv_survey" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(î½ÿz8ìÄØ”-
+\"squid:SwitchLastCaseIsDefaultCheckV""Add a default case to this switch.(×“¾ñùÿÿÿÿ8ìÄØ”-
+Psquid:S1068"2Remove this unused "mLayoutManager" private field.(¡¾•Ÿ8ìÄØ”-
+ysquid:S1450""[Remove the "agentSession" field and declare it as a local variable in the relevant methods.(‰éµ8ìÄØ”-
+Fsquid:S1481-")Remove this unused "data" local variable.(•ô—^8ìÄØ”-
+{squid:S1450$"]Remove the "scrollListener" field and declare it as a local variable in the relevant methods.(ÙéìÊ8ìÄØ”-
+Usquid:S1854-"8Remove this useless assignment to local variable "data".(•ô—^8ìÄØ”-
+]squid:UselessImportCheck"-Remove this unused import 'android.util.Log'.(Ô¦Ø²øÿÿÿÿ8ìÄØ”-
+usquid:S1450"XRemove the "rv_survey" field and declare it as a local variable in the relevant methods.(î½ÿz8ìÄØ”-
+…squid:S1450!"bRemove the "iv_back_list_survey" field and declare it as a local variable in the relevant methods.(¸«Üşÿÿÿÿ8ìÄØ”-
+‚squid:S00116!"^Rename this field "iv_back_list_survey" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸«Üşÿÿÿÿ8ìÄØ”-
+nsquid:S1301V"KReplace this "switch" statement by "if" statements to increase readability.(×“¾ñùÿÿÿÿ8ìÄØ”-
+dsquid:UselessImportCheck"4Remove this unused import 'android.widget.TextView'.(„Ë‚ˆÿÿÿÿÿ8ìÄØ”-

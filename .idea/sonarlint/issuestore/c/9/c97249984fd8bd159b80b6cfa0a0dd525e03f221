@@ -1,0 +1,6 @@
+
+gsquid:S11923"KDefine a constant instead of duplicating this literal "text/plain" 3 times.(“»Õ•ùÿÿÿÿ
+Msquid:UselessImportCheck
+")Remove this unused import 'java.io.File'.(†Ğ¥Å
+ksquid:S00116"NRename this field "TAG" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Í²âüÿÿÿÿ
+dsquid:UselessImportCheck";Remove this unused import 'android.graphics.BitmapFactory'.(âàºÍûÿÿÿÿ

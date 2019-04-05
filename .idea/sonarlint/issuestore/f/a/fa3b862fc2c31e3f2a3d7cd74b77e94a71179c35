@@ -1,0 +1,47 @@
+
+Msquid:S1068*"/Remove this unused "id_peminjam" private field.(ÒÆ¬®8–ÿËÙ”-
+zsquid:S00116("[Rename this field "et_laba_peminjam" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÉŒ‘ö8–ÿËÙ”-
+xsquid:S1450*"ZRemove the "id_peminjam" field and declare it as a local variable in the relevant methods.(ÒÆ¬®8–ÿËÙ”-
+psquid:S00117z"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨ñã 8–ÿËÙ”-
+~squid:S14500"`Remove the "isInternetPresent" field and declare it as a local variable in the relevant methods.(Ñœ‹8–ÿËÙ”-
+qsquid:S00116+"RRename this field "last_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºÛ „8ĞÕúº—-
+wsquid:S00116*"XRename this field "product_title" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÒÆ¬®8–ÿËÙ”-
+{squid:S1450*"]Remove the "master_loan_id" field and declare it as a local variable in the relevant methods.(ÒÆ¬®8–ÿËÙ”-
+}squid:S00116)"YRename this field "iv_back_survey" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İÀµßûÿÿÿÿ8–ÿËÙ”-
+Msquid:S1659("/Declare "et_biaya_peminjam" on a separate line.(ÉŒ‘ö8–ÿËÙ”-
+{squid:S00116("\Rename this field "et_omzet_peminjam" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÉŒ‘ö8–ÿËÙ”-
+Jsquid:S1068*",Remove this unused "id_agent" private field.(ÒÆ¬®8–ÿËÙ”-
+@squid:S1659*""Declare "laba" on a separate line.(ÒÆ¬®8–ÿËÙ”-
+osquid:S1301‡"KReplace this "switch" statement by "if" statements to increase readability.(×“¾ñùÿÿÿÿ8–ÿËÙ”-
+‰squid:S00116'"eRename this field "tv_dataKeungan_produktitle" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇÁßÑüÿÿÿÿ8–ÿËÙ”-
+ysquid:UselessImportCheck"IRemove this unused import 'id.bkdana.agent.contarct.FormSurvey2Contract'.(‚„¬ûÿÿÿÿ8–ÿËÙ”-
+Šsquid:S00116'"fRename this field "tv_dataKeungan_masterLoadId" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇÁßÑüÿÿÿÿ8–ÿËÙ”-
+Usquid:S2589r"7Remove this expression which always evaluates to "true"(ÿò†ô8–ÿËÙ”-
+€squid:S1450)"]Remove the "iv_back_survey" field and declare it as a local variable in the relevant methods.(İÀµßûÿÿÿÿ8–ÿËÙ”-
+qsquid:S1450*"SRemove the "laba" field and declare it as a local variable in the relevant methods.(ÒÆ¬®8–ÿËÙ”-
+rsquid:S00116*"SRename this field "id_agent" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÒÆ¬®8–ÿËÙ”-
+Jsquid:S1659*",Declare "master_loan_id" on a separate line.(ÒÆ¬®8–ÿËÙ”-
+usquid:S00116*"VRename this field "id_peminjam" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÒÆ¬®8–ÿËÙ”-
+ysquid:S1450,"[Remove the "agentSession" field and declare it as a local variable in the relevant methods.(‰éµ8Ëùúº—-
+\squid:S1854¦"=Remove this useless assignment to local variable "addresses".(£¦İ¶8–ÿËÙ”-
+Asquid:S1659*"#Declare "biaya" on a separate line.(ÒÆ¬®8–ÿËÙ”-
+zsquid:S1450*"\Remove the "product_title" field and declare it as a local variable in the relevant methods.(ÒÆ¬®8–ÿËÙ”-
+rsquid:S1450*"TRemove the "biaya" field and declare it as a local variable in the relevant methods.(ÒÆ¬®8–ÿËÙ”-
+Fsquid:S1659."#Declare "longi" on a separate line.(óÊŒ¨ÿÿÿÿÿ8–ÿËÙ”-
+Nsquid:S00108ª")Either remove or fill this block of code.(ÒÌâ–øÿÿÿÿ8–ÿËÙ”-
+{squid:S00116("\Rename this field "et_biaya_peminjam" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÉŒ‘ö8–ÿËÙ”-
+Lsquid:S1659(".Declare "et_laba_peminjam" on a separate line.(ÉŒ‘ö8–ÿËÙ”-
+rsquid:S1450*"TRemove the "omset" field and declare it as a local variable in the relevant methods.(ÒÆ¬®8–ÿËÙ”-
+ squid:S1186»"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÁïÕÒ8–ÿËÙ”-
+\squid:S1659'"9Declare "tv_dataKeungan_masterLoadId" on a separate line.(ÇÁßÑüÿÿÿÿ8–ÿËÙ”-
+‚squid:S00116&"dRename this field "btn_kirim_survey_peminjam" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æâ³#8–ÿËÙ”-
+Fsquid:S1148X"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8–ÿËÙ”-
+]"squid:SwitchLastCaseIsDefaultCheck‡""Add a default case to this switch.(×“¾ñùÿÿÿÿ8–ÿËÙ”-
+Msquid:S1481¦".Remove this unused "addresses" local variable.(£¦İ¶8–ÿËÙ”-
+…squid:S1450&"hRemove the "btn_kirim_survey_peminjam" field and declare it as a local variable in the relevant methods.(æâ³#8–ÿËÙ”-
+ squid:S1186¶"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(çÅğÙ8–ÿËÙ”-
+Gsquid:S1659*")Declare "id_peminjam" on a separate line.(ÒÆ¬®8–ÿËÙ”-
+Asquid:S1659*"#Declare "omset" on a separate line.(ÒÆ¬®8–ÿËÙ”-
+jsquid:CommentedOutCodeLine¨"<This block of commented-out lines of code should be removed.(Îóâ‚8–ÿËÙ”-
+Isquid:S1659*"+Declare "product_title" on a separate line.(ÒÆ¬®8–ÿËÙ”-
+xsquid:S00116*"YRename this field "master_loan_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÒÆ¬®8–ÿËÙ”-

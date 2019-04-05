@@ -1,0 +1,21 @@
+
+ysquid:S00116"ZRename this field "iv_back_profile" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´ğ¾Å8Ô¾®Ÿ-
+Lsquid:S1659".Declare "tv_email_profile" on a separate line.(¾„°Ë8Ô¾®Ÿ-
+|squid:S1450"^Remove the "tv_nama_profile" field and declare it as a local variable in the relevant methods.(¾„°Ë8Ô¾®Ÿ-
+|squid:S1450"^Remove the "iv_back_profile" field and declare it as a local variable in the relevant methods.(´ğ¾Å8Ô¾®Ÿ-
+zsquid:S00116"[Rename this field "tv_email_profile" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾„°Ë8Ô¾®Ÿ-
+ysquid:S00116"[Rename this field "btn_edit_profile" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²÷ûI8Ô¾®Ÿ-
+\"squid:SwitchLastCaseIsDefaultCheck4""Add a default case to this switch.(×“¾ñùÿÿÿÿ8Ô¾®Ÿ-
+|squid:S1450"_Remove the "btn_edit_profile" field and declare it as a local variable in the relevant methods.(²÷ûI8Ô¾®Ÿ-
+csquid:UselessImportCheck	"8Remove this unused import 'android.view.LayoutInflater'.(À¯ÑÇ8Œ‰³Ÿ-
+lsquid:UselessImportCheck"<Remove this unused import 'android.support.v4.app.Fragment'.(îñ«úÿÿÿÿ8Ù˜¯Ÿ-
+^squid:UselessImportCheck"3Remove this unused import 'android.view.ViewGroup'.(‹îá8Œ‰³Ÿ-
+nsquid:S13014"KReplace this "switch" statement by "if" statements to increase readability.(×“¾ñùÿÿÿÿ8Ô¾®Ÿ-
+isquid:UselessImportCheck"?Remove this unused import 'android.support.annotation.NonNull'.(¼Åß8Œ‰³Ÿ-
+ksquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ŞŞ£x8Ô¾®Ÿ-
+Lsquid:S1659".Declare "tv_phone_profile" on a separate line.(¾„°Ë8Ô¾®Ÿ-
+ysquid:S00116"ZRename this field "tv_nama_profile" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾„°Ë8Ô¾®Ÿ-
+zsquid:S00116"[Rename this field "tv_phone_profile" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾„°Ë8Ô¾®Ÿ-
+}squid:S1450"_Remove the "tv_email_profile" field and declare it as a local variable in the relevant methods.(¾„°Ë8Ô¾®Ÿ-
+ysquid:S1450"[Remove the "agentSession" field and declare it as a local variable in the relevant methods.(‰éµ8Ô¾®Ÿ-
+}squid:S1450"_Remove the "tv_phone_profile" field and declare it as a local variable in the relevant methods.(¾„°Ë8Ô¾®Ÿ-

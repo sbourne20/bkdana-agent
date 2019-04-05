@@ -1,0 +1,5 @@
+
+Hsquid:S1068"+Remove this unused "context" private field.(êİç8×¡Ÿ-
+Lsquid:S1068")Remove this unused "token" private field.(°É©ñÿÿÿÿÿ8×¡Ÿ-
+isquid:CommentedOutCodeLine1"<This block of commented-out lines of code should be removed.(ñÜ÷È8×¡Ÿ-
+rsquid:S00116"NRename this field "TAG" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´Ğ•ıÿÿÿÿ8×¡Ÿ-

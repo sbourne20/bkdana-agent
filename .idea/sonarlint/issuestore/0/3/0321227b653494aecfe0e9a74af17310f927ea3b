@@ -1,0 +1,64 @@
+
+squid:S00116"`Rename this field "iv_img_detailMysurvey" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÛˆœŞ8Ôâ§-
+€squid:S00116"aRename this field "iv_back_detailmysurvey" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÛˆœŞ8Ôâ§-
+}squid:S00116""^Rename this field "laba_detailmysurvey" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ùêÂ8Ôâ§-
+Nsquid:S1659!"0Declare "ktp_detailmysurvey" on a separate line.( ÷µ§8Ôâ§-
+squid:S00116"`Rename this field "tv_jenis_detailsurvey" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•½Òï8Ôâ§-
+ƒsquid:S00116"_Rename this field "tv_laba_detailsurvey" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³Ò›ùÿÿÿÿ8Ôâ§-
+Šsquid:S00116 "fRename this field "id_transaksi_detailmysurvey" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕİˆÆüÿÿÿÿ8Ôâ§-
+ysquid:S1450$"[Remove the "agentSession" field and declare it as a local variable in the relevant methods.(‰éµ8Ôâ§-
+Wsquid:S1659"9Declare "tv_id_produk_detailmysurvey" on a separate line.(¨¢ş8Ôâ§-
+‚squid:S00116"cRename this field "tv_alamat_detailmysurvey" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•½Òï8Ôâ§-
+Wsquid:S1659!"9Declare "alamat_usaha_detailmysurvey" on a separate line.( ÷µ§8Ôâ§-
+Vsquid:S1659"3Declare "tv_biaya_detailsurvey" on a separate line.(³Ò›ùÿÿÿÿ8Ôâ§-
+squid:S00116"`Rename this field "tv_ktp_detailmysurvey" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•½Òï8Ôâ§-
+„squid:S00116"`Rename this field "tv_biaya_detailsurvey" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³Ò›ùÿÿÿÿ8ö±ÀÙ”-
+‚squid:S00116 "^Rename this field "nama_detailmysurvey" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕİˆÆüÿÿÿÿ8Ôâ§-
+Tsquid:S1659 "1Declare "nama_detailmysurvey" on a separate line.(ÕİˆÆüÿÿÿÿ8Ôâ§-
+\"squid:SwitchLastCaseIsDefaultCheckp""Add a default case to this switch.(×“¾ñùÿÿÿÿ8Ôâ§-
+~squid:S00116!"_Rename this field "biaya_detailmysurvey" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ÷µ§8Ôâ§-
+Psquid:S1659!"2Declare "jenis_detailmysurvey" on a separate line.( ÷µ§8Ôâ§-
+„squid:S00116 "`Rename this field "alamat_detailmysurvey" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕİˆÆüÿÿÿÿ8Ôâ§-
+Ysquid:S1659"6Declare "tv_latitude_detailsurvey" on a separate line.(³Ò›ùÿÿÿÿ8Ôâ§-
+ˆsquid:S00116"iRename this field "tv_id_transaksi_detailmysurvey" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨¢ş8Ôâ§-
+Qsquid:S1659"3Declare "tv_ktp_detailmysurvey" on a separate line.(•½Òï8Ôâ§-
+†squid:S00116"gRename this field "tv_alamat_usaha_detailsurvey" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•½Òï8Ôâ§-
+\squid:S1068 "9Remove this unused "produk_detailmysurvey" private field.(ÕİˆÆüÿÿÿÿ8Ôâ§-
+…squid:S00116"fRename this field "tv_id_produk_detailmysurvey" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨¢ş8Ôâ§-
+Rsquid:S1659"4Declare "iv_back_detailmysurvey" on a separate line.(ÛˆœŞ8Ôâ§-
+…squid:S00116!"fRename this field "alamat_usaha_detailmysurvey" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ÷µ§8Ôâ§-
+Vsquid:S1068!"8Remove this unused "omset_detailmysurvey" private field.( ÷µ§8Ôâ§-
+Zsquid:S1068 "7Remove this unused "nama_detailmysurvey" private field.(ÕİˆÆüÿÿÿÿ8Ôâ§-
+Usquid:S1068""7Remove this unused "laba_detailmysurvey" private field.(‘ùêÂ8Ôâ§-
+€squid:S1450""bRemove the "id_mod_agent_detail" field and declare it as a local variable in the relevant methods.(‘ùêÂ8Ôâ§-
+Osquid:S1659""1Declare "laba_detailmysurvey" on a separate line.(‘ùêÂ8Ôâ§-
+nsquid:S1301p"KReplace this "switch" statement by "if" statements to increase readability.(×“¾ñùÿÿÿÿ8Ôâ§-
+Tsquid:S1659"6Declare "tv_alamat_detailmysurvey" on a separate line.(•½Òï8Ôâ§-
+Osquid:S1659""1Declare "id_mod_agent_detail" on a separate line.(‘ùêÂ8Ôâ§-
+Tsquid:S1068!"6Remove this unused "ktp_detailmysurvey" private field.( ÷µ§8Ôâ§-
+]squid:S1068!"?Remove this unused "alamat_usaha_detailmysurvey" private field.( ÷µ§8Ôâ§-
+ƒsquid:S1450"eRemove the "iv_back_detailmysurvey" field and declare it as a local variable in the relevant methods.(ÛˆœŞ8Ôâ§-
+Psquid:S1659!"2Declare "biaya_detailmysurvey" on a separate line.( ÷µ§8Ôâ§-
+‡squid:S00116"cRename this field "tv_latitude_detailsurvey" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³Ò›ùÿÿÿÿ8Ôâ§-
+€squid:S00116"aRename this field "tv_nama_deatilmysurvey" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨¢ş8Ôâ§-
+Vsquid:S1659 "3Declare "alamat_detailmysurvey" on a separate line.(ÕİˆÆüÿÿÿÿ8Ôâ§-
+\squid:S1068 "9Remove this unused "alamat_detailmysurvey" private field.(ÕİˆÆüÿÿÿÿ8Ôâ§-
+bsquid:S1068 "?Remove this unused "id_transaksi_detailmysurvey" private field.(ÕİˆÆüÿÿÿÿ8Ôâ§-
+Vsquid:S1068!"8Remove this unused "biaya_detailmysurvey" private field.( ÷µ§8Ôâ§-
+~squid:S00116!"_Rename this field "omset_detailmysurvey" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ÷µ§8Ôâ§-
+Xsquid:S1659":Declare "tv_alamat_usaha_detailsurvey" on a separate line.(•½Òï8Ôâ§-
+Vsquid:S1659 "3Declare "produk_detailmysurvey" on a separate line.(ÕİˆÆüÿÿÿÿ8Ôâ§-
+„squid:S00116"`Rename this field "tv_omset_detailsurvey" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³Ò›ùÿÿÿÿ8ö±ÀÙ”-
+~squid:S00116!"_Rename this field "jenis_detailmysurvey" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ÷µ§8Ôâ§-
+Psquid:S1659!"2Declare "omset_detailmysurvey" on a separate line.( ÷µ§8Ôâ§-
+†squid:S1450%"cRemove the "detailSurveyContract" field and declare it as a local variable in the relevant methods.(¥º³ùıÿÿÿÿ8Ôâ§-
+„squid:S00116 "`Rename this field "produk_detailmysurvey" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕİˆÆüÿÿÿÿ8Ôâ§-
+|squid:S00116!"]Rename this field "ktp_detailmysurvey" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ÷µ§8Ôâ§-
+Zsquid:S1659"7Declare "tv_longitude_detailsurvey" on a separate line.(³Ò›ùÿÿÿÿ8ö±ÀÙ”-
+Vsquid:S1659"3Declare "tv_omset_detailsurvey" on a separate line.(³Ò›ùÿÿÿÿ8Ôâ§-
+}squid:S00116""^Rename this field "id_mod_agent_detail" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ùêÂ8Ôâ§-
+Rsquid:S1659"4Declare "tv_nama_deatilmysurvey" on a separate line.(¨¢ş8Ôâ§-
+Qsquid:S1659"3Declare "tv_jenis_detailsurvey" on a separate line.(•½Òï8Ôâ§-
+Vsquid:S1068!"8Remove this unused "jenis_detailmysurvey" private field.( ÷µ§8Ôâ§-
+ˆsquid:S00116"dRename this field "tv_longitude_detailsurvey" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³Ò›ùÿÿÿÿ8Ôâ§-
+Usquid:S1659"2Declare "tv_laba_detailsurvey" on a separate line.(³Ò›ùÿÿÿÿ8ö±ÀÙ”-

@@ -1,0 +1,13 @@
+
+“squid:S00116"qRename this field "tv_nama_collection_tv_tenor_collection" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥áÓ‡úÿÿÿÿ8Ó÷Û„‘-
+esquid:S1659"DDeclare "tv_nama_collection_tv_tenor_collection" on a separate line.(¥áÓ‡úÿÿÿÿ8Ó÷Û„‘-
+Xsquid:S1659"7Declare "tv_sisa_hutang_collection" on a separate line.(¥áÓ‡úÿÿÿÿ8Ó÷Û„‘-
+msquid:UselessImportCheck"?Remove this unused import 'android.graphics.drawable.Drawable'.(Á‰º„ùÿÿÿÿ8ûÁıª‘-
+‰squid:S00116"gRename this field "tv_total_peminjam_collection" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥áÓ‡úÿÿÿÿ8Ó÷Û„‘-
+†squid:S00116"dRename this field "tv_sisa_hutang_collection" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥áÓ‡úÿÿÿÿ8Ó÷Û„‘-
+‚squid:S00116"`Rename this field "tv_tenor_mycollection" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥áÓ‡úÿÿÿÿ8Ó÷Û„‘-
+‚squid:S00116"`Rename this field "btn_detail_collection" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†½õ¬ıÿÿÿÿ8Ó÷Û„‘-
+„squid:S00116"hRename this field "container_item_list_container" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì·8¦‡óª‘-
+Tsquid:S1659"3Declare "tv_tenor_mycollection" on a separate line.(¥áÓ‡úÿÿÿÿ8Ó÷Û„‘-
+}squid:S00116"[Rename this field "tv_id_collection" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥áÓ‡úÿÿÿÿ8Ó÷Û„‘-
+[squid:S1659":Declare "tv_total_peminjam_collection" on a separate line.(¥áÓ‡úÿÿÿÿ8Ó÷Û„‘-

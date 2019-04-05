@@ -1,0 +1,10 @@
+
+asquid:S1659"@Declare "tv_tgl_item_listdetailmycollection" on a separate line.(ñïÎµÿÿÿÿÿ8Ê³Ãı-
+asquid:S1659"@Declare "tv_tgh_item_listdetailmycollection" on a separate line.(ñïÎµÿÿÿÿÿ8Ê³Ãı-
+Fsquid:S1068"+Remove this unused "context" private field.(êİç8Ê³Ãı-
+osquid:S1450"TRemove the "datum" field and declare it as a local variable in the relevant methods.(™Æu8Ê³Ãı-
+squid:S00116"lRename this field "tv_id_item_listdetailmycollection" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñïÎµÿÿÿÿÿ8Ê³Ãı-
+squid:S00116"mRename this field "tv_tgl_item_listdetailmycollection" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñïÎµÿÿÿÿÿ8Ê³Ãı-
+squid:S00116"mRename this field "tv_tgh_item_listdetailmycollection" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñïÎµÿÿÿÿÿ8Ê³Ãı-
+~squid:UselessImportCheck"URemove this unused import 'id.bkdana.agent.view.activity.DetailMyCollectionActivity'.(äóÌ¥8Ê³Ãı-
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ê³Ãı-

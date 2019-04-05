@@ -1,0 +1,12 @@
+
+csquid:UselessImportCheck"5Remove this unused import 'android.view.MotionEvent'.(˜šËŞúÿÿÿÿ8œ–ğ-
+‘squid:S1319"uThe type of the "listChildData" object should be an interface such as "Map" rather than the implementation "HashMap".(„¸’¢8œ–ğ-
+|squid:S00116"ZRename this field "_listDataHeader" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥…ªüÿÿÿÿ8œ–ğ-
+esquid:UselessImportCheck"7Remove this unused import 'android.widget.BaseAdapter'.(ŒŸà“ıÿÿÿÿ8œ–ğ-
+fsquid:UselessImportCheck">Remove this unused import 'android.widget.ExpandableListView'.(È¥Ù)8œ–ğ-
+{squid:S00116"YRename this field "_listDataChild" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Û…†«üÿÿÿÿ8œ–ğ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¢Äµùøÿÿÿÿ8Ú“ñ-
+Gsquid:S1481"+Remove this unused "etnama" local variable.(è†¤Æ8œ–ğ-
+Vsquid:S1854":Remove this useless assignment to local variable "etnama".(è†¤Æ8œ–ğ-
+`squid:UselessImportCheck"2Remove this unused import 'android.text.Editable'.(À”áÈşÿÿÿÿ8œ–ğ-
+^squid:UselessImportCheck"5Remove this unused import 'android.text.TextWatcher'.( š«8œ–ğ-

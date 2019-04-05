@@ -1,0 +1,6 @@
+
+msquid:S00116"NRename this field "TAG" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íñ•¢8¯ë‘ø-
+usquid:UselessImportCheck"JRemove this unused import 'id.bkdana.agent.contarct.DetailSurveyContract'.(Ä¾Ñ¹8¯ë‘ø-
+squid:UselessImportCheck
+"eRemove this unused import 'id.bkdana.agent.model.response.detailSurveyResponse.DetailSurveyResponse'.(ëÁ¶’8¯ë‘ø-
+Hsquid:S1068"+Remove this unused "context" private field.(êİç8¯ë‘ø-

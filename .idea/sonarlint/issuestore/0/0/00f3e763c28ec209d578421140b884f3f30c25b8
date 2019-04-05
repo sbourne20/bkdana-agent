@@ -1,0 +1,59 @@
+
+Ssquid:EmptyStatementUsageCheckÊ"Remove this empty statement.(À…Çùÿÿÿÿ8ªÇÿŸ-
+‚squid:S00116%"^Rename this field "iv_back_editprofile" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯†ªÊüÿÿÿÿ8ªÇÿŸ-
+tsquid:S1450+"QRemove the "cd" field and declare it as a local variable in the relevant methods.(¨ğÂæıÿÿÿÿ8ªÇÿŸ-
+€squid:S00116""\Rename this field "rl_title_password" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óäşŞıÿÿÿÿ8ªÇÿŸ-
+Lsquid:S1659!".Declare "ll_edit_password" on a separate line.(¬Æ‚€8ªÇÿŸ-
+Wsquid:S1659#"9Declare "et_old_password_editprofile" on a separate line.(˜ìôÙ8ªÇÿŸ-
+vsquid:S00117ˆ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é°™…ÿÿÿÿÿ8ªÇÿŸ-
+ysquid:S1192j"[Define a constant instead of duplicating this literal "Harap isi Terlebih dahulu!" 6 times.(Öšœ8ªÇÿŸ-
+zsquid:UselessImportCheck"ORemove this unused import 'id.bkdana.agent.view.fragment.fragment_scanbarcode'.(¼Ú¿8ªÇÿŸ-
+Zsquid:UselessImportCheck"/Remove this unused import 'android.os.Handler'.(ûÛ’¡8ªÇÿŸ-
+vsquid:S00117…"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–ß¥Šıÿÿÿÿ8ªÇÿŸ-
+]"squid:SwitchLastCaseIsDefaultCheck™""Add a default case to this switch.(×“¾ñùÿÿÿÿ8ªÇÿŸ-
+‰squid:S00116$"jRename this field "et_confrim_password_editprofile" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶Àú8ªÇÿŸ-
+vsquid:S00117‡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È¿˜şşÿÿÿÿ8ªÇÿŸ-
+zsquid:S00116!"[Rename this field "ll_edit_password" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬Æ‚€8ªÇÿŸ-
+Tsquid:S1659%"1Declare "btn_eye_visible_new" on a separate line.(¯†ªÊüÿÿÿÿ8ªÇÿŸ-
+Osquid:S1659&"2Declare "btn_eye_visible_conf" on a separate line.(›£¬g8ªÇÿŸ-
+…squid:S00116#"fRename this field "et_old_password_editprofile" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ìôÙ8ªÇÿŸ-
+Nsquid:EmptyStatementUsageCheckÀ"Remove this empty statement.(ñĞäİ8ªÇÿŸ-
+[squid:S1659$"=Declare "et_confrim_password_editprofile" on a separate line.(¶Àú8ªÇÿŸ-
+Wsquid:S1659$"9Declare "et_new_password_editprofile" on a separate line.(¶Àú8ªÇÿŸ-
+vsquid:S00117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–ß¥Šıÿÿÿÿ8ªÇÿŸ-
+„squid:S1450""aRemove the "rl_title_informasi" field and declare it as a local variable in the relevant methods.(óäşŞıÿÿÿÿ8ªÇÿŸ-
+’squid:S1450'"oRemove the "btn_update_informasi_editprofile" field and declare it as a local variable in the relevant methods.(âÎÓ úÿÿÿÿ8ªÇÿŸ-
+~squid:S00116#"_Rename this field "et_phone_editprofile" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ìôÙ8ªÇÿŸ-
+vsquid:S00117¢"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È¿˜şşÿÿÿÿ8ªÇÿŸ-
+}squid:S00116#"^Rename this field "et_nama_editprofile" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ìôÙ8ªÇÿŸ-
+squid:UselessImportCheck"QRemove this unused import 'id.bkdana.agent.adapter.ExpandableEditProfileAdapter'.(ŒÜÓöûÿÿÿÿ8ªÇÿŸ-
+Qsquid:S1659&"4Declare "btn_eye_invisible_conf" on a separate line.(›£¬g8ªÇÿŸ-
+„squid:S00116%"`Rename this field "btn_eye_invisible_new" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯†ªÊüÿÿÿÿ8ªÇÿŸ-
+squid:S00116&"aRename this field "btn_eye_invisible_conf" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›£¬g8ªÇÿŸ-
+‚squid:S00116%"^Rename this field "btn_eye_visible_old" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯†ªÊüÿÿÿÿ8ªÇÿŸ-
+Vsquid:S1659%"3Declare "btn_eye_invisible_old" on a separate line.(¯†ªÊüÿÿÿÿ8ªÇÿŸ-
+‚squid:S00116%"^Rename this field "btn_eye_visible_new" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯†ªÊüÿÿÿÿ8ªÇÿŸ-
+Psquid:S1659#"2Declare "et_phone_editprofile" on a separate line.(˜ìôÙ8ªÇÿŸ-
+~squid:S00116#"_Rename this field "et_email_editprofile" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ìôÙ8ªÇÿŸ-
+vsquid:S00117¡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´©³ùÿÿÿÿÿ8ªÇÿŸ-
+…squid:S00116$"fRename this field "et_new_password_editprofile" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶Àú8ªÇÿŸ-
+Csquid:S1659,"%Declare "emailIn" on a separate line.(áå«Ò8ªÇÿŸ-
+Ssquid:EmptyStatementUsageCheckÔ"Remove this empty statement.(–È¢Úûÿÿÿÿ8ªÇÿŸ-
+squid:S00116'"jRename this field "btn_update_password_editprofile" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(âÎÓ úÿÿÿÿ8ªÇÿŸ-
+}squid:S00116&"_Rename this field "btn_eye_visible_conf" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›£¬g8ªÇÿŸ-
+`squid:S1659'"=Declare "btn_update_password_editprofile" on a separate line.(âÎÓ úÿÿÿÿ8ªÇÿŸ-
+Psquid:S1659#"2Declare "et_email_editprofile" on a separate line.(˜ìôÙ8ªÇÿŸ-
+Isquid:S1068+"&Remove this unused "cd" private field.(¨ğÂæıÿÿÿÿ8ªÇÿŸ-
+…squid:S1450%"bRemove the "iv_back_editprofile" field and declare it as a local variable in the relevant methods.(¯†ªÊüÿÿÿÿ8ªÇÿŸ-
+squid:S00116""]Rename this field "rl_title_informasi" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óäşŞıÿÿÿÿ8ªÇÿŸ-
+Vsquid:S1659%"3Declare "btn_eye_invisible_new" on a separate line.(¯†ªÊüÿÿÿÿ8ªÇÿŸ-
+Csquid:S1659,"%Declare "phoneIn" on a separate line.(áå«Ò8ªÇÿŸ-
+squid:S00116'"kRename this field "btn_update_informasi_editprofile" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(âÎÓ úÿÿÿÿ8ªÇÿŸ-
+ƒsquid:S1450""`Remove the "rl_title_password" field and declare it as a local variable in the relevant methods.(óäşŞıÿÿÿÿ8ªÇÿŸ-
+Tsquid:S1659%"1Declare "btn_eye_visible_old" on a separate line.(¯†ªÊüÿÿÿÿ8ªÇÿŸ-
+Rsquid:S1659""/Declare "rl_title_password" on a separate line.(óäşŞıÿÿÿÿ8ªÇÿŸ-
+{squid:S00116!"\Rename this field "ll_edit_informasi" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬Æ‚€8ªÇÿŸ-
+vsquid:S00117†"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´©³ùÿÿÿÿÿ8ªÇÿŸ-
+„squid:S00116%"`Rename this field "btn_eye_invisible_old" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯†ªÊüÿÿÿÿ8ªÇÿŸ-
+vsquid:S00117£"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é°™…ÿÿÿÿÿ8ªÇÿŸ-
+‘squid:S1450'"nRemove the "btn_update_password_editprofile" field and declare it as a local variable in the relevant methods.(âÎÓ úÿÿÿÿ8ªÇÿŸ-

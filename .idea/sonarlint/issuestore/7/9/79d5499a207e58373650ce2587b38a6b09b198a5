@@ -1,0 +1,22 @@
+
+Esquid:S1659"'Declare "eye_close" on a separate line.(³¿œ8µûæŸ”-
+squid:S1450"^Remove the "btn_masuk_login" field and declare it as a local variable in the relevant methods.(Ïšˆ´ÿÿÿÿÿ8µûæŸ”-
+ssquid:S00116"TRename this field "eye_close" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³¿œ8µûæŸ”-
+wsquid:S00116 "SRename this field "Username" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥Ç”Úûÿÿÿÿ8µûæŸ”-
+wsquid:S00116 "SRename this field "Password" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥Ç”Úûÿÿÿÿ8µûæŸ”-
+zsquid:S1450 "WRemove the "Username" field and declare it as a local variable in the relevant methods.(¥Ç”Úûÿÿÿÿ8µûæŸ”-
+\"squid:SwitchLastCaseIsDefaultCheckk""Add a default case to this switch.(×“¾ñùÿÿÿÿ8µûæŸ”-
+zsquid:S1450 "WRemove the "Password" field and declare it as a local variable in the relevant methods.(¥Ç”Úûÿÿÿÿ8µûæŸ”-
+nsquid:S1301k"KReplace this "switch" statement by "if" statements to increase readability.(×“¾ñùÿÿÿÿ8µûæŸ”-
+xsquid:S00116"YRename this field "et_email_login" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–øÂø8µûæŸ”-
+rsquid:S00116"SRename this field "eye_open" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³¿œ8µûæŸ”-
+~squid:S00116"ZRename this field "btn_masuk_login" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ïšˆ´ÿÿÿÿÿ8µûæŸ”-
+Jsquid:S1068",Remove this unused "eye_open" private field.(³¿œ8µûæŸ”-
+isquid:CommentedOutCodeLineM"<This block of commented-out lines of code should be removed.(à±»™8µûæŸ”-
+usquid:S00117|"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åèĞ—ùÿÿÿÿ8µûæŸ”-
+isquid:UselessImportCheck"?Remove this unused import 'android.support.annotation.NonNull'.(¼Åß8µûæŸ”-
+Ksquid:S1068"-Remove this unused "eye_close" private field.(³¿œ8µûæŸ”-
+{squid:S00116"\Rename this field "et_password_login" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–øÂø8µûæŸ”-
+Msquid:S1659"/Declare "et_password_login" on a separate line.(–øÂø8µûæŸ”-
+Isquid:S1659 "&Declare "Password" on a separate line.(¥Ç”Úûÿÿÿÿ8µûæŸ”-
+ysquid:S1450"[Remove the "agentSession" field and declare it as a local variable in the relevant methods.(‰éµ8µûæŸ”-

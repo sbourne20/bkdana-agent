@@ -1,0 +1,8 @@
+
+nsquid:S1301O"KReplace this "switch" statement by "if" statements to increase readability.(×“¾ñùÿÿÿÿ8á–ÄØ”-
+zsquid:S1450"\Remove the "rv_collection" field and declare it as a local variable in the relevant methods.(É¬‡˜8á–ÄØ”-
+{squid:S1450"]Remove the "scrollListener" field and declare it as a local variable in the relevant methods.(ÙéìÊ8äðÅØ”-
+wsquid:S00116"XRename this field "rv_collection" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(É¬‡˜8á–ÄØ”-
+\"squid:SwitchLastCaseIsDefaultCheckO""Add a default case to this switch.(×“¾ñùÿÿÿÿ8á–ÄØ”-
+†squid:S00116"bRename this field "iv_back_list_collection" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜¨µ°ÿÿÿÿÿ8á–ÄØ”-
+‰squid:S1450"fRemove the "iv_back_list_collection" field and declare it as a local variable in the relevant methods.(˜¨µ°ÿÿÿÿÿ8á–ÄØ”-

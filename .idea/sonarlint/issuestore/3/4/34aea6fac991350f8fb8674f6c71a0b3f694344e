@@ -1,0 +1,14 @@
+
+Ysquid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ƒ¨§«‘-
+|squid:S00116"_Rename this field "item_no_reg_peminjam" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŽµÒó8ƒ¨§«‘-
+{squid:S00116"^Rename this field "item_bulan_peminjam" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŽµÒó8ƒ¨§«‘-
+jsquid:UselessImportCheck"ARemove this unused import 'id.bkdana.agent.model.DataListSurvey'.(ã ƒ“8ƒ¨§«‘-
+}squid:S00116"`Rename this field "item_total_peminjaman" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŽµÒó8ƒ¨§«‘-
+}squid:UselessImportCheck"TRemove this unused import 'id.bkdana.agent.view.activity.DetailScanBarcodeActivity'.(þÙŒž8ƒ¨§«‘-
+Z"squid:SwitchLastCaseIsDefaultCheck""Add a default case to this switch.(×“¾ñùÿÿÿÿ8ƒ¨§«‘-
+Nsquid:S1659"2Declare "item_no_reg_peminjam" on a separate line.(ŽµÒó8ƒ¨§«‘-
+zsquid:S00116"]Rename this field "item_nama_peminjam" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŽµÒó8ƒ¨§«‘-
+Msquid:S1659"1Declare "item_bulan_peminjam" on a separate line.(ŽµÒó8ƒ¨§«‘-
+|squid:S00116"ZRename this field "item_add_survey" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ð—­äýÿÿÿÿ8ƒ¨§«‘-
+Osquid:S1659"3Declare "item_total_peminjaman" on a separate line.(ŽµÒó8ƒ¨§«‘-
+lsquid:S1301"KReplace this "switch" statement by "if" statements to increase readability.(×“¾ñùÿÿÿÿ8ƒ¨§«‘-

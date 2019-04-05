@@ -1,0 +1,23 @@
+
+Rsquid:S1659"4Declare "tv_product_scanbarcode" on a separate line.(ÚﬂÑÄ8ù®®Ÿî-
+vsquid:S00116"WRename this field "total_pinjam" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Òÿﬁœ8ù®®Ÿî-
+ásquid:S1450"jRemove the "btn_selanjutnya_scanbarcode" field and declare it as a local variable in the relevant methods.(Ωìº.8ù®®Ÿî-
+nsquid:CommentedOutCodeLine3"<This block of commented-out lines of code should be removed.(ùƒù≤¯ˇˇˇˇ8ù®®Ÿî-
+Psquid:S1659"2Declare "tv_tenor_scanbarcode" on a separate line.(ÚﬂÑÄ8ù®®Ÿî-
+Äsquid:S00116"aRename this field "tv_product_scanbarcode" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚﬂÑÄ8ù®®Ÿî-
+Osquid:S1659"1Declare "tv_nama_scanbarcode" on a separate line.(ÚﬂÑÄ8ù®®Ÿî-
+Hsquid:S1659"*Declare "total_pinjam" on a separate line.(Òÿﬁœ8ù®®Ÿî-
+~squid:S00116"_Rename this field "tv_tenor_scanbarcode" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚﬂÑÄ8ù®®Ÿî-
+Nsquid:S1068"0Remove this unused "agentSession" private field.(âÈûµ8ù®®Ÿî-
+Asquid:S1659"#Declare "idtrk" on a separate line.(Òÿﬁœ8ù®®Ÿî-
+Xsquid:S1659":Declare "tv_jmlpembayaran_scanbarcode" on a separate line.(ÚﬂÑÄ8ù®®Ÿî-
+vsquid:S00116"WRename this field "sisa_tagihan" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Òÿﬁœ8ù®®Ÿî-
+Ösquid:S00116"fRename this field "tv_id_transaksi_scanbarcode" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚﬂÑÄ8ù®®Ÿî-
+Üsquid:S00116"gRename this field "tv_jmlpembayaran_scanbarcode" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚﬂÑÄ8ù®®Ÿî-
+nsquid:S1301]"KReplace this "switch" statement by "if" statements to increase readability.(◊ìæÒ˘ˇˇˇˇ8ù®®Ÿî-
+Üsquid:S1450"hRemove the "iv_back_scanbarcodedetail" field and declare it as a local variable in the relevant methods.(õÕ≤8ù®®Ÿî-
+Ésquid:S00116"dRename this field "iv_back_scanbarcodedetail" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õÕ≤8ù®®Ÿî-
+Ñsquid:S00116"fRename this field "btn_selanjutnya_scanbarcode" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ωìº.8ù®®Ÿî-
+\"squid:SwitchLastCaseIsDefaultCheck]""Add a default case to this switch.(◊ìæÒ˘ˇˇˇˇ8ù®®Ÿî-
+}squid:S00116"^Rename this field "tv_nama_scanbarcode" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚﬂÑÄ8ù®®Ÿî-
+Hsquid:S1659"*Declare "sisa_tagihan" on a separate line.(Òÿﬁœ8ù®®Ÿî-

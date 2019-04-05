@@ -1,0 +1,5 @@
+
+U"squid:SwitchLastCaseIsDefaultCheck""Add a default case to this switch.(×“¾ñùÿÿÿÿ
+squid:S1450"jRemove the "btn_selesai_survey_peminjam" field and declare it as a local variable in the relevant methods.(ÎÙİş
+gsquid:S1301"KReplace this "switch" statement by "if" statements to increase readability.(×“¾ñùÿÿÿÿ
+~squid:S00116"fRename this field "btn_selesai_survey_peminjam" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÎÙİş

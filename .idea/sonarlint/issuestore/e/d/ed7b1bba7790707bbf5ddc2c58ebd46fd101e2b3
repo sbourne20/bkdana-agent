@@ -1,0 +1,19 @@
+
+[squid:S1854"@Remove this useless assignment to local variable "formatRupiah".(Ší¬8Ã¹Ø”-
+Nsquid:S1659"2Declare "item_no_reg_peminjam" on a separate line.(Ùğ8Ã¹Ø”-
+zsquid:S00116"]Rename this field "item_nama_peminjam" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ùğ8Ã¹Ø”-
+[squid:UselessImportCheck"-Remove this unused import 'android.util.Log'.(Ô¦Ø²øÿÿÿÿ8Ã¹Ø”-
+Msquid:S1659"1Declare "item_bulan_peminjam" on a separate line.(Ùğ8Ã¹Ø”-
+Bsquid:S1659"&Declare "tv_idMOD" on a separate line.(Ùğ8Ã¹Ø”-
+{squid:S00116"^Rename this field "item_bulan_peminjam" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ùğ8Ã¹Ø”-
+}squid:S00116"`Rename this field "item_total_peminjaman" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ùğ8Ã¹Ø”-
+psquid:S00116"SRename this field "tv_idMOD" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ùğ8Ã¹Ø”-
+Usquid:S1068"9Remove this unused "item_total_peminjaman" private field.(Ùğ8Ã¹Ø”-
+Ssquid:S1068"7Remove this unused "item_bulan_peminjam" private field.(Ùğ8Ã¹Ø”-
+Lsquid:S1481"1Remove this unused "formatRupiah" local variable.(Ší¬8Ã¹Ø”-
+|squid:S00116"_Rename this field "item_no_reg_peminjam" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ùğ8Ã¹Ø”-
+|squid:UselessImportCheck"SRemove this unused import 'id.bkdana.agent.view.activity.MenuDataPersonalActivity'.(Å‚¨Æ8Ã¹Ø”-
+}squid:UselessImportCheck"TRemove this unused import 'id.bkdana.agent.view.activity.DetailScanBarcodeActivity'.(şÙŒ8Ã¹Ø”-
+|squid:S00116"ZRename this field "item_add_survey" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ—­äıÿÿÿÿ8Ã¹Ø”-
+Osquid:S1659"3Declare "item_total_peminjaman" on a separate line.(Ùğ8Ã¹Ø”-
+usquid:S1450"TRemove the "datum" field and declare it as a local variable in the relevant methods.(®›¹–şÿÿÿÿ8Î“»Ø”-

@@ -1,0 +1,36 @@
+
+Tsquid:S1659'"6Declare "tv_dataUsaha_produktitle" on a separate line.(ÁÒç•8Ó«’£”-
+Osquid:S1068)",Remove this unused "id_agent" private field.(‘Ğ’œùÿÿÿÿ8Ó«’£”-
+‚squid:S00116("cRename this field "et_alamat_usaha_peminjam" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯Øº’8Ó«’£”-
+}squid:S1450)"ZRemove the "alamatUsaha" field and declare it as a local variable in the relevant methods.(‘Ğ’œùÿÿÿÿ8Ó«’£”-
+`squid:UselessImportCheck"5Remove this unused import 'android.widget.TextClock'.(™ã›—8Ó«’£”-
+ysquid:S1450+"[Remove the "agentSession" field and declare it as a local variable in the relevant methods.(‰éµ8Ğ¤øº—-
+Œsquid:S00116$"hRename this field "btn_selanjutnya_data_peminjam" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÈñÔÜüÿÿÿÿ8Ó«’£”-
+squid:S1450$"lRemove the "btn_selanjutnya_data_peminjam" field and declare it as a local variable in the relevant methods.(ÈñÔÜüÿÿÿÿ8Ó«’£”-
+€squid:S1450&"]Remove the "iv_back_survey" field and declare it as a local variable in the relevant methods.(®»ë·ûÿÿÿÿ8Ó«’£”-
+Usquid:S2589j"7Remove this expression which always evaluates to "true"(ÿò†ô8Ğè÷º—-
+‚squid:S00116'"cRename this field "tv_dataUsaha_produktitle" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁÒç•8Ó«’£”-
+„squid:S1450("fRemove the "et_jenis_usaha_peminjam" field and declare it as a local variable in the relevant methods.(¯Øº’8Ó«’£”-
+\"squid:SwitchLastCaseIsDefaultCheckq""Add a default case to this switch.(×“¾ñùÿÿÿÿ8Ğè÷º—-
+Nsquid:S1659)"+Declare "product_title" on a separate line.(‘Ğ’œùÿÿÿÿ8Ó«’£”-
+wsquid:S00116)"SRename this field "id_agent" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ’œùÿÿÿÿ8Ó«’£”-
+Œsquid:S00116&"hRename this field "iv_upload_foto_usaha_peminjam" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®»ë·ûÿÿÿÿ8Ó«’£”-
+Tsquid:UselessImportCheck")Remove this unused import 'java.io.File'.(†Ğ¥Å8Ó«’£”-
+Ysquid:S1068(";Remove this unused "et_jenis_usaha_peminjam" private field.(¯Øº’8Ó«’£”-
+|squid:S1450)"YRemove the "jenisUsaha" field and declare it as a local variable in the relevant methods.(‘Ğ’œùÿÿÿÿ8Ó«’£”-
+Lsquid:S1659)")Declare "id_peminjam" on a separate line.(‘Ğ’œùÿÿÿÿ8Ó«’£”-
+Osquid:S1659)",Declare "master_loan_id" on a separate line.(‘Ğ’œùÿÿÿÿ8Ó«’£”-
+^squid:S1659&";Declare "iv_upload_foto_usaha_peminjam" on a separate line.(®»ë·ûÿÿÿÿ8Ó«’£”-
+Ssquid:S1659("5Declare "et_jenis_usaha_peminjam" on a separate line.(¯Øº’8Ó«’£”-
+ƒsquid:S00116'"dRename this field "tv_dataUsaha_masterLoadId" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁÒç•8Ó«’£”-
+squid:S00116("bRename this field "et_jenis_usaha_peminjam" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯Øº’8Ó«’£”-
+squid:S00116%"iRename this field "btn_upload_foto_udaha_peminjam" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿµ¥Üùÿÿÿÿ8Ó«’£”-
+}squid:S00116)"YRename this field "master_loan_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ’œùÿÿÿÿ8Ó«’£”-
+|squid:S00116)"XRename this field "product_title" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ’œùÿÿÿÿ8Ó«’£”-
+qsquid:S00116*"RRename this field "last_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºÛ „8Ìóöº—-
+zsquid:S00116)"VRename this field "id_peminjam" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ’œùÿÿÿÿ8Ó«’£”-
+Ksquid:S1659)"(Declare "jenisUsaha" on a separate line.(‘Ğ’œùÿÿÿÿ8Ó«’£”-
+~squid:S1450."`Remove the "isInternetPresent" field and declare it as a local variable in the relevant methods.(Ñœ‹8Ó«’£”-
+}squid:S00116&"YRename this field "iv_back_survey" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®»ë·ûÿÿÿÿ8Ó«’£”-
+vsquid:S00117ƒ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏˆŒÂùÿÿÿÿ8Ğè÷º—-
+Lsquid:S1659)")Declare "alamatUsaha" on a separate line.(‘Ğ’œùÿÿÿÿ8Ó«’£”-

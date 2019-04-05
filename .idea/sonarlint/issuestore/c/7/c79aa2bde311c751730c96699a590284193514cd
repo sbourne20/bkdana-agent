@@ -1,0 +1,10 @@
+
+}squid:S1450"ZRemove the "rv_mysurvey" field and declare it as a local variable in the relevant methods.(¦à˜ÿÿÿÿÿ8¶Ç›Ø”-
+nsquid:CommentedOutCodeLine,"<This block of commented-out lines of code should be removed.(ÏúÛİúÿÿÿÿ8¶Ç›Ø”-
+„squid:S00116"`Rename this field "iv_back_list_mysurvey" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ëâªûÿÿÿÿ8¶Ç›Ø”-
+\"squid:SwitchLastCaseIsDefaultCheckS""Add a default case to this switch.(×“¾ñùÿÿÿÿ8¶Ç›Ø”-
+{squid:S1450 "]Remove the "scrollListener" field and declare it as a local variable in the relevant methods.(ÙéìÊ8¶Ç›Ø”-
+‡squid:S1450"dRemove the "iv_back_list_mysurvey" field and declare it as a local variable in the relevant methods.(Ëâªûÿÿÿÿ8¶Ç›Ø”-
+zsquid:S00116"VRename this field "rv_mysurvey" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦à˜ÿÿÿÿÿ8¶Ç›Ø”-
+]squid:UselessImportCheck"-Remove this unused import 'android.util.Log'.(Ô¦Ø²øÿÿÿÿ8À¨œØ”-
+nsquid:S1301S"KReplace this "switch" statement by "if" statements to increase readability.(×“¾ñùÿÿÿÿ8¶Ç›Ø”-
